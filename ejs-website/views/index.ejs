@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('includes'); %>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='../stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('header', {active: "Home"}); %>
+
+    <div id="landing" class="container-fluid">
+        <div id="intro">
+            <h1>The all-Canadian Hyperloop
+                <br> student design team
+            </h1>
+            <p>
+                Having withstood the test of time, team Waterloop is back with
+                 a whole new roster, preparing to take on the SpaceX
+                 Hyperloop challenge in Summer 2018.
+            </p>
+        </div>
+
+        <div id="newsletter">
+            <h4> Sign up for our montly newsletter </h4>
+            <div class="input-group-sm">
+                <input type="text" class="form-control" placeholder="Your email" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
