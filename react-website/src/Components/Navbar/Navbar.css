@@ -1,0 +1,7 @@
+.logo {
+  background-image: url('../Assets/Icon_Black.png');
+  display: inline-block;
+  height: 100px;
+  width: auto;
+  z-index: 20000;
+}
