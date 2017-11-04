@@ -1,0 +1,19 @@
+#landing {
+	background-color: #F2F3F4;
+	height: 100vh;
+	padding-top: 40px;
+	text-align: center;
+	font-family: "helvetica";
+}
+
+#intro {
+	margin-bottom: 40px;
+}
+
+#intro, h1{
+	color: #1C2833;
+}
+#intro, p{
+	font-size: 22px;
+	color: #5f6767;
+}

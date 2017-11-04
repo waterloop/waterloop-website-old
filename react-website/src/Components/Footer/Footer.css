@@ -1,0 +1,38 @@
+.footerColumn {
+    display: inline-block;
+    padding: 21px 30px;
+}
+
+.footerTable {
+    padding: 6% 0%;
+}
+
+.footerElement {
+    line-height: 1.9em;
+    font-size: 12px;
+    opacity: 0.4;
+    white-space: nowrap;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+
+.footerLink {
+    text-decoration: none;
+    color: #111111;
+}
+
+.footerElement:hover{
+    opacity: 0.9;
+}
+
+.horizontalRuler {
+  position: absolute;
+  height: 2px;
+  width: 60vw;
+  left: 15vw;
+  background: #111111;
+  opacity: 0.1;
+  border-radius: 200%;
+  z-index: 1101;
+}
