@@ -28,3 +28,21 @@ nav .logo {
 nav .nav-logo {
     padding-right: 1.5vw;
 }
+
+/* Footer Styles */
+
+footer .footer-link a{
+    color: #111111;
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+footer .footer-link a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+footer .logo {
+    height: 120px;
+    opacity: 0.9;
+}
