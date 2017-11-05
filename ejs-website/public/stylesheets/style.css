@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-} 
+}
 
 
 /* Navbar Styles */
@@ -14,7 +14,7 @@ nav ul a {
 nav ul a:hover {
     opacity: 0.7;
     transition: 0.3s;
-} 
+}
 
 nav .nav-wrapper {
     padding: 0 9vw;
@@ -41,6 +41,7 @@ footer .horizontal-ruler {
     border-radius: 50px;
     opacity: 0.1;
 }
+
 footer .footer-link a{
     color: #111111;
     font-weight: 600;

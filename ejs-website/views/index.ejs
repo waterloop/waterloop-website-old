@@ -8,22 +8,26 @@
   <body>
     <%- include('header', {active: "Home"}); %>
 
-    <div id="landing" class="container-fluid" style="height:100vh;">
+    <div id="landing" class="container-fluid center" style="height:100vh;">
         <div id="intro">
             <h1>The all-Canadian Hyperloop
                 <br> student design team
             </h1>
             <p>
                 Having withstood the test of time, team Waterloop is back with
-                 a whole new roster, preparing to take on the SpaceX
-                 Hyperloop challenge in Summer 2018.
+                <br> a whole new roster, preparing to take on the SpaceX
+                <br> Hyperloop challenge in Summer 2018.
             </p>
         </div>
 
         <div id="newsletter">
             <h4> Sign up for our montly newsletter </h4>
-            <div class="input-group-sm">
-                <input type="text" class="form-control" placeholder="Your email" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="row">
+                <div class="col s3"></div>
+                <div class="input-field col s6">
+                    <input placeholder="Your Email" id="email" type="email" class="validate">
+                </div>
+                <div class="col s3"></div>
             </div>
         </div>
     </div>
