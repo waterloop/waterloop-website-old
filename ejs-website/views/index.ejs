@@ -3,12 +3,12 @@
   <head>
     <%- include('includes'); %>
     <title><%= title %></title>
-    <link rel='stylesheet' href='../stylesheets/style.css' />
-  </head>
+
+</head>
   <body>
     <%- include('header', {active: "Home"}); %>
 
-    <div id="landing" class="container-fluid">
+    <div id="landing" class="container-fluid" style="height:100vh;">
         <div id="intro">
             <h1>The all-Canadian Hyperloop
                 <br> student design team
@@ -27,6 +27,8 @@
             </div>
         </div>
     </div>
+
+    <%- include('footer'); %>
 
   </body>
 </html>
