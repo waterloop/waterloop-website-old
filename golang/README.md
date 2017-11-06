@@ -4,7 +4,7 @@ Official website of Team Waterloop
 ## Development
 
 ### Configuration
-Our website is build using Go.
+Our website is built using Go.
 1. download the Go distribution for your OS from `https://golang.org/`
 2. install Revel with `go get github.com/revel/cmd/revel`
 3. clone your fork (recommended) or the main repo
