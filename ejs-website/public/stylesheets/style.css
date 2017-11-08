@@ -6,6 +6,11 @@ form-text {
     font-size: 10px;
 }
 
+.blog-row {
+    width: 100%;
+    margin-left:0;
+}
+
 #landing {
     position: relative;
     height: auto;
