@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('includes'); %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('header', {active: "Home"}); %>
+
+    <div class="container container-fluid">
+      <h1>Contact Info</h1>
+      <div class="row">
+        <div class="col m8">
+          <h2>Contact Us</h2>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons email">edit_mode</i>
+                    <input id="email" type="text" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="subject" type="text" class="validate">
+                    <label for="subject">Subject</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="message" class="materialize-textarea"></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+
+        <div class="col m4">
+          <h2>Our Office</h2>
+
+          <p>University of Waterloo<br>
+          200 University Ave W<br>
+          Engineering 5, 1104<br>
+          Waterloo, ON N2L 3G1</p>
+          <!-- TODO add a map
+        </div>
+      </div>
+    </div>
+    <%- include('footer'); %>
+
+  </body>
+</html>
