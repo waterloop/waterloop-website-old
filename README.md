@@ -22,23 +22,31 @@ Official website of teamwaterloop
 ## Styling
 ### Colours:
 Titles: #262626
+
 Sub-titles: #27282B
+
 Text (Including Navbar): #808080
+
 Downloads link - Navbar: #C1C1C1
 
 Navbar-BG: #FFFFFF
+
 Main-BG: #FAFAFA
 
 Primary-Gold: #FFD550
+
 Secondary-Gold: #FFC64F
 
 ### Fonts:
 Main: Proxima Nova
 Secondary 1: Montserrat
+
 Secondary 2: Helvetica
+
 
 ### Transparency & Drop-Shadows:
 Light: #FCFCFC overlay at 95% opacity. 
+
 Dark: #27282B overlay at 75% opacity. 
 
 Button drop-shadows: x:0 ;  Y:5 ; B:5
