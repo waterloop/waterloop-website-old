@@ -7,6 +7,18 @@ Official website of teamwaterloop
 * Install requirements `npm install`
 * Run server `npm start`
 
+## How to add routes?
+* Find `routes/index.js`
+* Insert another one of those 
+```javascript 1.8
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'Waterloop' });
+});
+```
+* where `/` is the url that you want to render
+* where `index` is name of ejs file that you want to render
+* and `{'title: Waterloop'}` is the parameters to pass to 
+
 ## CSS file documentation
 |File Name|Purpose|
 |---|---|
@@ -21,32 +33,27 @@ Official website of teamwaterloop
 
 ## Styling
 ### Colours:
-Titles: #262626
-
-Sub-titles: #27282B
-
-Text (Including Navbar): #808080
-
-Downloads link - Navbar: #C1C1C1
-
-Navbar-BG: #FFFFFF
-
-Main-BG: #FAFAFA
-
-Primary-Gold: #FFD550
-
-Secondary-Gold: #FFC64F
+| Element | Color |
+|:--------|:-------|
+|Titles | `#262626`|
+|Sub-titles | `#27282B`|
+|Text (Including Navbar) | `#808080`|
+|Downloads link - Navbar | `#C1C1C1`|
+|Navbar-BG | `#FFFFFF`|
+|Main-BG | `#FAFAFA`|
+|Primary-Gold | `#FFD550`|
+|Secondary-Gold| `#FFC64F` |
 
 ### Fonts:
-Main: Proxima Nova
-Secondary 1: Montserrat
-
-Secondary 2: Helvetica
-
+|| Fonts |
+|---| --- |
+|Main | Proxima Nova |
+|Secondary 1 | Montserrat |
+|Secondary 2 | Helvetica |
 
 ### Transparency & Drop-Shadows:
-Light: #FCFCFC overlay at 95% opacity. 
+Light: `#FCFCFC` overlay at 95% opacity.
 
-Dark: #27282B overlay at 75% opacity. 
+Dark: `#27282B` overlay at 75% opacity.
 
-Button drop-shadows: x:0 ;  Y:5 ; B:5
+Button drop-shadows: `x:0,  Y:5, B:5`
