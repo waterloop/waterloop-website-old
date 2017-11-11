@@ -11,7 +11,6 @@ Official website of teamwaterloop
 |File Name|Purpose|
 |---|---|
 |style.css   |  |
-|main.css   |   |
 
 ## How to use EJS templates?
 * A great tutorial here http://www.embeddedjs.com/getting_started.html
@@ -19,3 +18,35 @@ Official website of teamwaterloop
 * We have a folder `/views` where we store all of our EJS files. The advantage of EJS is that we can include a predefined elements and reuse them that way. So for example, we have a `index.ejs` file that has multiple includes inside it
 `<%- include('header', {active: "Home"}); %>` This line would include another EJS file `header.ejs`, meaning that the contents of header will be inserted at that place in the `index` file. This is the main feature of EJS.
 * We also have a folder `/public` where we store all of our static content. So things like stylesheet, javascript, font files and images go here.
+
+## Styling
+### Colours:
+Titles: #262626
+
+Sub-titles: #27282B
+
+Text (Including Navbar): #808080
+
+Downloads link - Navbar: #C1C1C1
+
+Navbar-BG: #FFFFFF
+
+Main-BG: #FAFAFA
+
+Primary-Gold: #FFD550
+
+Secondary-Gold: #FFC64F
+
+### Fonts:
+Main: Proxima Nova
+Secondary 1: Montserrat
+
+Secondary 2: Helvetica
+
+
+### Transparency & Drop-Shadows:
+Light: #FCFCFC overlay at 95% opacity. 
+
+Dark: #27282B overlay at 75% opacity. 
+
+Button drop-shadows: x:0 ;  Y:5 ; B:5
