@@ -11,4 +11,8 @@ router.get('/flock', function(req, res, next) {
     res.render('flock', { title: 'Waterloop' });
 });
 
+router.get('/contact', function(req, res, next) {
+    res.render('contact', { title: 'Waterloop' });
+});
+
 module.exports = router;
