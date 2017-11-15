@@ -108,3 +108,13 @@ footer .logo {
     height: 120px;
     opacity: 0.9;
 }
+
+/* hightlighting colour */
+*::selection,  {
+  background-color: #fee098;
+}
+
+/* firefox highlighting colour */
+*::-moz-selection,  {
+  background-color: #fee098; /* hightlighting colour */
+}
