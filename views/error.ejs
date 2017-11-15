@@ -1,3 +1,35 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('includes'); %>
+    <title>Waterloop - <%= error.status %> <%= message %></title>
+  </head>
+  <body>
+    <%- include('header', {active: ""}); %>
+
+    <div class="container container-fluid">
+      <h1><%= error.status %> <%= message %></h1>
+      <div class="row">
+        <p>Error stack information below:</p>
+
+        <div class="row">
+        <div class="col s12">
+          <div class="card-panel yellow darken-4">
+            <div class="white-text">
+              <pre><%= error.stack %></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        <a class="waves-effect waves-light btn-large grey darken-2" href="/">Home</a>
+        <a class="waves-effect waves-light btn-large grey darken-2" href="/contact">Contact</a>
+      </p>
+
+      </div>
+    </div>
+    <%- include('footer'); %>
+
+  </body>
+</html>
