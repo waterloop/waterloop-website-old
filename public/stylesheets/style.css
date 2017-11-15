@@ -110,11 +110,11 @@ footer .logo {
 }
 
 /* hightlighting colour */
-*::selection,  {
+*::selection {
   background-color: #fee098;
 }
 
 /* firefox highlighting colour */
-*::-moz-selection,  {
+*::-moz-selection {
   background-color: #fee098; /* hightlighting colour */
 }
