@@ -9,15 +9,15 @@ Official website of teamwaterloop
 
 ## How to add routes?
 * Find `routes/index.js`
-* Insert another one of those 
+* Insert another one of those
 ```javascript 1.8
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Waterloop' });
+    res.render('index', { title: '[TITLE]' });
 });
 ```
 * where `/` is the url that you want to render
 * where `index` is name of ejs file that you want to render
-* and `{'title: Waterloop'}` is the parameters to pass to 
+* and `[TITLE]` is the title of the page, generally in the form `Waterloop – [page]`
 
 ## CSS file documentation
 |File Name|Purpose|
