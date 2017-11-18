@@ -1,8 +1,8 @@
-symbol,date,price,flag
-S&P 500,Jan 2000,0,1
-S&P 500,Feb 2000,1,1
-S&P 500,Jan 2001,2,1
-S&P 500,Jul 2001,3,1
-S&P 500,Apr 2005,5,1
-S&P 500,May 2006,7,1
-S&P 500,Feb 2007,9,1
+x,date,price,flag,term,info
+0,Apr 2015,0,0,,
+80,May 2015,0,1,Summer 2015,Team Founded at the University of Waterloo
+130,Jan 2016,5,1,Winter 2016,One of 31 teams to the Hyperloop design weekend from over 1200 entrants
+200,Sep 2016,10,1,Fall 2016, First team to achieve pneumatic levitation. Also launched a successful kickstarter and raised over 43000 dollars
+150,Jan 2017,19,1,Winter 2017, One of 27 teams invited to Competition I at SpaceX Hawthorne, California
+150,May 2017,25,1,Summer 2017, One of 24 teams invited to Competition II at SpaceX Hawthorne, California
+0,Jun 2017,33,0,,

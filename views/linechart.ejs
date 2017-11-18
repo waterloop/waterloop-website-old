@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
+
+<svg></svg>
 <style>
-
-    #linechart {
-        font: 10px sans-serif;
-        margin: 0;
+    svg {
+      fill: transparent;
     }
-
+    .dot{
+      z-index: 1;
+    }
     path.line {
         fill: none;
         stroke: #666;
@@ -51,160 +51,155 @@
     div.tooltip {
         position: absolute;
         text-align: center;
-        width: 60px;
-        height: 100px;
+        width: 160px;
+        height: 200px;
         padding: 2px;
-        font: 12px sans-serif;
+        font: 18px sans-serif;
         background: white;
         border: 0px;
         border-radius: 8px;
         pointer-events: none;
+        z-index: 1;
+        box-shadow: 10px 10px 5px #888888;
     }
 
 </style>
 
-<body>
-<svg></svg>
-</body>
-
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-
-    var div = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-    var margin = {top: 80, right: 80, bottom: 80, left: 80},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-    var parse = d3.timeParse("%b %Y");
-
-    // Scales and axes. Note the inverted domain for the y-scale: bigger is up!
-    var x = d3.scaleTime().range([0, width]),
-        y = d3.scaleLinear().range([height, 0]);
-
-    // An area generator, for the light fill.
-    var area = d3.area()
-        .curve(d3.curveMonotoneX)
-        .x(function(d) { return x(d.date); })
-        .y0(height)
-        .y1(function(d) { return y(d.price); });
-
-    // A line generator, for the dark stroke.
-    var line = d3.line()
-        .curve(d3.curveMonotoneX)
-        .x(function(d) { return x(d.date); })
-        .y(function(d) { return y(d.price); });
-
-    //data = d3.csvParse(d3.select("pre#data").text());
-    d3.csv("data.csv", function(error, data) {
-
-        // format the data
-        data.forEach(function(d) {
-            d = type(d);
-        });
-
-        // Filter to one symbol; the S&P 500.
-        var values = data;
-        var dots = data.filter(function(d) {
-            return d.flag == "1";
-        });
-        console.log(dots);
+  var svg = d3.select("svg");
 
 
-        // Compute the minimum and maximum date, and the maximum price.
-        x.domain([values[0].date, values[values.length - 1].date]);
-        y.domain([d3.min(values, function(d) { return d.price; }), d3.max(values, function(d) { return d.price; })]);
+  function draw(){
+      var div = d3.select("body").append("div")
+          .attr("class", "tooltip")
+          .style("opacity", 0);
 
-        // Add an SVG element with the desired dimensions and margin.
-        var svg = d3.select("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      var margin = {top: 80, right: 10, bottom: 100, left: 1};
+      var width = $("svg").parent().width();
+      var height = $("svg").parent().height();
 
-        // Add the clip path.
-        svg.append("clipPath")
-            .attr("id", "clip")
-            .append("rect")
-            .attr("width", width)
-            .attr("height", height);
+      var parse = d3.timeParse("%b %Y");
 
-        svg.selectAll(".dot")
-            .data(values)
-            .enter().append("circle")
-            .attr("class", "dot")
-            //.attr("stroke", function (d) { return d.measure==datasetMeasureMin ? "red" : (d.measure==datasetMeasureMax ? "green" : "steelblue") } )
-            .attr("fill", "white")
-            //.attr("stroke-width", function (d) { return d.measure==datasetMeasureMin || d.measure==datasetMeasureMax ? "3px" : "1.5px"} )
-            .attr("cx", line.x())
-            .attr("cy", line.y())
-            .attr("r", function(d){return d.flag=="1"? "5":"0"})
-            .attr("stroke", "lightgrey")
-            .on("mouseover", function(d) {
-                div.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                div.html(d.date + "<br/>" + d.price)
-                    .style("left", (d3.event.pageX - 20) + "px")
-                    .style("top", (d3.event.pageY - 100) + "px");
-            })
-            .on("mouseout", function(d) {
-                div.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
-        ;;
+      // Scales and axes. Note the inverted domain for the y-scale: bigger is up!
+      var x = d3.scaleTime().range([0, width]),
+          y = d3.scaleLinear().range([height, 0]);
 
-        var colors = d3.scaleOrdinal(d3.schemeCategory10);
-        svg.selectAll('.line')
-            .data([values])
-            .enter()
-            .append('path')
-            .attr('class', 'line')
-            .style('stroke', function(d) {
-                return colors(Math.random() * 50);
-            })
-            .attr('clip-path', 'url(#clip)')
-            .attr('d', function(d) {
-                return line(d);
-            })
+      // A line generator, for the dark stroke.
+      var line = d3.line()
+          .x(function(d) { return x(d.date); })
+          .y(function(d) { return y(d.price); });
 
-        /* Add 'curtain' rectangle to hide entire graph */
-        var curtain = svg.append('rect')
-            .attr('x', -1 * width)
-            .attr('y', -1 * height)
-            .attr('height', height)
-            .attr('width', width)
-            .attr('class', 'curtain')
-            .attr('transform', 'rotate(180)')
-            .style('fill', '#ffffff');
+      //data = d3.csvParse(d3.select("pre#data").text());
+      d3.csv("data.csv", function(error, data) {
 
-        /* Create a shared transition for anything we're animating */
-        var t = svg.transition()
-            .delay(750)
-            .duration(1000)
-            .ease(d3.easeLinear)
-            .on('end', function() {
-                d3.select('line.guide')
-                    .transition()
-                    .style('opacity', 0)
-                    .remove()
-            });
+          // format the data
+          data.forEach(function(d) {
+              d = type(d);
+          });
 
-        t.select('rect.curtain')
-            .attr('width', 0);
-        t.select('line.guide')
-            .attr('transform', 'translate(' + width + ', 0)')
+          // Filter to one symbol; the S&P 500.
+          var values = data;
+          var dots = data.filter(function(d) {
+              return d.flag == "1";
+          });
 
-    });
 
-    // Parse dates and numbers. We assume values are sorted by date.
-    function type(d) {
-        d.date = parse(d.date);
-        d.price = +d.price;
-        return d;
-    }
+          // Compute the minimum and maximum date, and the maximum price.
+          x.domain([values[0].date, values[values.length - 1].date]);
+          y.domain([0, d3.max(values, function(d) { return +d.price; })]).nice();
 
+          // Add an SVG element with the desired dimensions and margin.
+
+          svg.attr("id", "lineCharPlot")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          // Add the clip path.
+          svg.append("clipPath")
+              .attr("id", "clip")
+              .append("rect")
+              .attr("width", width)
+              .attr("height", height);
+
+          svg.selectAll(".dot")
+              .data(values)
+              .enter().append("circle")
+              .attr("class", "dot")
+              .attr("stroke", "#27282B" )
+              .attr("fill", "#FFF1CC")
+              .attr("stroke-width", "3px" )
+              .attr("cx", line.x())
+              .attr("cy", line.y())
+              .attr("r", function(d){return d.flag=="1"? "8":"0"})
+              .attr("stroke", "lightgrey")
+              .on("mouseover", function(d) {
+                  div.transition()
+                      .duration(200)
+                      .style("opacity", 1);
+                  div.html(d.term + "<br/>"  + d.info)
+                      .style("left", (d3.event.pageX - 90) + "px")
+                      .style("top", (d3.event.pageY + 10) + "px");
+              })
+              .on("mouseout", function(d) {
+                  div.transition()
+                      .duration(500)
+                      .style("opacity", 0);
+              });
+          ;;
+
+          var colors = d3.scaleOrdinal(d3.schemeCategory10);
+          svg.selectAll('.line')
+              .data([values])
+              .enter()
+              .append('path')
+              .attr('class', 'line')
+              .style('stroke', function(d) {
+                  return colors(Math.random() * 50);
+              })
+              .attr('clip-path', 'url(#clip)')
+              .attr('d', function(d) {
+                  return line(d);
+              })
+
+          // /* Add 'curtain' rectangle to hide entire graph */
+          // var curtain = svg.append('rect')
+          //     .attr('x', -1 * width)
+          //     .attr('y', -1 * height)
+          //     .attr('height', height)
+          //     .attr('width', width)
+          //     .attr('class', 'curtain')
+          //     .attr('transform', 'rotate(180)')
+          //     .style('fill', '#ffffff');
+
+          /* Create a shared transition for anything we're animating */
+          var t = svg.transition()
+              .delay(750)
+              .duration(1000)
+              .ease(d3.easeLinear)
+              .on('end', function() {
+                  d3.select('line.guide')
+                      .transition()
+                      .style('opacity', 0)
+                      .remove()
+              });
+
+          // t.select('rect.curtain')
+          //     .attr('width', 0);
+          t.select('line.guide')
+              .attr('transform', 'translate(' + width + ', 0)')
+
+      });
+
+      // Parse dates and numbers. We assume values are sorted by date.
+      function type(d) {
+          d.date = parse(d.date);
+          d.price = +d.price;
+          return d;
+      }
+      d3.select("#lineChartPlot").attr("align","center")
+  }
+  draw();
 </script>
