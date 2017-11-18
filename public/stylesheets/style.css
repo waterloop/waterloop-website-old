@@ -16,7 +16,7 @@ form-text {
     position: relative;
     height: auto;
     min-height: 100% !important;
-    background-image: url("/images/front-page/1.jpg");
+    background-image: url("../images/front-page/1.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ input[type=email]:not(.browser-default){
     width:100%;
     display:block;
     height:30vh;
-    background-image: url("/images/front-page/spotlight01.jpg");
+    background-image: url("../images/front-page/spotlight01.jpg");
     background-attachment: fixed;
     background-color:  #555555;
 }
@@ -41,7 +41,7 @@ input[type=email]:not(.browser-default){
     width:100%;
     display:block;
     height:30vh;
-    background-image: url("/images/front-page/spotlight03.jpg");
+    background-image: url("../images/front-page/spotlight03.jpg");
     background-attachment: fixed;
     background-color:  #555555;
 }
@@ -53,6 +53,20 @@ input[type=email]:not(.browser-default){
 .carousel .carousel-item>img {
     width: 200%;
     margin-left: -50%;
+}
+
+#lineChart {
+  padding: 2%;
+  width: 100%;
+  height: 22%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display:block;
+  background-image: url("../images/front-page/teamaback.jpg");
+  background-color:  #555555;
 }
 
 /* Navbar Styles */
