@@ -1,61 +1,73 @@
 var express = require('express');
 var router = express.Router();
+var teamStructureJSON = require('./teamStructure.json');
+
 
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
     res.render('index', { 
         title: 'Waterloop',
-        pageName: 'home'
+        pageName: 'home',
+        pageParams: {}
     });
 });
 
 router.get('/flock', function(req, res, next) {
     res.render('index', {
         title: 'Waterloop - Flock',
-        pageName: 'flock'
+        pageName: 'flock',
+        pageParams: {}
     });
 });
 
 router.get('/media', function(req, res, next) {
     res.render('media', { 
         title: 'Waterloop – Media',
-        pageName: 'media'
+        pageName: 'media',
+        pageParams: {}
     });
 });
 
 router.get('/team', function(req, res, next) {
     res.render('index', { 
         title: 'Waterloop – Team', 
-        pageName: 'team'
+        pageName: 'team',
+        pageParams: {
+            teamStructure: teamStructureJSON
+        }
     });
 });
 
 router.get('/sponsors', function(req, res, next) {
     res.render('sponsors', { 
         title: 'Waterloop – Sponsors',
-        pageName: 'sponsors'
+        pageName: 'sponsors',
+        pageParams: {}
     });
 });
 
 router.get('/downloads', function(req, res, next) {
     res.render('downloads', { 
         title: 'Waterloop – Downloads',
-        pageName: 'downloads'
+        pageName: 'downloads',
+        pageParams: {}
     });
 });
 
 router.get('/shop', function(req, res, next) {
     res.render('shop', { 
         title: 'Waterloop – Shop', 
-        pageName: 'shop'
+        pageName: 'shop',
+        pageParams: {}
     });
 });
 
 router.get('/contact', function(req, res, next) {
     res.render('contact', { 
         title: 'Waterloop – Contact', 
-        pageName: 'contact'
+        pageName: 'contact',
+        pageParams: {}
     });
 });
 

@@ -4,11 +4,11 @@
     <%- include('includes'); %>
     <title><%= title %></title>
   </head>
-  <body>
+  <body class="grey lighten-5">
 
     <%- include('header', {active: pageName}); %>
 
-    <%- include( pageName ); %>
+    <%- include( pageName , pageParams ); %>
 
 
     <%- include('footer'); %>

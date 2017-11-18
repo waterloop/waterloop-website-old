@@ -1,0 +1,18 @@
+<div class="team-card container">
+    <div class="card">
+        <div class="team-name">
+            <%- team.name %>
+        </div>
+        <div class="team-number">
+            <%- team.members.length %>
+        </div>
+    </div>
+    <div class="team-tree">
+        <ul>
+            <li> <span class="lead-text"> Lead: <%- team.members[0] %> </span>  </li>
+            <% for(var i=1; i<team.members.length; i++) {%>
+                    <li><%= team.members[i] %></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

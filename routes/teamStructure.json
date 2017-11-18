@@ -1,0 +1,141 @@
+{
+    "advisorName": "I am the Advisor",
+    "admin": {
+        "lead": "Admdsnkjadsnin Lead",
+        "teamHeirarchy": [
+            {
+                "team": {
+                    "name": "Something1",
+                    "members": [
+                        "cnsdkjcbdsjhdbcjh",
+                        "Aditya is here",
+                        "sanksj",
+                        "ahsdgjsh"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something2",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something3",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },            {
+                "team": {
+                    "name": "Something4",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something5",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something6",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something2",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something2",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            }
+        ]
+    },
+    "technical": {
+        "lead": "Techincal Lead",
+        "teamHeirarchy": [
+            {
+                "team": {
+                    "name": "Something",
+                    "members": [
+                        "cnsdkjcbdsjhdbcjh",
+                        "Beta"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },            {
+                "team": {
+                    "name": "Something",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Something",
+                    "members":[
+                        "Alpha",
+                        "Beta",
+                        "Gamma"
+                    ]
+                }
+            }
+        ]
+    }
+}
