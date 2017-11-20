@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <%- include('includes'); %>
     <title><%= title %></title>
-  </head>
-  <body>
-    <%- include('header', {active: "Contact"}); %>
+</head>
+<body>
+<%- include('header', {active: "Contact"}); %>
 
-    <div class="container container-fluid">
-      <h1>Contact Info</h1>
-      <div class="row">
+<div class="container container-fluid">
+   <h1>Contact Info</h1>
+    <div class="row">
         <div class="col m8">
-          <h2>Contact Us</h2>
+            <h2>Send us a message</h2>
             <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
             </div>
             <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons email">edit_mode</i>
-                    <input id="email" type="text" class="validate">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-              </form>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="subject" type="text" class="validate">
-                    <label for="subject">Subject</label>
-                  </div>
-                </div>
-              </form>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">short_text</i>
+                            <input id="subject" type="text" class="validate">
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="message" class="materialize-textarea"></textarea>
-                    <label for="message">Message</label>
-                  </div>
-                </div>
-              </form>
-          </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">subject</i>
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <div class="col m4">
-          <h2>Our Office</h2>
+            <h2>Visit us</h2>
 
-          <p>University of Waterloo<br>
-          200 University Ave W<br>
-          Engineering 5, 1104<br>
-          Waterloo, ON N2L 3G1</p>
-          <!-- TODO add a map-->
+            <p>University of Waterloo<br>
+                200 University Ave W<br>
+                Engineering 5, 1104<br>
+                Waterloo, ON N2L 3G1</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4398990702825!2d-80.54704628419452!3d43.47228927212763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf6ad02edccff%3A0xdd9df23996268e17!2sUniversity+of+Waterloo!5e0!3m2!1sen!2sca!4v1511187357255" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- TODO: add a submit button -->
         </div>
-      </div>
     </div>
-    <%- include('footer'); %>
+</div>
+<%- include('footer'); %>
 
-  </body>
+</body>
 </html>
