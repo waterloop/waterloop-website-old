@@ -136,7 +136,7 @@ footer .logo {
 
 
 .team-container {
-    padding: 10vh 2vw;
+    padding: 10vh 2vw 0 2vw;
 }
 
 .team-tree {
@@ -185,4 +185,60 @@ footer .logo {
 
 .team-advisor {
     font-weight: 600;
+}
+
+.sponsor-landing {
+    background-image: url('../images/front-page/ray-hennessy-233426.jpg');
+    margin: none;
+    height: 50vh;
+}
+
+.sponsors-header {
+    color: white;
+    font-size: 70px;
+    padding: 15vh 0 7vh 0;
+    font-weight: 600;
+}
+
+.sponsor-button {
+    font-size: 20px;
+    border-radius: 50px;
+    text-transform: none;
+    height: 45px;
+    line-height: 45px;    
+}
+
+.sponsor-container{
+    padding: 7vh 0;
+}
+
+.sponsor-landing-heading {
+    padding: 1vh 0;
+    font-weight: 600;
+}
+
+
+.sponsor-landing-content {
+    opacity: 0.7;
+}
+
+.sponsor-structure {
+    padding: 25vh 2vw 0 2vw;
+}
+
+.sponsor-structure-heading {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.sponsor-logo {
+    height: 120px;
+    margin: 2vh 1vw;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.sponsor-logo:hover {
+    opacity: 1;
+    transition: 0.2s;    
 }

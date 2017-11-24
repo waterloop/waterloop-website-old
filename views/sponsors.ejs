@@ -1,0 +1,32 @@
+<div class="sponsor-landing">
+    <div class="center">
+        <div class="sponsors-header"> We love our sponsors! </div>
+        <a href="/contact" class="waves-effect waves-light btn sponsor-button amber accent-2">Become a sponsor</a>
+        <div class="container sponsor-container">
+            <div class="row">
+                <div class="col s6 offset-s3">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="sponsor-landing-heading">Waterloop Sponsorship</div>
+                            <p class="sponsor-landing-content">Lorem ipsum dolor sit amet, animal timeam mel te, in nulla noster dicunt pri, novum dolorem te eum. Simul dicam et eam. Ne nominavi probatus cotidieque has, ei tritani contentiones usu. Latine scribentur ei nec, veri debet nonumy cu eam.</p>
+                            <p class="sponsor-landing-content"><p class="sponsor-landing-content">Lorem ipsum dolor sit amet, animal timeam mel te, in nulla noster dicunt pri, novum dolorem te eum. Simul dicam et eam. Ne nominavi probatus cotidieque has, ei tritani contentiones usu. Latine scribentur ei nec, veri debet nonumy cu eam.</p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sponsor-structure container">
+    
+    <% for(var i=0; i<sponsors.length; i++) {%>                
+        <%- include( 'sponsorStructure' , {
+            "members": sponsors[i].members,
+            "name": sponsors[i].name
+        } ); %>
+    <% } %>
+
+</div>
