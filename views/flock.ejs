@@ -7,6 +7,20 @@
   background-size: cover;
   padding: 5%;
 }
+
+/* Image hover effects: https://codepen.io/nxworld/pen/ZYNOBZ */
+.card-image {
+  overflow: hidden;
+}
+
+.zoomblur:hover {
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+  -webkit-filter: blur(2px);
+	filter: blur(2px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
 </style>
 
 
@@ -19,7 +33,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose I</span>
         </div>
         <div class="card-content">
@@ -30,7 +44,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose II</span>
         </div>
         <div class="card-content">
@@ -41,7 +55,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose X</span>
         </div>
         <div class="card-content">
