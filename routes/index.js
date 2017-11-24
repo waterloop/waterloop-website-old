@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var teamStructureJSON = require('./teamStructure.json');
+var sponsorStructureJSON = require('./sponsorStructure.json');
 
 
 /* GET home page. */
@@ -40,10 +41,12 @@ router.get('/team', function(req, res, next) {
 });
 
 router.get('/sponsors', function(req, res, next) {
-    res.render('sponsors', { 
+    res.render('index', { 
         title: 'Waterloop – Sponsors',
         pageName: 'sponsors',
-        pageParams: {}
+        pageParams: {
+            sponsors: sponsorStructureJSON.sponsors
+        }    
     });
 });
 
