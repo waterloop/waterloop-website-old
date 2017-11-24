@@ -137,3 +137,55 @@ footer .logo {
 *::-moz-selection {
   background-color: #fee098; /* hightlighting colour */
 }
+
+.team-container {
+    padding: 10vh 2vw;
+}
+
+.team-tree {
+    padding: 0 0 0 10px;
+}
+
+.team-name {
+    padding: 1vh 1vw;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.team-card {
+    padding: 2vh 0;
+}
+
+.team-number {
+    float: right;
+    display: inline-block;
+    padding: 1vh 1vw;
+    font-weight: 500;
+}
+
+.lead-text {
+    font-weight: 600;
+}
+
+.team-header-text {
+    font-size: 30px;
+    opacity: 0.6; 
+    padding: 0 4vw;  
+}
+
+.team-header {
+    font-weight: 600;
+}
+
+.team-landing {
+    padding: 5vh;
+}
+
+.team-faculty {
+    padding: 10vh 0;
+    font-size: 24px;
+}
+
+.team-advisor {
+    font-weight: 600;
+} 
