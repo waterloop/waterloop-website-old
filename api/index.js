@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const slackmailer = require('slack-node');
 const secret = require('../secret/index.json');
 const email = secret.email_account;
-const slack = secret.slack;
+const slack = secret.slack_account;
 
 module.exports = {
     sendEmail: function (data, callback) {
