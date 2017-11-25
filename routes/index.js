@@ -95,7 +95,7 @@ router.post('/api/submitEmailForm', (req, res) => {
 router.post('/api/submitSlackForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
     const data = req.query;
-
+    console.log(data);
     sender.sendSlack({
         to: data.email,
         subject: data.subject,

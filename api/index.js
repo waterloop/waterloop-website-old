@@ -37,7 +37,7 @@ module.exports = {
 
         slackClient.api('chat.postMessage', {
             token: slack.api_token,
-            text: 'contact form request test',
+            text: data.firstname + " " + data.lastname + ": \n" + data.subject + "\n" + data.msg,
             channel: '#contact_us',
         }, function(err, response){
             console.log(response);

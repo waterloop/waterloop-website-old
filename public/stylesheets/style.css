@@ -169,8 +169,8 @@ footer .logo {
 
 .team-header-text {
     font-size: 30px;
-    opacity: 0.6; 
-    padding: 0 4vw;  
+    opacity: 0.6;
+    padding: 0 4vw;
 }
 
 .team-header {
@@ -208,7 +208,7 @@ footer .logo {
     border-radius: 50px;
     text-transform: none;
     height: 45px;
-    line-height: 45px;    
+    line-height: 45px;
 }
 
 .sponsor-container{
@@ -243,5 +243,13 @@ footer .logo {
 
 .sponsor-logo:hover {
     opacity: 1;
-    transition: 0.2s;    
+    transition: 0.2s;
+}
+
+.btn {
+  background-color: #fed138;
+}
+
+.btn:hover, .btn-large:hover{
+    background-color: #fee098;
 }
