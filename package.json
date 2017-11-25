@@ -13,6 +13,11 @@
     "express": "~4.15.5",
     "favicon": "0.0.2",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
+    "sendmail": "^1.2.0",
+    "serve-favicon": "~2.4.5",
+    "slack-node": "^0.1.8"
+  },
+  "devDependencies": {
+    "nodemailer": "^4.4.0"
   }
 }

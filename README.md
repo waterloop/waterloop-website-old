@@ -8,7 +8,7 @@ Official website of teamwaterloop
 * Run server `npm start`
 
 ## How to add routes?
-* Find `routes/index.js`
+* Find `routes/siteRoutes.js`
 * Insert another one of those
 ```javascript 1.8
 router.get('/', function(req, res, next) {
