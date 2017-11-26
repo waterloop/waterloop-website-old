@@ -17,8 +17,8 @@ module.exports = {
         const mailOptions = {
             from: email.username,
             to: 'nikolaevra@hotmail.com',
-            subject: 'Sending Email using Node.js',
-            text: '<h1>Welcome</h1><p>That was easy!</p>'
+            subject: `Contact us request: ${data.subject}`,
+            text: `Incoming contact us request:\nName: ${data.firstname} ${data.lastname}\nEmail: ${data.email}\nSubject: ${data.subject}\nMessage: ${data.msg}`
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
@@ -34,13 +34,14 @@ module.exports = {
 
     sendSlack: function (data, callback) {
         let slackClient = new slackmailer(slack.api_token);
+        console.log(data.firstname);
 
-        slackClient.api('chat.postMessage', {
+       slackClient.api('chat.postMessage', {
             token: slack.api_token,
-            text: data.firstname + " " + data.lastname + ": \n" + data.subject + "\n" + data.msg,
+            text: `*Incoming contact us request:*\n*Name:* \`${data.firstname} ${data.lastname}\`\n*Email:* \`${data.email}\`\n*Subject:* ${data.subject}\n*Message:* ${data.msg}`,
             channel: '#contact_us',
         }, function(err, response){
-            console.log(response);
+            //console.log(response);
             if (err) {
                 callback(false);
             } else {

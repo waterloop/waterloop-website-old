@@ -76,13 +76,8 @@ router.get('/contact', function(req, res, next) {
 
 router.post('/api/submitEmailForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
-    const data = req.query;
 
-    sender.sendEmail({
-        to: data.email,
-        subject: data.subject,
-        html: data.msg,
-    }, (result) => {
+    sender.sendEmail(req.query, (result) => {
         if (result) {
             res.status(200).json({"message": "Email sent successfully"});
         } else {
@@ -94,13 +89,8 @@ router.post('/api/submitEmailForm', (req, res) => {
 
 router.post('/api/submitSlackForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
-    const data = req.query;
-    console.log(data);
-    sender.sendSlack({
-        to: data.email,
-        subject: data.subject,
-        html: data.msg,
-    }, (result) => {
+
+    sender.sendSlack(req.query, (result) => {
         if (result) {
             res.status(200).json({"message": "Slack sent successfully"});
         } else {

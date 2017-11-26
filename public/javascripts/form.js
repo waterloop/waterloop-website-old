@@ -1,31 +1,41 @@
-function assert(condition, message) {
-    if (!condition) {
-        message = message || "Assertion failed";
-        if (typeof Error !== "undefined") {
-            throw new Error(message);
-        }
-        throw message; // Fallback
+/**
+ * @return {boolean}
+ */
+function ValidateEmail(email) {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+}
+
+function getInputs() {
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    if (ValidateEmail(email) && message.length > 0) {
+        return {
+            firstname: document.getElementById('first_name').value,
+            lastname: document.getElementById('last_name').value,
+            email: email,
+            subject: document.getElementById('subject').value,
+            msg: message,
+        };
+    } else if (message.length === 0) {
+        showMessage("Message field cannot be empty");
+        return false;
+    } else {
+        showMessage("Invalid email");
+        return false;
     }
 }
 
-function submitEmailForm(){
-    var first_name = document.getElementById('first_name').value;
-    var last_name = document.getElementById('last_name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-    assert(message.length > 0, "Message should not be empty");
-    $.ajax({
-        type: "POST",
-        url: "/api/submitEmailForm",
-        data: {firstname: first_name,lastname:last_name, email: email, subject:subject, msg:message},
-        success: function (returnCode) {
-            alert(returnCode.message);
-        },
-        error: function (err) {
-            alert(err.message)
-        }
-    });
+function resetFields() {
+    document.getElementById('first_name').value = "";
+    document.getElementById('last_name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('subject').value = "";
+    document.getElementById('message').value = "";
+}
+
+function showMessage(text) {
+    alert(text);
 }
 
 function formatParams( params ){
@@ -38,20 +48,35 @@ function formatParams( params ){
 }
 
 function submitSlackForm(){
-    var first_name = document.getElementById('first_name').value;
-    var last_name = document.getElementById('last_name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-    assert(message.length > 0, "Message should not be empty");
-    $.ajax({
-        type: "POST",
-        url: "/api/submitSlackForm"+formatParams({firstname: first_name,lastname:last_name, email: email, subject:subject, msg:message}),
-        success: function (returnCode) {
-            alert(returnCode.message);
-        },
-        error: function (err) {
-            alert(err.message)
-        }
-    });
+    const form = getInputs();
+
+    if (form) {
+        $.ajax({
+            type: "POST",
+            url: "/api/submitSlackForm" + formatParams(form),
+            success: function (returnCode) {
+                showMessage(returnCode.message);
+                resetFields();
+            }, error: function (err) {
+                showMessage(err.message);
+            }
+        });
+    }
+}
+
+function submitEmailForm(){
+    const form = getInputs();
+
+    if (form) {
+        $.ajax({
+            type: "POST",
+            url: "/api/submitEmailForm" + formatParams(form),
+            success: function (returnCode) {
+                showMessage(returnCode.message);
+                resetFields();
+            }, error: function (err) {
+                showMessage(err.message);
+            }
+        });
+    }
 }
