@@ -253,3 +253,14 @@ footer .logo {
 .btn:hover, .btn-large:hover{
     background-color: #fee098;
 }
+
+/* No selection nor dragging */
+.noseldrag {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}

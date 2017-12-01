@@ -1,11 +1,15 @@
 <style>
+body {
+  background: linear-gradient(0deg,rgba(255,255,255,1),rgba(255,255,255,0.5)),url('/images/front-page/ray-hennessy-233426.jpg') center center no-repeat;
+  background-size: cover;
+  /*padding: 5%;*/
+}
+
 #flock {
+  padding: 5%;
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg,rgba(255,255,255,1),rgba(255,255,255,0.5)),url('/images/front-page/ray-hennessy-233426.jpg') center center no-repeat;
-  background-size: cover;
-  padding: 5%;
 }
 
 /* Image hover effects: https://codepen.io/nxworld/pen/ZYNOBZ */
@@ -15,7 +19,7 @@
 
 .zoomblur:hover {
   -webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	transform: scale(1.02);
   -webkit-filter: blur(2px);
 	filter: blur(2px);
 	-webkit-transition: .3s ease-in-out;
@@ -24,16 +28,30 @@
 </style>
 
 
-<div id="flock" class="container-fluid center">
+<div id="flock" class="container container-fluid center">
   <div class="row">
     <h1>The Flock</h1>
   </div>
 
   <div class="row">
+    <% for(var i = 0; i < flock.length; i++) { %>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img class="zoomblur noseldrag" src="<%= flock[i].thumbnail %>">
+            <span class="card-title"><a href="/flock/<%= flock[i].url %>"><%= flock[i].name %></a></span>
+          </div>
+          <div class="card-content">
+            <p><%= flock[i].desc %></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+    <!--
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="/images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose I</span>
         </div>
         <div class="card-content">
@@ -44,7 +62,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="/images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose II</span>
         </div>
         <div class="card-content">
@@ -55,7 +73,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img class="zoomblur" src="images/front-page/1486659447915.jpeg">
+          <img class="zoomblur" src="/images/front-page/1486659447915.jpeg">
           <span class="card-title">Goose X</span>
         </div>
         <div class="card-content">
@@ -63,5 +81,6 @@
         </div>
       </div>
     </div>
+  -->
   </div>
 </div>

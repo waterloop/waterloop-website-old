@@ -3,6 +3,7 @@ const router = express.Router();
 const teamStructureJSON = require('./teamStructure.json');
 const sponsorStructureJSON = require('./sponsorStructure.json');
 const sender = require('../api/index');
+const flockJSON = require('./flock.json');
 
 /* GET home page. */
 
@@ -18,9 +19,25 @@ router.get('/flock', function(req, res, next) {
     res.render('index', {
         title: 'Waterloop - Flock',
         pageName: 'flock',
-        pageParams: {}
+        pageParams: {
+          flock: flockJSON
+        }
     });
 });
+
+// The geese (flock pages)
+for(var i in flockJSON) {
+    var a = flockJSON[i];
+    router.get('/flock/' + a.url, function(req, res, next) {
+        res.render('index', {
+            title: 'Waterloop – ' + a.name,
+            pageName: 'goose',
+            pageParams: {
+              goose: a
+            }
+        });
+    });
+}
 
 router.get('/media', function(req, res, next) {
     res.render('media', {
