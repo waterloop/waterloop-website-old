@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Goose I",
+    "thumbnail": "/images/front-page/1486659447915.jpeg",
+    "url": "goose_i",
+    "desc": "Goose I was the initial prototype. ",
+    "sections": [
+      {
+        "title": "Specifications",
+        "content": [
+          "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
+          "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
+        ],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+      },
+      {
+        "title": "Pod Shell",
+        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
+      }
+    ]
+  },
+  {
+    "name": "Goose II",
+    "thumbnail": "/images/front-page/1486659447915.jpeg",
+    "url": "goose_ii",
+    "desc": "Goose I was the initial prototype. ",
+    "sections": [
+      {
+        "title": "Specifications",
+        "content": [
+          "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
+          "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
+        ],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+      },
+      {
+        "title": "Pod Shell",
+        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
+      }
+    ]
+  },
+  {
+    "name": "Goose X",
+    "thumbnail": "/images/front-page/1486659447915.jpeg",
+    "url": "goose_x",
+    "desc": "Goose I was the initial prototype. ",
+    "sections": [
+      {
+        "title": "Specifications",
+        "content": [
+          "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
+          "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
+        ],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+      },
+      {
+        "title": "Pod Shell",
+        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
+        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
+      }
+    ]
+  }
+]
