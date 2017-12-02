@@ -2344,7 +2344,7 @@ ul:not(.browser-default)>li {
 }
 
 a {
-    color: #039be5;
+    color: #fed138;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent
 }
@@ -5101,13 +5101,13 @@ small {
 }
 
 .btn:focus,.btn-large:focus,.btn-floating:focus {
-    background-color: #1d7d74
+    background-color: #e4b000;
 }
 
 .btn,.btn-large {
     text-decoration: none;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #fed138;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: .2s ease-out;
@@ -5129,7 +5129,7 @@ small {
     height: 40px;
     line-height: 40px;
     padding: 0;
-    background-color: #26a69a;
+    background-color: #fed138;
     border-radius: 50%;
     -webkit-transition: .3s;
     transition: .3s;
@@ -5138,7 +5138,7 @@ small {
 }
 
 .btn-floating:hover {
-    background-color: #26a69a
+    background-color: ##fed138
 }
 
 .btn-floating:before {
@@ -5848,7 +5848,7 @@ select:focus {
 
 button:focus {
     outline: none;
-    background-color: #2ab7a9
+    background-color: #e4b000;
 }
 
 label {
