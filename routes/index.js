@@ -68,7 +68,7 @@ router.get('/sponsors', function(req, res, next) {
 });
 
 router.get('/downloads', function(req, res, next) {
-    res.render('downloads', {
+    res.render('index', {
         title: 'Waterloop – Downloads',
         pageName: 'downloads',
         pageParams: {}
