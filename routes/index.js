@@ -40,7 +40,7 @@ for(var i in flockJSON) {
 }
 
 router.get('/media', function(req, res, next) {
-    res.render('media', {
+    res.render('index', {
         title: 'Waterloop – Media',
         pageName: 'media',
         pageParams: {}
@@ -84,7 +84,7 @@ router.get('/shop', function(req, res, next) {
 });
 
 router.get('/contact', function(req, res, next) {
-    res.render('contact', {
+    res.render('index', {
         title: 'Waterloop – Contact',
         pageName: 'contact',
         pageParams: {}
