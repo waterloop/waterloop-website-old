@@ -1,64 +1,73 @@
 [
   {
     "name": "Goose I",
-    "thumbnail": "/images/front-page/1486659447915.jpeg",
+    "thumbnail": "/images/flock/goose1.png",
     "url": "goose_i",
     "desc": "Goose I was the initial prototype. ",
+    "banner": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/5807de1c9de4bb88fee7de24/1476910626385/Competition+pod_elevation.jpg?format=2500w",
     "sections": [
       {
         "title": "Specifications",
         "content": [
           "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
           "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
-        ],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+        ]
       },
       {
         "title": "Pod Shell",
         "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
-      }
-    ]
-  },
-  {
-    "name": "Goose II",
-    "thumbnail": "/images/front-page/1486659447915.jpeg",
-    "url": "goose_ii",
-    "desc": "Goose I was the initial prototype. ",
-    "sections": [
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+      },
       {
-        "title": "Specifications",
+        "title": "Levitation System",
         "content": [
-          "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
-          "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
+          "Air levitation through the form of four air casters is supplied via two on-board air tanks. The air casters create a thin sheet of air similar to an air hockey table upon which our pod floats. Air levitation is significantly less expensive and produces less drag than magnetic levitation. Although air caster technology has been in use for decades and is well understood, our levitation system is the first of its kind."
         ],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
       },
       {
-        "title": "Pod Shell",
-        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
-      }
-    ]
-  },
-  {
-    "name": "Goose X",
-    "thumbnail": "/images/front-page/1486659447915.jpeg",
-    "url": "goose_x",
-    "desc": "Goose I was the initial prototype. ",
-    "sections": [
-      {
-        "title": "Specifications",
+        "title": "Braking",
         "content": [
-          "This is the Hyperloop pod that we are building. The GOOSE I is our half-scale, functional prototype vehicle pod. Fabrication for the pod is already underway and the funding from our Kickstarter will be used to complete its construction. This pod is entered in the SpaceX Hyperloop Pod Competition to perform full systems tests on SpaceX’s one mile long test track at high-speeds and in a vacuum.",
-          "The prototype is about 0.8m  (32\") wide, 2.5m (8') long, 0.9m (36\") tall, around 250 kg in weight, and will travel at 550km/h (150m/s)."
-        ],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca03086e6c0e3351a3a12/1486659664943/?format=1500w"
+          "Our hybrid braking system is mechanically fail-safe and functions even if all other systems fail. A combination of eddy current braking and friction braking is used. This allows for greater control over heat generation, higher performance, lower maintenance, and safety through redundancy."
+        ]
       },
       {
-        "title": "Pod Shell",
-        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
-        "img": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca082440243e6828f99a1/1486659740271/?format=1500w"
+        "title": "Eddy Current Braking",
+        "content": [
+          "Our state-of-the-art contactless eddy current braking system uses 84 neodymium magnets arranged in a <a href=\"https://en.wikipedia.org/wiki/Halbach_array\">Halbach array</a>. This arrangement doubles the magnetic strength on one side and cancels it out on the other. Braking force is achieved by exploiting the same drag produced in magnetic levitation - or when a permanent magnet is dropped down a copper tube. As the permanent magnets approach the I-beam while the pod is in motion, tiny circular electrical currents called eddy currents are induced within the beam which smoothly slows the pod down in a highly controlled fashion. "
+        ],
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/58cb25819f74560b269a1ef9/1489708432097/?format=1500w"
+      },
+      {
+        "title": "Friction Braking",
+        "content": [
+          "Our friction braking system is simple yet effective. Special brake linings made of resin-bonded synthetic rubber with steel fibres allow for effective energy transformation and heat dissipation, sparing damage to the I-beam."
+        ],
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca0ca725e253c1a5a7d04/1486659805849/?format=1500w"
+      },
+      {
+        "title": "Lateral Control",
+        "content": [
+          "The lateral control system uses two sets of spring-loaded caster wheels to maintain the lateral stability of the Goose I, with respect to the I-beam of the Hypertube. The system combines reliability, efficiency, safety, and comfort by using high speed, high performance, and dampened wheels."
+        ],
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca13ae3df285dc91a14aa/1486659913757/?format=1500w"
+      },
+      {
+        "title": "Drive Train",
+        "content": [
+          "The Low-speed Drive system allows for taxiing before the test, in order to position for launch, and after the test so that the pod can exit the Hypertube. This system uses an air cylinder to retract the drive wheel into the pod during high speed travel. A set of four idler wheels keep the air casters from contacting the ground when levitation stops."
+        ],
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca11815d5db3ff222aeba/1486659874840/?format=1500w"
+      },
+      {
+        "title": "Electrical and Embedded Systems",
+        "content": [
+          "<h3>Electrical</h3>",
+          "The Electrical system is responsible for power distribution. Onboard power is delivered by a rechargeable 48V battery pack surrounded by a phase changing, fire-retardant matrix and enclosed in a sturdy PVC shell enclosure to keep it cool and secure.",
+          "<h3>Embedded</h3>",
+          "The nervous system of our pod - using a multitude of sensors and actuators, the embedded system is responsible for the control of all other subsystems, position detection within the Hypertube, and communications between the pod and a remote control dashboard. This dashboard acts as a control center and a feed displaying information on the status of the pod."
+        ],
+        "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca16529687fa0576c7773/1486659956942/?format=1500w"
       }
     ]
   }

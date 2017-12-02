@@ -1,3 +1,45 @@
+<div class="parallax-container">
+  <div class="parallax"><img class="responsive-img" src="<%= goose.banner %>"></div>
+</div>
+<div class="section white">
+  <div class="row container">
+    <h2 class="header"><%= goose.name %></h2>
+    <p class="grey-text text-darken-3 lighten-3"><%= goose.desc %></p>
+  </div>
+</div>
+<% for(var i in goose.sections) { %>
+  <% if('parallax' in goose.sections[i]) { %>
+    <div class="parallax-container">
+      <div class="parallax"><img class="responsive-img pimg" src="<%= goose.sections[i].parallax %>"></div>
+    </div>
+  <% } %>
+  <div class="section white">
+    <div class="row container">
+      <% if(!('parallax' in goose.sections[i])) { %>
+        <hr>
+      <% } %>
+      <h2 class="header"><%= goose.sections[i].title %></h2>
+      <% for(var j in goose.sections[i].content) { %>
+        <p><%- goose.sections[i].content[j] %><p>
+      <% } %>
+      <% if('img' in goose.sections[i]) { %>
+      <% for(var j = 0; j < goose.sections[i].img.length; j++) { %>
+        <img class="responsive-img" src="<%= goose.sections[i].img[j] %>" />
+      <% } %>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+
+
+
+<!--
 <div class="container container-fluid">
    <h1><%= goose.name %></h1>
     <div class="row">
@@ -9,4 +51,4 @@
         <img class="responsive-img" src="<%= goose.sections[i].img %>" />
       <% } %>
     </div>
-</div>
+</div> -->
