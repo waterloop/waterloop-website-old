@@ -7,6 +7,21 @@ Official website of teamwaterloop
 * Install requirements `npm install`
 * Run server `npm start`
 
+## Maintaining the flock pages
+
+All the data is stored within `routes/flock.json`. The file contains a JSON array of the pods. A pod has few properties:
+
+* `name`: The name of the pod, used for titles and such
+* `thumbnail`: The image used to display on the flock page
+* `url`: The location of the pod page within `/flock/`.
+* `desc`: A short description of the pod
+* `banner`: The parallax image src to display on the pod page
+* `sections`: Objects of the sections on the pod page
+  * `title`: The header of the section
+  * `content`: An array of text (paragraphs)
+  * `parallax`: An optional image for a parallax slide above the section
+  * `img`: An optional array containing image srcs
+
 ## How to add routes?
 * Find `routes/siteRoutes.js`
 * Insert another one of those
