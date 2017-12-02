@@ -6,11 +6,6 @@ form-text {
     font-size: 10px;
 }
 
-.blog-row {
-    width: 100%;
-    margin-left:0;
-}
-
 #landing {
     position: relative;
     height: auto;
@@ -141,6 +136,7 @@ footer .logo {
 /* firefox highlighting colour */
 *::-moz-selection {
   background-color: rgba(0,0,0,0.7); /* hightlighting colour */
+  color: #FFF;
 }
 
 .team-container {
