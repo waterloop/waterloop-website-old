@@ -134,12 +134,13 @@ footer .logo {
 
 /* hightlighting colour */
 *::selection {
-  background-color: #fee098;
+  background-color: rgba(0,0,0,0.7);
+  color: #FFF;
 }
 
 /* firefox highlighting colour */
 *::-moz-selection {
-  background-color: #fee098; /* hightlighting colour */
+  background-color: rgba(0,0,0,0.7); /* hightlighting colour */
 }
 
 .team-container {
