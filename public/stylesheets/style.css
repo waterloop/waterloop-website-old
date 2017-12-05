@@ -265,3 +265,36 @@ footer .logo {
   -webkit-user-drag: none;
   user-drag: none;
 }
+
+.media-landing {
+    background-image: url('../images/front-page/ray-hennessy-233426.jpg');
+    margin: none;
+    height: 50vh;
+}
+
+.media-header {
+    color: white;
+    font-size: 70px;
+    padding: 9vh 0 10vh 0;
+    font-weight: 600;
+}
+
+.media-icon {
+    color: white;
+    display: inline-block;
+    padding: 0 1vw 0 1vw;
+}
+
+.main-tweet {
+    opacity: 0.8;
+    display: inline-block;
+}
+.media-carousel {
+    height: 20vh;
+}
+
+#main-tweet:hover {
+    bottom: 1000px;
+    transition: 5s;
+}
+

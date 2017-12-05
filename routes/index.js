@@ -40,10 +40,21 @@ for(var i in flockJSON) {
 }
 
 router.get('/media', function(req, res, next) {
-    res.render('index', {
-        title: 'Waterloop – Media',
-        pageName: 'media',
-        pageParams: {}
+    var tweets = [];
+    var instas = [];
+    sender.getTweeterPosts(function(tweetList){
+        sender.getInstaPosts(function(instaList){
+            console.log(tweetList);
+            console.log(instaList.data.length);
+            res.render('index', {
+                title: 'Waterloop – Media',
+                pageName: 'media',
+                pageParams: {
+                    tweets: tweetList,
+                    instas: instaList.data
+                }
+            });
+        });
     });
 });
 
@@ -117,3 +128,4 @@ router.post('/api/submitSlackForm', (req, res) => {
 });
 
 module.exports = router;
+

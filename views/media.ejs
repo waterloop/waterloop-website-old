@@ -1,0 +1,37 @@
+<div class="media-landing">
+    <div class="center">
+        <div class="media-header"> Notes from Waterloop! </div>
+        <div class="container sponsor-container">
+            <div class="row">
+                <div class="container">
+                    <div class="row center-align">
+                        <div class="media-icon">
+                            <i class="small material-icons">add_circle_outline</i>
+                        </div>
+                        <div class="media-icon">
+                            <i class="small material-icons">add_circle_outline</i>
+                        </div>
+                        <div class="media-icon">
+                            <i class="small material-icons">add_circle_outline</i>
+                        </div>                                    
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+        
+    <ul class="collection media-carousel">
+    <% for(var i=0; i<tweets.length ; i++) {%>      
+        <a class="carousel-item">          
+        <li class="card avatar main-tweet">
+            <img src=<%=tweets[i].user.profile_image_url%> alt="" class="circle">                
+            <span class="title"><%= tweets[i].text %></span>
+        </li>
+        </a>
+    <% } %>
+    </ul>
+</div>
