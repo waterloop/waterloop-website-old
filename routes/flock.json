@@ -64,7 +64,7 @@
         "content": [
           "<h3>Electrical</h3>",
           "The Electrical system is responsible for power distribution. Onboard power is delivered by a rechargeable 48V battery pack surrounded by a phase changing, fire-retardant matrix and enclosed in a sturdy PVC shell enclosure to keep it cool and secure.",
-          "<h3>Embedded</h3>",
+          "<h3>EMBEDDED</h3>",
           "The nervous system of our pod - using a multitude of sensors and actuators, the embedded system is responsible for the control of all other subsystems, position detection within the Hypertube, and communications between the pod and a remote control dashboard. This dashboard acts as a control center and a feed displaying information on the status of the pod."
         ],
         "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca16529687fa0576c7773/1486659956942/?format=1500w"
