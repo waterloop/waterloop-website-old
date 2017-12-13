@@ -2,6 +2,7 @@
 body {
   background: linear-gradient(0deg,rgba(255,255,255,1),rgba(255,255,255,0.5)),url('/images/front-page/ray-hennessy-233426.jpg') center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   /*padding: 5%;*/
 }
 
@@ -19,9 +20,7 @@ body {
 
 .zoomblur:hover {
   -webkit-transform: scale(1.1);
-	transform: scale(1.02);
-  -webkit-filter: blur(2px);
-	filter: blur(2px);
+	transform: scale(1.1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
@@ -35,17 +34,18 @@ body {
 
   <div class="row">
     <% for(var i = 0; i < flock.length; i++) { %>
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img class="zoomblur noseldrag" src="<%= flock[i].thumbnail %>">
-            <span class="card-title"><a href="/flock/<%= flock[i].url %>"><%= flock[i].name %></a></span>
-          </div>
-          <div class="card-content">
-            <p><%= flock[i].desc %></p>
+      <a href="/flock/<%= flock[i].url %>">
+        <div class="col s12 m4">
+          <div class="card grey darken-4 z-depth-3">
+            <div class="card-image">
+              <img class="zoomblur noseldrag img-responsive" src="<%= flock[i].thumbnail %>">
+            </div>
+            <div class="card-content center">
+              <span class="card-title"><%= flock[i].name %></span>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     <% } %>
   </div>
 </div>
