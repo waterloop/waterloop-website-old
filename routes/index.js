@@ -9,7 +9,7 @@ const flockJSON = require('./flock.json');
 
 router.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'Waterloop',
+        title: 'Waterloop – Canada\'s Hyperloop',
         pageName: 'home',
         pageParams: {}
     });
@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/flock', function(req, res, next) {
     res.render('index', {
-        title: 'Waterloop - Flock',
+        title: 'Waterloop – Flock',
         pageName: 'flock',
         pageParams: {
           flock: flockJSON
@@ -128,4 +128,3 @@ router.post('/api/submitSlackForm', (req, res) => {
 });
 
 module.exports = router;
-

@@ -7,22 +7,6 @@ form-text {
     font-size: 10px;
 }
 
-#landing {
-    position: relative;
-    height: 100%;
-    min-height: 100% !important;
-    top: 0;
-    left: 0;
-    offset: none;
-    background-image: url("../images/front-page/1.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color:  #555555;
-    padding:5%;
-    margin: 0;
-}
-
 input[type=email]:not(.browser-default){
     margin: 0;
 }
