@@ -102,6 +102,14 @@ router.get('/contact', function(req, res, next) {
     });
 });
 
+router.get('*', function(req, res, next) {
+    res.render('index', {
+        title: 'Waterloop – Canada\'s Hyperloop',
+        pageName: '404',
+        pageParams: {}
+    });
+});
+
 router.post('/api/submitEmailForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
 

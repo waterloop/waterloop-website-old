@@ -226,3 +226,9 @@ footer .logo {
     bottom: 1000px;
     transition: 5s;
 }
+
+@media only screen and (min-width: 993px) {
+  #i404 {
+    margin-top:7rem;
+  }
+}
