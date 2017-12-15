@@ -2,8 +2,8 @@
 Official website of teamwaterloop
 
 ## How to start a server and locally run the website?
-* Git clone the repo `git clone https://github.com/teamwaterloop/team-website.git`
-* Do this `cd team-website`
+* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git`
+* Do this `cd waterloop-website`
 * Install requirements `npm install`
 * Run server `npm start`
 
@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
 ## CSS file documentation
 |File Name|Purpose|
 |---|---|
-|style.css   |  |
+|style.css   |Holds the CSS for the entire website|
 
 ## How to use EJS templates?
 * A great tutorial here http://www.embeddedjs.com/getting_started.html
