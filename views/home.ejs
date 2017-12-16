@@ -1,66 +1,96 @@
 <style>
-html, body {
-  height: 100%;
-}
+    html, body {
+        height: 100%;
+    }
 
-.full-height {
-  height: calc(100% - 64px);
-  margin: 0;
-}
+    .full-height {
+        height: calc(100% - 64px);
+        margin: 0;
+    }
 
-.empty {
-  padding: 0;
-}
+    .empty {
+        padding: 0;
+    }
+
+    .image123{
+        clear: both;
+        margin-top: 10em;
+    }
+
+    .title-box {
+        margin-top: 5em;
+        clear:both;
+    }
+
+    .title-text {
+        color: white;
+        margin-top: 0;
+        font-weight: 700;
+        text-shadow: 0 0 0.5em #FFFFFF;
+    }
+
+    .subtitle-text {
+        font-size: 2em;
+        color:white;
+    }
+
+    .small-glyph {
+        margin-left: 5em;
+    }
 </style>
 
 <div class="parallax-container full-height">
-  <div class="parallax"><img class="responsive-img" src="images/front-page/toronto.png"></div>
-  <div class="container center landing">
-    <div style="margin-top: 15em;">
-        <img height="24px" class="noseldrag" src="/images/front-page/wluwca.png">
-        <h1 style="color: white; margin-top: 0; font-weight: 700; text-shadow: 0 0 0.5em #FFFFFF;">Canada's Hyperloop</h1>
-        <p style="font-size: 2em; color:white;">
-            Having withstood the test of time, team Waterloop is back with
-            <br> a whole new roster, preparing to take on the SpaceX
-            <br> Hyperloop challenge in Summer 2018.
-        </p>
-    </div>
-    <div>
-        <h5 style="color: white;"> Sign up for our monthly newsletter </h5>
-        <div class="row" style="margin-bottom:0;">
-            <div class="col s3"></div>
-            <div class="file-field input-field col s6">
-                <div class="row" style="margin-bottom:0;">
-                  <div class="col s11">
-                    <input placeholder="Your Email" id="email" type="email" class="validate" style="color:#FFF; font-size: 1.5em;">
-                    <p style="font-size:14px;margin-top:1px;color:#808080;">We don't spam, that's a promise.</p>
-                  </div>
-                  <div class="col s1">
-                    <a href="/" id="neg-margin"><i class="material-icons right">send</i></a>
-                  </div>
+    <div class="parallax"><img class="responsive-img" src="images/front-page/toronto.png"></div>
+    <div class="container center landing">
+        <div class="image123">
+            <img src="images/front-page/waterloo-shield.png" height="50"/>
+            <img class="small-glyph" src="images/front-page/waterloop-logo.png" height="50"/>
+            <img class="small-glyph" src="images/front-page/canada-flag.png" height="50"/>
+        </div>
+        <div class="title-box">
+            <h1 class="title-text">Canada's Hyperloop</h1>
+            <p class="subtitle-text">
+                Having withstood the test of time, team Waterloop is back with
+                <br> a whole new roster, preparing to take on the SpaceX
+                <br> Hyperloop challenge in Summer 2018.
+            </p>
+        </div>
+        <div>
+            <h5 style="color: white;"> Sign up for our monthly newsletter </h5>
+            <div class="row" style="margin-bottom:0;">
+                <div class="col s3"></div>
+                <div class="file-field input-field col s6">
+                    <div class="row" style="margin-bottom:0;">
+                        <div class="col s11">
+                            <input placeholder="Your Email" id="email" type="email" class="validate" style="color:#FFF; font-size: 1.5em;">
+                            <p style="font-size:14px;margin-top:1px;color:#808080;">We don't spam, that's a promise.</p>
+                        </div>
+                        <div class="col s1">
+                            <a href="/" id="neg-margin"><i class="material-icons right">send</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s3"></div>
+            </div>
+            <div class="row" style="margin-bottom:0px;">
+                <div class="col s2 m2 l2 offset-s5 offset-m5 offset-l5 noseldrag">
+                    <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-white-alt.png" alt="team waterloop facebook" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
+                    <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-white.png" alt="team waterloop twitter" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
+                    <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-white.png" alt="team waterloop insta" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
                 </div>
             </div>
-            <div class="col s3"></div>
-        </div>
-        <div class="row" style="margin-bottom:0px;">
-          <div class="col s2 m2 l2 offset-s5 offset-m5 offset-l5 noseldrag">
-            <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-white-alt.png" alt="team waterloop facebook" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
-            <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-white.png" alt="team waterloop twitter" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
-            <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-white.png" alt="team waterloop insta" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
-          </div>
         </div>
     </div>
-  </div>
 </div>
 <div class="section white full-height empty">
-  <div id="pod-container" style="background-image: url('/images/landscape.jpg'); background-repeat: none; background-size: cover; position: relative; height: 100%">
-    <img id='pod' class="noseldrag" src="/images/goose.jpg" style="position: absolute"/>
-  </div>
+    <div id="pod-container" style="background-image: url('/images/landscape.jpg'); background-repeat: none; background-size: cover; position: relative; height: 100%">
+        <img id='pod' class="noseldrag" src="/images/goose.jpg" style="position: absolute"/>
+    </div>
 </div>
 <div class="section white full-height empty">
-  <div class="row container">
-    <div id="deconst-pod"></div>
-  </div>
+    <div class="row container">
+        <div id="deconst-pod"></div>
+    </div>
 </div>
 <div class="section grey">
   <div class="container row center">
@@ -86,62 +116,61 @@ html, body {
             <a class="carousel-item" href="#!"><img src="/images/spotlight03.jpg"></a>
         </div>
     </div>
-  </div>
 </div>
 <div class="parallax-container full-height empty">
-  <div class="parallax"><img class="responsive-img" src="https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/59b607768419c20a25dde703/5a29ae68419202c649fa7e3a/1512681072642/team-19.jpg"></div>
-  <div id="lineChart"><%- include('linechart'); %></div>
+    <div class="parallax"><img class="responsive-img" src="https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/59b607768419c20a25dde703/5a29ae68419202c649fa7e3a/1512681072642/team-19.jpg"></div>
+    <div id="lineChart"><%- include('linechart'); %></div>
 </div>
 <div class="section white">
-  <div class="container row">
-      <div class="col l4 m12 s12">
-        <div class="card">
-          <div class="card-image">
-            <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-            <span class="card-title">Mr. Goose blog</span>
-          </div>
-          <div class="card-content">
-            <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Check out some more action</a>
-          </div>
+    <div class="container row">
+        <div class="col l4 m12 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
+                    <span class="card-title">Mr. Goose blog</span>
+                </div>
+                <div class="card-content">
+                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Check out some more action</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col l4 m12 s12">
-        <div class="card">
-          <div class="card-image">
-            <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-            <span class="card-title">Mr. Goose blog</span>
-          </div>
-          <div class="card-content">
-            <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Check out some more action</a>
-          </div>
+        <div class="col l4 m12 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
+                    <span class="card-title">Mr. Goose blog</span>
+                </div>
+                <div class="card-content">
+                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Check out some more action</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col l4 m12 s12">
-        <div class="card">
-          <div class="card-image">
-            <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-            <span class="card-title">Mr. Goose blog</span>
-          </div>
-          <div class="card-content">
-            <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">Check out some more action</a>
-          </div>
+        <div class="col l4 m12 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
+                    <span class="card-title">Mr. Goose blog</span>
+                </div>
+                <div class="card-content">
+                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Check out some more action</a>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
 </div>
 
 <script src="/javascripts/homeTimeLine.js"></script>
 <script>
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
+    $(document).ready(function(){
+        $('.parallax').parallax();
+    });
 </script>
