@@ -4143,7 +4143,7 @@ nav ul a span.badge {
 
 nav {
     color: #fed138;
-    background-color: #fafafa;
+    background-color: rgba(255,255,255,0.5);
     width: 100%;
     height: 56px;
     line-height: 56px
