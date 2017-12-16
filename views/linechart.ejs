@@ -84,7 +84,7 @@
 
     // Get the data
     var datalist = [];
-    d3.csv("/korea_gdp.csv", function (error, data) {
+    d3.csv("/timeline.csv", function (error, data) {
         if (error) throw error;
         // scale the range of the data
         x.domain(d3.extent(data, function (d) {
