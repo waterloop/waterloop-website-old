@@ -14,7 +14,7 @@
 
     .image123{
         clear: both;
-        margin-top: 10em;
+        /*margin-top: 10em;*/
     }
 
     .title-box {
@@ -30,7 +30,7 @@
     }
 
     .subtitle-text {
-        font-size: 2em;
+        font-size: 2.3vmax;
         color:white;
     }
 
@@ -39,9 +39,9 @@
     }
 </style>
 
-<div class="parallax-container full-height">
+<div class="parallax-container full-height" style="padding: 70px 0;">
     <div class="parallax"><img class="responsive-img" src="images/front-page/toronto.png"></div>
-    <div class="container center landing">
+    <div class="container center landing" style="font-size:0.8em;">
         <div class="image123">
             <img src="images/front-page/waterloo-shield.png" height="50"/>
             <img class="small-glyph" src="images/front-page/waterloop-logo.png" height="50"/>
@@ -63,20 +63,22 @@
                     <div class="row" style="margin-bottom:0;">
                         <div class="col s11">
                             <input placeholder="Your Email" id="email" type="email" class="validate" style="color:#FFF; font-size: 1.5em;">
-                            <p style="font-size:14px;margin-top:1px;color:#808080;">We don't spam, that's a promise.</p>
                         </div>
-                        <div class="col s1">
-                            <a href="/" id="neg-margin"><i class="material-icons right">send</i></a>
-                        </div>
+
+                    <a href="/" id="neg-margin"><i class="material-icons center">send</i></a>
+
+                    </div>
+                    <div class="row" style="margin-bottom:0;">
+                        <p style="font-size:14px;margin-top:1px;color:#808080;">We don't spam, that's a promise.</p>
                     </div>
                 </div>
                 <div class="col s3"></div>
             </div>
-            <div class="row" style="margin-bottom:0px;">
-                <div class="col s2 m2 l2 offset-s5 offset-m5 offset-l5 noseldrag">
-                    <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-white-alt.png" alt="team waterloop facebook" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
-                    <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-white.png" alt="team waterloop twitter" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
-                    <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-white.png" alt="team waterloop insta" style="width:30%;padding:4%;min-height:30px;min-width:30px;"></a>
+            <div class="row" style="margin-bottom:0px;" id="social">
+                <div class="col s8 m2 l2 offset-s2 offset-m5 offset-l5 noseldrag">
+                    <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-white-alt.png" alt="team waterloop facebook"></a>
+                    <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-white.png" alt="team waterloop twitter"></a>
+                    <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-white.png" alt="team waterloop insta"></a>
                 </div>
             </div>
         </div>
@@ -84,7 +86,7 @@
 </div>
 <div class="section white full-height empty">
     <div id="pod-container" style="background-image: url('/images/landscape.jpg'); background-repeat: none; background-size: cover; position: relative; height: 100%">
-        <img id='pod' class="noseldrag" src="/images/goose.jpg" style="position: absolute"/>
+        <img id='pod' class="noseldrag" src="/images/goose.jpg" style="position: absolute;max-width:10%;width:auto;height:auto;"/>
     </div>
 </div>
 <div class="section white full-height empty">
@@ -92,11 +94,11 @@
         <div id="deconst-pod"></div>
     </div>
 </div>
-<div class="section grey">
+<div class="section">
   <div class="container row center">
     <div id="sponsors">
       <h2 class="subtitle">Our Sponsors</h2>
-        <p class="text">Since the first competition we have relied on our sponsors <br>to support us through our journey to first place.
+        <p class="text" style="font-size:2vmax;">Since the first competition we have relied on our sponsors <br>to support us through our journey to first place.
         </p>
         <div id="gallery" class="carousel">
             <a class="carousel-item" href="#!"><img src="/images/sponsors/university.jpg"></a>
@@ -123,7 +125,7 @@
 </div>
 <div class="section white">
     <div class="container row">
-        <div class="col l4 m12 s12">
+        <div class="col l4 m6 s12">
             <div class="card">
                 <div class="card-image">
                     <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
@@ -137,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="col l4 m12 s12">
+        <div class="col l4 m6 s12">
             <div class="card">
                 <div class="card-image">
                     <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
@@ -151,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="col l4 m12 s12">
+        <div class="hide-on-med-only col l4 m12 s12">
             <div class="card">
                 <div class="card-image">
                     <img src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
