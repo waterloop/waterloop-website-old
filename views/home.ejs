@@ -2,10 +2,17 @@
     html, body {
         height: 100%;
     }
-
-    .full-height {
-        height: calc(100% - 64px);
-        margin: 0;
+    @media only screen and (min-width: 993px) {
+      .full-height {
+          height: calc(100% - 64px);
+          margin: 0;
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      .full-height {
+          height: calc(100% - 56px);
+          margin: 0;
+      }
     }
 
     .empty {
