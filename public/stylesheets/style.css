@@ -180,6 +180,11 @@ footer .logo {
     font-weight: 600;
 }
 
+.team-picture {
+    padding: 2vh 0;
+    width: 100%;
+}
+
 .btn {
   background-color: #fed138;
 }
@@ -224,6 +229,12 @@ footer .logo {
 }
 .media-carousel {
     height: 20vh;
+}
+
+.side-border-left {
+    border-right-style: solid;
+    border-width: 2px;
+    border-color: #b3b3b3
 }
 
 #main-tweet:hover {

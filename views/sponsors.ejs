@@ -74,7 +74,8 @@
     <% for(var i=0; i<sponsors.length; i++) {%>
         <%- include( 'sponsorStructure' , {
             "members": sponsors[i].members,
-            "name": sponsors[i].name
+            "name": sponsors[i].name,
+            "itemsNum": sponsors[i].itemsNum
         } ); %>
     <% } %>
   </div>
