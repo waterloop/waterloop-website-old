@@ -2,6 +2,7 @@
     "sponsors" : [
         {
             "name" : "Orbital Velocity",
+            "itemsNum": 2,
             "members" : [
                 "../images/pic01.jpg",
                 "../images/spotlight02.jpg",
@@ -19,6 +20,7 @@
             ]
         },{
             "name" : "Hypersonic",
+            "itemsNum": 3,
             "members" : [
                 "../images/pic01.jpg",
                 "../images/pic01.jpg",
@@ -35,6 +37,7 @@
             ]
         },{
             "name" : "Supersonic",
+            "itemsNum": 5,
             "members" : [
                 "../images/pic01.jpg",
                 "../images/pic01.jpg",
@@ -51,6 +54,7 @@
             ]
         },{
             "name" : "Transonic",
+            "itemsNum": 7,
             "members" : [
                 "../images/pic01.jpg",
                 "../images/pic01.jpg",
