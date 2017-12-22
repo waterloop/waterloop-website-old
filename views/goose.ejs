@@ -1,3 +1,9 @@
+<style>
+p.content {
+  font-size: 120%;
+}
+</style>
+
 <div class="parallax-container">
   <div class="parallax"><img class="responsive-img" src="<%= goose.banner %>"></div>
 </div>
@@ -20,7 +26,7 @@
       <% } %>
       <h2 class="header"><%= goose.sections[i].title %></h2>
       <% for(var j in goose.sections[i].content) { %>
-        <p><%- goose.sections[i].content[j] %><p>
+        <p class="content"><%- goose.sections[i].content[j] %><p>
       <% } %>
       <% if('img' in goose.sections[i]) { %>
       <% for(var j = 0; j < goose.sections[i].img.length; j++) { %>
