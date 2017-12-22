@@ -2,9 +2,11 @@ const nodemailer = require('nodemailer');
 const Instagram = require('node-instagram').default;
 const slackmailer = require('slack-node');
 const twitter = require('twitter');
+const medium = require('medium-get-latest-posts');
 const secret = require('../secret/index.json');
 const email = secret.email_account;
 const slack = secret.slack_account;
+const medium_username = secret.medium_account.username;
 
 module.exports = {
     sendEmail: function (data, callback) {
@@ -84,6 +86,14 @@ module.exports = {
             } else {
                 callback(response);
             }
+        });
+    },
+
+    getMediumPosts: function (callback) {
+        medium.getPublisherLatestPosts(medium_username).then((data) => {
+            callback(data);
+        }).catch((err) => {
+            callback(err);
         });
     }
 };
