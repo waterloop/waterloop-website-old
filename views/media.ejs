@@ -23,15 +23,27 @@
 
 
 <div class="container">
-        
-    <ul class="collection media-carousel">
+<div class="tweet-container">
+    <h4>@team_waterloop</h4>
+    <div class="carousel carousel-slider">
     <% for(var i=0; i<tweets.length ; i++) {%>      
-        <a class="carousel-item">          
-        <li class="card avatar main-tweet">
-            <img src=<%=tweets[i].user.profile_image_url%> alt="" class="circle">                
-            <span class="title"><%= tweets[i].text %></span>
-        </li>
+        <a class="carousel-item">
+            <div class="col s12 center-align carousel-tweet">
+                <div class="main-tweet">
+                    <div class="tweet-design card">
+                        <div class="row twitter-row">
+                            <div class="side-border-left col s1">
+                                <img src=<%=tweets[i].user.profile_image_url%> class="circle">                
+                            </div>
+                            <div class="col s11">
+                                <span class="tweet-text"><%= tweets[i].text %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </a>
     <% } %>
-    </ul>
+    </div>
+</div>
 </div>
