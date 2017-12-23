@@ -87,7 +87,7 @@ router.get('/downloads', function(req, res, next) {
 });
 
 router.get('/shop', function(req, res, next) {
-    res.render('shop', {
+    res.render('index', {
         title: 'Waterloop – Shop',
         pageName: 'shop',
         pageParams: {}
