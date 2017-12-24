@@ -1,138 +1,149 @@
 {
-    "advisorName": "I am the Advisor",
+    "advisorName": "Serhiy Yarusevych",
     "admin": {
-        "lead": "Admdsnkjadsnin Lead",
+        "lead": "Jason Pan",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Something1",
+                    "name": "Marketing/ Media",
                     "members": [
-                        "cnsdkjcbdsjhdbcjh",
-                        "LOL is here",
-                        "sanksj",
-                        "ahsdgjsh"
+                        " Natalia Zigante"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something2",
+                    "name": "Graphics/ Video",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Emile Patry",
+                        "Liahm Ruest",
+                        "Natasha Poley"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something3",
+                    "name": "Sponsorship",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Nicholas Jelich",
+                        "Sponsorship Consultant: Darren Li",
+                        "Griffin Barnicutt",
+                        "Zhaoxin Zhang",
+                        "Jenarth Jegatheeswaran",
+                        "Xander Griff",
+                        "William Yan",
+                        "Monica Chung",
+                        "Justin Hammond"
                     ]
                 }
             },            {
                 "team": {
-                    "name": "Something4",
+                    "name": "Finance",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Nafee Hasan",
+                        "Turja Aninda"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something5",
+                    "name": "Logistics",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Yi Dong"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something6",
+                    "name": "General",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
-                    ]
-                }
-            },{
-                "team": {
-                    "name": "Something2",
-                    "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
-                    ]
-                }
-            },{
-                "team": {
-                    "name": "Something2",
-                    "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Isabel Zhu",
+                        "Promit Barua"
                     ]
                 }
             }
         ]
     },
     "technical": {
-        "lead": "Techincal Lead",
+        "lead": "Clive Chan",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Something",
+                    "name": "Software",
                     "members": [
-                        "cnsdkjcbdsjhdbcjh",
-                        "Beta"
+                        "Ruslan Nikolaev",
+                        "Lily Hwang",
+                        "Tyler Zhang",
+                        "Jeff Niu",
+                        "Archer Zhang",
+                        "Edwin Zhang",
+                        "Navraj Singh Chhina",
+                        "Shun Rao"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
+                    "name": "Friction Drive",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Jimmy Zhou",
+                        "Arnav Garcha",
+                        "Attilio Ravani",
+                        "Benjamin Li",
+                        "Dallyn Wynnychuk",
+                        "Daniel Ingriselli",
+                        "Donovan Kwong",
+                        "Laura Chambers",
+                        "Pascal Voyer-Nguyen",
+                        "Casey Garcia",
+                        "Emrys Halbertsma"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
+                    "name": "Web",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Melissa Tran",
+                        "Aditya Arora",
+                        "Armanit Garg",
+                        "Tyler Zhang",
+                        "Stephanie Mills",
+                        "Egemen Guray",
+                        "Justin Pu",
+                        "Nicole Rosario"
                     ]
                 }
             },            {
                 "team": {
-                    "name": "Something",
+                    "name": "Embedded",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Deep Dhillon",
+                        "Ambareesh Balaji",
+                        "Ayush Kapur",
+                        "Bob Wei",
+                        "Heather D'Souza",
+                        "Ibrahim Irfan",
+                        "Imad Azzam",
+                        "Mathieu Godin",
+                        "Jeff Niu",
+                        "Jack Xu"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
+                    "name": "EC-Brakes",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "William Ngana",
+                        "Ben Tonita",
+                        "Josie Eshkenazi",
+                        "Connor Nicholls"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
+                    "name": "Mechanical",
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Urooj Khaleji",
+                        "Leon Lau",
+                        "Edmond Lu",
+                        "Justin Schaper",
+                        "Kaeun Kim",
+                        "Arnav Garcha"
                     ]
                 }
             }
