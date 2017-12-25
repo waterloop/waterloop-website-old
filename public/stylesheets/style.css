@@ -224,22 +224,35 @@ footer .logo {
 }
 
 .main-tweet {
-    opacity: 0.8;
-    display: inline-block;
+    padding: 1vh 5vw;
+    margin: 0;
 }
-.media-carousel {
-    height: 20vh;
+
+
+.tweet-design {
+    border-radius: 25px;
+    padding: 1vh 2vw;
+    background-color: white;
+}
+
+.twitter-row {
+    margin: 0;
+}
+
+.tweet-container {
+    overflow: hidden;
+}
+
+.tweet-text {
+    color: #111111;
+    font-size: 18px;
+    padding: 4vh 2vw;
 }
 
 .side-border-left {
     border-right-style: solid;
     border-width: 2px;
     border-color: #b3b3b3
-}
-
-#main-tweet:hover {
-    bottom: 1000px;
-    transition: 5s;
 }
 
 @media only screen and (min-width: 993px) {
