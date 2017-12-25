@@ -9,9 +9,11 @@
     </div>
     <div class="team-tree">
         <ul>
-            <li> <span class="lead-text"> Lead: <%- team.members[0] %> </span>  </li>
-            <% for(var i=1; i<team.members.length; i++) {%>
-                    <li><%= team.members[i] %></li>
+            <% for(var i=0; i<team.numBold; i++) {%>
+                <li> <span class="lead-text"> <%- team.members[i] %> </span>  </li>
+            <% } %>
+            <% for(var i=team.numBold; i<team.members.length; i++) {%>
+                <li><%= team.members[i] %></li>
             <% } %>
         </ul>
     </div>
