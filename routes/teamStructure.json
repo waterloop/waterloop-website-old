@@ -1,152 +1,177 @@
 {
-    "advisorName": "I am the Advisor",
+    "advisorName": "Serhiy Yarusevych",
     "admin": {
-        "lead": "Admdsnkjadsnin Lead",
+        "lead": "Jason Pan",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Something1",
-                    "numBold": 1,
+                    "name": "Marketing/ Media",
+                    "numBold":1,
                     "members": [
-                        "Lead: cnsdkjcbdsjhdbcjh",
-                        "LOL is here",
-                        "sanksj",
-                        "ahsdgjsh"
+                        "Lead: Natalia Zigante"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something2",
-                    "numBold": 1,                    
+                    "name": "Graphics/ Video",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Emile Patry",
+                        "Liahm Ruest",
+                        "Natasha Poley"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something3",
-                    "numBold": 1,
+                    "name": "Sponsorship",
+                    "numBold":2,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Nicholas Jelich",
+                        "Sponsorship Consultant: Darren Li",
+                        "Griffin Barnicutt",
+                        "Zhaoxin Zhang",
+                        "Jenarth Jegatheeswaran",
+                        "Xander Griff",
+                        "William Yan",
+                        "Monica Chung",
+                        "Justin Hammond"
                     ]
                 }
             },            {
                 "team": {
-                    "name": "Something4",
-                    "numBold": 1,
+                    "name": "Finance",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Nafee Hasan",
+                        "Turja Aninda"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something5",
-                    "numBold": 1,
+                    "name": "Logistics",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Yi Dong"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something6",
-                    "numBold": 1,
+                    "name": "General",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
-                    ]
-                }
-            },{
-                "team": {
-                    "name": "Something2",
-                    "numBold": 1,                    
-                    "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
-                    ]
-                }
-            },{
-                "team": {
-                    "name": "Something2",
-                    "numBold": 1,                    
-                    "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Isabel Zhu",
+                        "Promit Barua"
                     ]
                 }
             }
         ]
     },
     "technical": {
-        "lead": "Techincal Lead",
+        "lead": "Clive Chan",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Something",
-                    "numBold": 1,                    
+                    "name": "Software",
+                    "numBold":1,
                     "members": [
-                        "cnsdkjcbdsjhdbcjh",
-                        "Beta"
+                        "Lead: Ruslan Nikolaev",
+                        "Lily Hwang",
+                        "Tyler Zhang",
+                        "Jeff Niu",
+                        "Archer Zhang",
+                        "Edwin Zhang",
+                        "Navraj Singh Chhina",
+                        "Shun Rao"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
-                    "numBold": 1,                    
+                    "name": "Friction Drive",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Jimmy Zhou",
+                        "Arnav Garcha",
+                        "Attilio Ravani",
+                        "Benjamin Li",
+                        "Dallyn Wynnychuk",
+                        "Daniel Ingriselli",
+                        "Donovan Kwong",
+                        "Laura Chambers",
+                        "Pascal Voyer-Nguyen",
+                        "Casey Garcia",
+                        "Emrys Halbertsma"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
-                    "numBold": 1,                    
+                    "name": "Web",
+                    "numBold":2,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Co-Lead: Melissa Tran",
+                        "Co-Lead: Aditya Arora",
+                        "Armanit Garg",
+                        "Tyler Zhang",
+                        "Stephanie Mills",
+                        "Egemen Guray",
+                        "Justin Pu",
+                        "Nicole Rosario"
                     ]
                 }
             },            {
                 "team": {
-                    "name": "Something",
-                    "numBold": 1,                    
+                    "name": "Embedded",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: Deep Dhillon",
+                        "Ambareesh Balaji",
+                        "Ayush Kapur",
+                        "Bob Wei",
+                        "Heather D'Souza",
+                        "Ibrahim Irfan",
+                        "Imad Azzam",
+                        "Mathieu Godin",
+                        "Jeff Niu",
+                        "Jack Xu"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
-                    "numBold": 1,                    
+                    "name": "EC-Brakes",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Lead: William Ngana",
+                        "Ben Tonita",
+                        "Josie Eshkenazi",
+                        "Connor Nicholls"
                     ]
                 }
             },{
                 "team": {
-                    "name": "Something",
-                    "numBold": 2,                    
+                    "name": "Mechanical",
+                    "numBold":1,
                     "members":[
-                        "Alpha",
-                        "Beta",
-                        "Gamma"
+                        "Urooj Khaleji",
+                        "Leon Lau",
+                        "Edmond Lu",
+                        "Justin Schaper",
+                        "Kaeun Kim",
+                        "Arnav Garcha"
+                    ]
+                }
+            },{
+                "team": {
+                    "name": "Electrical",
+                    "numBold":2,
+                    "members":[
+                        "Co-Lead: James Ro",
+                        "Co-Lead: Chawthri Kanagarasa",
+                        "Connor Nicholls",
+                        "Illya Myshakov",
+                        "Justin Gorvett",
+                        "Kelvin Tezinde",
+                        "Namitra Kalicharran",
+                        "Noah Ford",
+                        "William Xian"
                     ]
                 }
             }

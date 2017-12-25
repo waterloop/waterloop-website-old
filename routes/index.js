@@ -58,6 +58,16 @@ router.get('/media', function(req, res, next) {
     });
 });
 
+router.get('/hyperloop', function(req, res, next) {
+    res.render('index', {
+        title: 'Waterloop – Flock',
+        pageName: 'hyperloop',
+        pageParams: {
+          flock: flockJSON
+        }
+    });
+});
+
 router.get('/team', function(req, res, next) {
     res.render('index', {
         title: 'Waterloop – Team',
