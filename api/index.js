@@ -3,10 +3,13 @@ const Instagram = require('node-instagram').default;
 const slackmailer = require('slack-node');
 const twitter = require('twitter');
 const medium = require('medium-get-latest-posts');
+var google = require('googleapis');
 const secret = require('../secret/index.json');
+
 const email = secret.email_account;
 const slack = secret.slack_account;
 const medium_username = secret.medium_account.username;
+const google_creds = secret.medium_account.username;
 
 module.exports = {
     sendEmail: function (data, callback) {
@@ -95,5 +98,24 @@ module.exports = {
         }).catch((err) => {
             callback(err);
         });
+    },
+
+    writeRowToGoogleSheet: function (values, callback) {
+          var body = {
+            values: values
+          };
+          service.spreadsheets.values.append({
+            spreadsheetId: spreadsheetId,
+            range: range,
+            valueInputOption: valueInputOption,
+            resource: body
+          }, function(err, result) {
+            if(err) {
+              // Handle error.
+              console.log(err);
+            } else {
+              console.log('%d cells appended.', result.updates.updatedCells);
+            }
+          });
     }
 };

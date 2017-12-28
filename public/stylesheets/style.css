@@ -12,7 +12,11 @@ input[type=email]:not(.browser-default){
 }
 
 #social img{
-  width:10%; margin: 0 2%; min-height:30px;min-width:30px;
+  width: 10%; 
+  margin: 0 5%;
+  min-height: 30px;
+  min-width: 30px;
+  opacity: 0.6;
 }
 
 #neg-margin{

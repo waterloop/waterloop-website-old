@@ -13,6 +13,8 @@
     "es6": "0.0.7",
     "express": "~4.15.5",
     "favicon": "0.0.2",
+    "google-auth-library": "^0.12.0",
+    "googleapis": "^23.0.0",
     "medium-get-latest-posts": "^1.1.2",
     "morgan": "~1.9.0",
     "node-instagram": "^4.1.0",
