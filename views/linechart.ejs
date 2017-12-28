@@ -16,18 +16,19 @@
     div.tooltip {
         position: absolute;
         text-align: center;
-        padding: 5px;
+        padding: 5px 25px 5px 25px;
         font-size: 14px;
-        font-weight: bold;
+        /*font-weight: bold;*/
         background: #fffbfd;
         border: 0px;
         border-radius: 8px;
-        max-width: 170px;
+        max-width: 200px;
     }
 
     .tooltip p {
         margin: 0;
         padding: 0;
+        font-family: 'Proxima Nova', 'Montserrat', Helvetica;
     }
 
     circle {
@@ -46,7 +47,7 @@
     var margin = {
             top: 20,
             right: 80,
-            bottom: 30,
+            bottom: 200,
             left: 80
         };
         var width = $("svg").parent().width() - margin.right - margin.left;
@@ -138,7 +139,7 @@
                     .duration(200)
                     .style("opacity", .9);
                 div.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>")
-                    .style("left", function(){if(d.flagger == '1'){return (d3.event.pageX) - 170 + "px";}
+                    .style("left", function(){if(d.flagger == '1'){return (d3.event.pageX) - 200 + "px";}
                     else{
                         return (d3.event.pageX)+ 10+ "px";
                     }})
