@@ -3,7 +3,7 @@
     "name": "Goose I",
     "thumbnail": "/images/flock/goose_i.jpg",
     "url": "goose_i",
-    "desc": "Goose I was the initial prototype. ",
+    "desc": "The initial prototype. ",
     "banner": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/5807de1c9de4bb88fee7de24/1476910626385/Competition+pod_elevation.jpg?format=2500w",
     "sections": [
       {
@@ -74,8 +74,8 @@
   {
     "name": "Goose II",
     "thumbnail": "/images/flock/goose_ii.jpg",
-    "url": "goose_i",
-    "desc": "Goose I was the initial prototype. ",
+    "url": "goose_ii",
+    "desc": "The next generation. ",
     "banner": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/5807de1c9de4bb88fee7de24/1476910626385/Competition+pod_elevation.jpg?format=2500w",
     "sections": [
       {

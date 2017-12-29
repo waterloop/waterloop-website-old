@@ -27,14 +27,13 @@ router.get('/flock', function(req, res, next) {
 });
 
 // The geese (flock pages)
-for(var i in flockJSON) {
-    var a = flockJSON[i];
-    router.get('/flock/' + a.url, function(req, res, next) {
+for(let i in flockJSON) {
+    router.get('/flock/' + flockJSON[i].url, function(req, res, next) {
         res.render('index', {
-            title: 'Waterloop – ' + a.name,
+            title: 'Waterloop – ' + flockJSON[i].name,
             pageName: 'goose',
             pageParams: {
-              goose: a
+              goose: flockJSON[i]
             }
         });
     });
