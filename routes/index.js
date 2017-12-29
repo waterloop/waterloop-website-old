@@ -4,6 +4,7 @@ const teamStructureJSON = require('./teamStructure.json');
 const sponsorStructureJSON = require('./sponsorStructure.json');
 const sender = require('../api/index');
 const flockJSON = require('./flock.json');
+const downloadsJSON = require('./downloads.json');
 
 /* GET home page. */
 
@@ -34,6 +35,36 @@ for(var i in flockJSON) {
             pageName: 'goose',
             pageParams: {
               goose: a
+            }
+        });
+    });
+}
+
+router.get('/downloads/', function(req, res, next) {
+    res.render('index', {
+        title: 'Waterloop – Downloads',
+        pageName: 'download',
+        pageParams: {
+          dl: {
+              cur: 0,
+              total: Math.ceil(downloadsJSON.length / 4),
+              img: downloadsJSON.slice(0, Math.min(downloadsJSON.length, 4))
+          }
+        }
+    });
+});
+
+for(let i = 0; i < downloadsJSON.length; i += 4) {
+    router.get('/downloads/' + (i/4 + 1), function(req, res, next) {
+        res.render('index', {
+            title: 'Waterloop – Downloads page ' + (i/4 + 1),
+            pageName: 'download',
+            pageParams: {
+              dl: {
+                  cur: i/4,
+                  total: Math.ceil(downloadsJSON.length / 4),
+                  img: downloadsJSON.slice(i, Math.min(downloadsJSON.length, i+4))
+              }
             }
         });
     });
@@ -88,6 +119,7 @@ router.get('/sponsors', function(req, res, next) {
     });
 });
 
+/*
 router.get('/downloads', function(req, res, next) {
     res.render('index', {
         title: 'Waterloop – Downloads',
@@ -95,6 +127,7 @@ router.get('/downloads', function(req, res, next) {
         pageParams: {}
     });
 });
+*/
 
 router.get('/shop', function(req, res, next) {
     res.render('index', {

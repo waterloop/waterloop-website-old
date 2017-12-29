@@ -1,0 +1,78 @@
+<% console.log(dl); %>
+<div class="container container-fluid">
+  <div class="row center">
+    <h1>Downloads</h1>
+  </div>
+  <% if(dl.total != 1) { %>
+  <ul class="pagination">
+    <li class="<% if(dl.cur == 0) { %>disabled<% } else { %>waves-effect<% } %>"><a href="/downloads/<%= dl.cur %>"><i class="material-icons">chevron_left</i></a></li>
+    <% for(var i = Math.max(0, dl.cur - 3); i < dl.cur; i++) { %>
+      <li class="waves-effect"><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
+    <% } %>
+    <li class="active"><a><%= dl.cur + 1 %></a></li>
+    <% for(var i = dl.cur + 1; i <= Math.min(dl.total - 1, dl.cur + 3); i++) { %>
+      <li class="waves-effect"><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
+    <% } %>
+    <li class="<% if(dl.cur == dl.total - 1) { %>disabled<% } else { %>waves-effect<% } %>"><a href="/downloads/<%= dl.cur + 2 %>"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+  <% } %>
+  <div class="row">
+    <div class="col m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= dl.img[0].thumb %>">
+          <span class="card-title"><%= dl.img[0].title %></span>
+        </div>
+        <div class="card-action">
+          <a href="<%= dl.img[0].mobile %>" download>Mobile</a>
+          <a href="<%= dl.img[0].desktop %>" download>Desktop</a>
+        </div>
+      </div>
+    </div>
+
+    <% if(dl.img.length > 1) { %>
+    <div class="col m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= dl.img[1].thumb %>">
+          <span class="card-title"><%= dl.img[1].title %></span>
+        </div>
+        <div class="card-action">
+          <a href="<%= dl.img[1].mobile %>" download>Mobile</a>
+          <a href="<%= dl.img[1].desktop %>" download>Desktop</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="row">
+      <% if(dl.img.length > 2) { %>
+        <div class="col m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="<%= dl.img[2].thumb %>">
+              <span class="card-title"><%= dl.img[2].title %></span>
+            </div>
+            <div class="card-action">
+              <a href="<%= dl.img[2].mobile %>" download>Mobile</a>
+              <a href="<%= dl.img[2].desktop %>" download>Desktop</a>
+            </div>
+          </div>
+        </div>
+        <% } %>
+
+    <% if(dl.img.length > 3) { %>
+    <div class="col m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= dl.img[3].thumb %>">
+          <span class="card-title"><%= dl.img[3].title %></span>
+        </div>
+        <div class="card-action">
+          <a href="<%= dl.img[3].mobile %>" download>Mobile</a>
+          <a href="<%= dl.img[3].desktop %>" download>Desktop</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+</div>
