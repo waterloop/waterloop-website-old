@@ -22,6 +22,15 @@ All the data is stored within `routes/flock.json`. The file contains a JSON arra
   * `parallax`: An optional image for a parallax slide above the section
   * `img`: An optional array containing image srcs
 
+## Adding to downloads
+
+All the data is stored within `routes/downloads.json`. The file contains a JSON array of the downloads. A download has few properties:
+
+* `name`: The name of the pod, used for titles and such
+* `thumbnail`: The image used to display on the page
+* `mobile`: The URL of the mobile image version of the download
+* `desktop`: The URL of the full image version of the download
+
 ## How to add routes?
 * Find `routes/siteRoutes.js`
 * Insert another one of those
