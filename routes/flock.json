@@ -1,7 +1,7 @@
 [
   {
     "name": "Goose I",
-    "thumbnail": "/images/flock/goose_i.jpg",
+    "thumbnail": "/images/flock/goose1.png",
     "url": "goose_i",
     "desc": "The initial prototype. ",
     "banner": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/5807de1c9de4bb88fee7de24/1476910626385/Competition+pod_elevation.jpg?format=2500w",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Goose II",
-    "thumbnail": "/images/flock/goose_ii.jpg",
+    "thumbnail": "/images/flock/goose2.png",
     "url": "goose_ii",
     "desc": "The next generation. ",
     "banner": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/5807de1c9de4bb88fee7de24/1476910626385/Competition+pod_elevation.jpg?format=2500w",
@@ -142,5 +142,13 @@
         "parallax": "https://static1.squarespace.com/static/56aacae205caa7065b09c6ff/t/589ca16529687fa0576c7773/1486659956942/?format=1500w"
       }
     ]
+  },
+  {
+    "name": "Goose III",
+    "thumbnail": "/images/flock/goose3.png",
+    "url": "goose_iii",
+    "desc": "",
+    "banner": "",
+    "sections": []
   }
 ]
