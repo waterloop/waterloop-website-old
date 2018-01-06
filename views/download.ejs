@@ -2,19 +2,6 @@
   <div class="row center">
     <h1>Downloads</h1>
   </div>
-  <% if(dl.total != 1) { %>
-  <ul class="pagination center">
-    <li class="<% if(dl.cur == 0) { %>disabled<% } %>"><a href="/downloads/<%= dl.cur %>"><i class="material-icons">chevron_left</i></a></li>
-    <% for(var i = Math.max(0, dl.cur - 3); i < dl.cur; i++) { %>
-      <li><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
-    <% } %>
-    <li class="active"><a><%= dl.cur + 1 %></a></li>
-    <% for(var i = dl.cur + 1; i <= Math.min(dl.total - 1, dl.cur + 3); i++) { %>
-      <li><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
-    <% } %>
-    <li class="<% if(dl.cur == dl.total - 1) { %>disabled<% } %>"><a href="/downloads/<%= dl.cur + 2 %>"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-  <% } %>
   <div class="row">
     <div class="col m6">
       <div class="card">
@@ -73,5 +60,18 @@
         </div>
       </div>
     </div>
+    <% } %>
+    <% if(dl.total != 1) { %>
+    <ul class="pagination center">
+      <li class="<% if(dl.cur == 0) { %>disabled<% } %>"><a href="/downloads/<%= dl.cur %>"><i class="material-icons">chevron_left</i></a></li>
+      <% for(var i = Math.max(0, dl.cur - 3); i < dl.cur; i++) { %>
+        <li><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
+      <% } %>
+      <li class="active"><a><%= dl.cur + 1 %></a></li>
+      <% for(var i = dl.cur + 1; i <= Math.min(dl.total - 1, dl.cur + 3); i++) { %>
+        <li><a href="/downloads/<%= i + 1 %>"><%= i + 1 %></a></li>
+      <% } %>
+      <li class="<% if(dl.cur == dl.total - 1) { %>disabled<% } %>"><a href="/downloads/<%= dl.cur + 2 %>"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
     <% } %>
 </div>
