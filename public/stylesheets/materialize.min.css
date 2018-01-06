@@ -4392,9 +4392,7 @@ a {
 }
 
 html {
-    line-height: 1.5;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
+
     color: rgba(0,0,0,0.87)
 }
 
@@ -4450,7 +4448,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.64rem;
+    font-size: 3vmin;
     line-height: 110%;
     margin: .82rem 0 .656rem 0
 }

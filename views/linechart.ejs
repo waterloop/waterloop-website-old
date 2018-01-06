@@ -43,131 +43,139 @@
 <!-- load the d3.js library -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-    // set the dimensions and margins of the graph
-    var margin = {
-            top: 20,
-            right: 80,
-            bottom: 200,
-            left: 80
-        };
-        var width = $("svg").parent().width() - margin.right - margin.left;
-        var height = $("svg").parent().height() - margin.top - margin.bottom;
+function draw(){
+  // set the dimensions and margins of the graph
+  var margin = {
+          top: 20,
+          right: 80,
+          bottom: 200,
+          left: 80
+      };
+      var width = $("svg").parent().width() - margin.right - margin.left;
+      var height = $("svg").parent().height() - margin.top - margin.bottom;
 
-    // set the ranges
-    var x = d3.scaleLinear().range([0, width]);
-    var y = d3.scaleLinear().range([height, 0]);
+  // set the ranges
+  var x = d3.scaleLinear().range([0, width]);
+  var y = d3.scaleLinear().range([height, 0]);
 
-    // define the line
-    function basicy() {
-        var ret = d3.line()
-            .x(function (d) {
-                return x(d.year);
-            })
-        return ret;
-    }
-    var valueline = basicy()
-        .y(function (d) {
-            return y(d.GNI);
-        });
-    var div = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
+  // define the line
+  function basicy() {
+      var ret = d3.line()
+          .x(function (d) {
+              return x(d.year);
+          })
+      return ret;
+  }
+  var valueline = basicy()
+      .y(function (d) {
+          return y(d.GNI);
+      });
+  var div = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
 
-    // append the svg obgect to the body of the page
-    // appends a 'group' element to 'svg'
-    // moves the 'group' element to the top left margin
-    var svg = d3.select("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+  // append the svg obgect to the body of the page
+  // appends a 'group' element to 'svg'
+  // moves the 'group' element to the top left margin
+  var svg = d3.select("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+  // Get the data
+  var datalist = [];
+  d3.csv("/timeline.csv", function (error, data) {
+      if (error) throw error;
+      // scale the range of the data
+      x.domain(d3.extent(data, function (d) {
+          return d.year;
+      }));
+      y.domain(d3.extent(data, function (d) {
+          return d.GNI;
+      }));
 
-    // Get the data
-    var datalist = [];
-    d3.csv("/timeline.csv", function (error, data) {
-        if (error) throw error;
-        // scale the range of the data
-        x.domain(d3.extent(data, function (d) {
-            return d.year;
-        }));
-        y.domain(d3.extent(data, function (d) {
-            return d.GNI;
-        }));
+      // add the valueline path.
+      //그냥 data를 하게 되면 array[16]이 되지만, [data]를 하게 되면 array[1]안에 있는 array[16]이 된다.
+      var dataArray = [{
+          "name": "GNI",
+          "x": 100,
+          "y": 50,
+          "class": "line-text",
+          "class2": "line",
+          "dataline": valueline
+      }]
+      for (var i = 0; i < dataArray.length; i++) {
 
-        // add the valueline path.
-        //그냥 data를 하게 되면 array[16]이 되지만, [data]를 하게 되면 array[1]안에 있는 array[16]이 된다.
-        var dataArray = [{
-            "name": "GNI",
-            "x": 100,
-            "y": 50,
-            "class": "line-text",
-            "class2": "line",
-            "dataline": valueline
-        }]
-        for (var i = 0; i < dataArray.length; i++) {
+          var path = svg.append("path").attr("class", "line")
+          .data([data])
+          .attr("d", dataArray[i].dataline)
+          .attr("class", dataArray[i].class2)
+          .attr("stroke-dasharray", function(d){ return this.getTotalLength() })
+          .attr("stroke-dashoffset", function(d){ return this.getTotalLength() })
+      }
+      // add the dots with tooltips
+      var fixeddot = svg.selectAll(".dot")
+          .data(data)
+          .enter().append("circle")
+          .attr("class", "dot")
+          .attr("r", 5)
+          .attr("fill-opacity", 0)
+          .attr("stroke", "#111111" )
+          .attr("stroke-opacity", 0)
+          .attr("fill", "#FFF1CC")
+          .attr("stroke-width", "3px" )
 
-            var path = svg.append("path").attr("class", "line")
-            .data([data])
-            .attr("d", dataArray[i].dataline)
-            .attr("class", dataArray[i].class2)
-            .attr("stroke-dasharray", function(d){ return this.getTotalLength() })
-            .attr("stroke-dashoffset", function(d){ return this.getTotalLength() })
-        }
-        // add the dots with tooltips
-        var fixeddot = svg.selectAll(".dot")
-            .data(data)
-            .enter().append("circle")
-            .attr("class", "dot")
-            .attr("r", 5)
-            .attr("fill-opacity", 0)
-            .attr("stroke", "#111111" )
-            .attr("stroke-opacity", 0)
-            .attr("fill", "#FFF1CC")
-            .attr("stroke-width", "3px" )
+      fixeddot.attr("cx", function (d) {
+              return x(d.year);
+          })
+          .attr("cy", function (d) {
+              return y(d.GNI);
+          })
+          .on("mouseover", function (d) {
+              d3.select(this).style("stroke","#ff7a09");
+              console.log(d);
+              div.transition()
+                  .duration(200)
+                  .style("opacity", .9);
+              div.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>")
+                  .style("left", function(){if(d.flagger == '1'){return (d3.event.pageX) - 200 + "px";}
+                  else{
+                      return (d3.event.pageX)+ 10+ "px";
+                  }})
+                  .style("top", function(){console.log(d);
+                      if(d.flagger == '-1'){return (d3.event.pageY) - 80+ "px";}
+                  else{return (d3.event.pageY) + "px"
+                      }}
 
-        fixeddot.attr("cx", function (d) {
-                return x(d.year);
-            })
-            .attr("cy", function (d) {
-                return y(d.GNI);
-            })
-            .on("mouseover", function (d) {
-                d3.select(this).style("stroke","#ff7a09");
-                console.log(d);
-                div.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                div.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>")
-                    .style("left", function(){if(d.flagger == '1'){return (d3.event.pageX) - 200 + "px";}
-                    else{
-                        return (d3.event.pageX)+ 10+ "px";
-                    }})
-                    .style("top", function(){console.log(d);
-                        if(d.flagger == '-1'){return (d3.event.pageY) - 80+ "px";}
-                    else{return (d3.event.pageY) + "px"
-                        }}
+                  );
+          })
+          .on("mouseout",function(d){
+          d3.select(this).style("stroke","#111111");
+          });
+      // var totalLength = path.node().getTotalLength();
+      var t = d3.transition()
+          .duration(2000)
+          .ease(d3.easeQuadIn)
+          .on("start", function(d){ console.log("transiton start") })
+          .on("end", function(d){ console.log("transiton end") })
+      // var t1 = d3.transition()
+      //     .duration(1000)
+      //     .ease(d3.easeLinear)
+      //     .on("start", function(d){ console.log("transiton start") })
+      //     .on("end", function(d){ console.log("transiton end") })
+      path.transition(t)
+          .attr("stroke-dashoffset", 0);
+    setTimeout(function(){fixeddot.transition().duration(2000).ease(d3.easeLinear).attr("fill-opacity",1).attr("stroke-opacity",1);}, 2000)
 
-                    );
-            })
-            .on("mouseout",function(d){
-            d3.select(this).style("stroke","#111111");
-            });
-        // var totalLength = path.node().getTotalLength();
-        var t = d3.transition()
-            .duration(2000)
-            .ease(d3.easeQuadIn)
-            .on("start", function(d){ console.log("transiton start") })
-            .on("end", function(d){ console.log("transiton end") })
-        // var t1 = d3.transition()
-        //     .duration(1000)
-        //     .ease(d3.easeLinear)
-        //     .on("start", function(d){ console.log("transiton start") })
-        //     .on("end", function(d){ console.log("transiton end") })
-        path.transition(t)
-            .attr("stroke-dashoffset", 0);
-      setTimeout(function(){fixeddot.transition().duration(2000).ease(d3.easeLinear).attr("fill-opacity",1).attr("stroke-opacity",1);}, 2000)
+  });
+}
 
+draw();
+$(window).resize(() => {
+  console.log('resized')
+  d3.selectAll("svg > *").remove()
+  draw();
+})
 
-    });
 </script>
