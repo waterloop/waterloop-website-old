@@ -26,7 +26,9 @@
   }
 
   function progressTimeline (fromTop) {
-    timeline.seek(fromTop)
+    this.timelinePosition = Math.max(fromTop, this.timelinePosition) || fromTop
+    console.log(this.timelinePosition)
+    timeline.seek(this.timelinePosition)
   }
 
   setupTimeline()
