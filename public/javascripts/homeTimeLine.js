@@ -2,18 +2,26 @@
   const container = $('#pod-container')
   const pod = $('#pod')
 
-  let bodyHeight
   let timeline
-  let viewportHeight
 
   function setupTimeline () {
-    bodyHeight = $('body').height()
-    viewportHeight = $(window).innerHeight()
+    const bodyHeight = $('body').height()
+    const viewportHeight = $(window).innerHeight()
+    const viewportWidth = $(window).innerWidth()
     
     timeline = new TimelineLite()
     timeline.add('pod-start', pod.offset().top + pod.height() - viewportHeight)
 
-    timeline.to(pod, (viewportHeight * 0.7), { right: 0, ease: Sine.easeInOut }, 'pod-start')
+    const animationDuration = viewportHeight * 0.8
+    const fromOpts = {
+      left: - pod.width()  // Start with the pod completely off screen
+    }
+    const toOpts = {
+      left: viewportWidth,
+      easee: Sine.easeInOut
+    }
+
+    timeline.fromTo(pod, animationDuration, fromOpts, toOpts, 'pod-start')
     timeline.pause()
   }
 
