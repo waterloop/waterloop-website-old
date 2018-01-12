@@ -12,6 +12,8 @@
       text-transform: none;
       height: 45px;
       line-height: 45px;
+      z-index: 1000;
+      bottom: 3vh;
   }
 
   .sponsor-container{
@@ -47,20 +49,27 @@
       opacity: 1;
       transition: 0.2s;
   }
+
+  @media only screen and (max-width: 360px) {
+    .sponsors-header {
+        font-size: 57px;
+    }
+  }
 </style>
 
 <div class="parallax-container" style="height: 50vh;">
   <div class="parallax"><img class="responsive-img" src="images/front-page/ray-hennessy-233426.jpg"></div>
   <div class="center">
       <div class="sponsors-header"> We love our sponsors! </div>
-      <a href="/sponsorship_package.pdf" class="waves-effect waves-light btn sponsor-button amber accent-2">Become a sponsor</a>
   </div>
 </div>
 
 
 <div class="section white">
-  <div class="row container">
-    <div class="col s6 offset-s3" style="margin-top: -10vh;">
+  <div class="row container center-align ">
+    <div class="col l6 s10 offset-l3 offset-s1" style="margin-top: -10vh;">
+
+      <a href="/sponsorship_package.pdf" class="waves-effect waves-light btn sponsor-button amber accent-2">Become a sponsor</a>
       <div class="card">
         <div class="card-content">
           <div class="sponsor-landing-heading">Waterloop Sponsorship</div>
