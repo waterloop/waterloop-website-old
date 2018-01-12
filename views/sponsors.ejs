@@ -38,14 +38,14 @@
       font-weight: 600;
   }
 
-  .sponsor-logo {
+  .sponsor-logo1 {
       height: 120px;
       margin: 2vh 1vw;
-      opacity: 0.6;
-      transition: 0.2s;
+      opacity: 0.9;
+      /*transition: 0.2s;*/
   }
 
-  .sponsor-logo:hover {
+  .sponsor-logo1:hover {
       opacity: 1;
       transition: 0.2s;
   }
@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="row container sponsor-structure">
+  <div class="row container sponsor-structure1">
     <% for(var i=0; i<sponsors.length; i++) {%>
         <%- include( 'sponsorStructure' , {
             "members": sponsors[i].members,
