@@ -1,6 +1,10 @@
 html {
-    font-family: 'Proxima Nova', 'Montserrat', Helvetica;
+    font-family: 'proxima_nova_ltthin', 'Montserrat', Helvetica;
     height: 100%;
+}
+
+body {
+    font-size: 115%;
 }
 
 form-text {
@@ -280,3 +284,8 @@ footer .logo {
   }
 }
 
+.responsive-img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
