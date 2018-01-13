@@ -44,17 +44,17 @@
                 <% for(var i=0; i<teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; i= i+3) {%>
                     <div class="row">
                         <% for(var j=0; j<3; j++) {%>
-                            <div class="col s4"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[i+j].team }); %></div>
+                            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[i+j].team }); %></div>
                         <% } %>
                     </div>
                 <% } %>
                 <div class="row">
                     <% for(var j=teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; j<teamStructure.admin.teamHeirarchy.length; j++) {%>
-                        <div class="col s4"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[j].team }); %></div>
+                        <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[j].team }); %></div>
                     <% } %>
                 </div>
 
-        </div>
+        </div>   
         <div class="col s12">
 
                 <div class="row">
@@ -74,13 +74,13 @@
                 <% for(var i=0; i<teamStructure.technical.teamHeirarchy.length-teamStructure.technical.teamHeirarchy.length%3; i= i+3) {%>
                     <div class="row">
                         <% for(var j=0; j<3; j++) {%>
-                            <div class="col s4"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[i+j].team }); %></div>
+                            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[i+j].team }); %></div>
                         <% } %>
                     </div>
                 <% } %>
                 <div class="row">
                     <% for(var j=teamStructure.technical.teamHeirarchy.length - teamStructure.technical.teamHeirarchy.length%3; j<teamStructure.technical.teamHeirarchy.length; j++) {%>
-                        <div class="col s4"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[j].team }); %></div>
+                        <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[j].team }); %></div>
                     <% } %>
                 </div>
 

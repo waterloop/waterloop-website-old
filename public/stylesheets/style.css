@@ -258,12 +258,6 @@ footer .logo {
     width: auto
 }
 
-.side-border-left {
-    border-right-style: solid;
-    border-width: 2px;
-    border-color: #b3b3b3
-}
-
 .insta-caption {
     line-height: 1em;
     max-height: 3em;
@@ -285,3 +279,4 @@ footer .logo {
     margin-top:7rem;
   }
 }
+
