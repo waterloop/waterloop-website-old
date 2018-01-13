@@ -5,7 +5,7 @@
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Marketing/ Media",
+                    "name": "Marketing",
                     "numBold":1,
                     "members": [
                         "Lead: Natalia Zigante"
@@ -13,7 +13,7 @@
                 }
             },{
                 "team": {
-                    "name": "Graphics/ Video",
+                    "name": "Graphics",
                     "numBold":1,
                     "members":[
                         "Lead: Emile Patry",
@@ -107,8 +107,8 @@
                     "name": "Web",
                     "numBold":2,
                     "members":[
-                        "Co-Lead: Melissa Tran",
                         "Co-Lead: Aditya Arora",
+                        "Co-Lead: Melissa Tran",  
                         "Armanit Garg",
                         "Tyler Zhang",
                         "Stephanie Mills",
