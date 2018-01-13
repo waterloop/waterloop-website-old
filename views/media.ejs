@@ -1,39 +1,43 @@
-<div class="media-landing">
-    <div class="center">
-        <div class="media-header"> Notes from Waterloop! </div>
-        <div class="container sponsor-container">
-            <div class="row">
-                <div class="container">
-                    <div class="row center-align">
-                        <div class="media-icon">
-                            <i class="small material-icons">add_circle_outline</i>
+<div class="parallax-container full-height" style="padding: 70px 0;">
+    <div class="parallax"><img class="responsive-img" src="images/gooseI.jpg"></div>
+    <div class="media-landing">
+        <div class="center">
+            <div class="media-header"> Notes from Waterloop! </div>
+            <div class="container sponsor-container">
+                <div class="row">
+                    <div class="container">
+                        <div class="row center-align">
+                            <div class="media-icon">
+                                <i class="small material-icons">add_circle_outline</i>
+                            </div>
+                            <div class="media-icon">
+                                <i class="small material-icons">add_circle_outline</i>
+                            </div>
+                            <div class="media-icon">
+                                <i class="small material-icons">add_circle_outline</i>
+                            </div>
                         </div>
-                        <div class="media-icon">
-                            <i class="small material-icons">add_circle_outline</i>
-                        </div>
-                        <div class="media-icon">
-                            <i class="small material-icons">add_circle_outline</i>
-                        </div>                                    
                     </div>
                 </div>
-            </div>                
+            </div>
         </div>
     </div>
 </div>
+
 
 
 <div class="container">
 <div class="tweet-container">
     <h4>@team_waterloop</h4>
     <div class="carousel carousel-slider">
-    <% for(var i=0; i<tweets.length ; i++) {%>      
+    <% for(var i=0; i<tweets.length ; i++) {%>
         <a class="carousel-item">
             <div class="col s12 center-align carousel-tweet">
                 <div class="main-tweet">
                     <div class="tweet-design card">
                         <div class="row twitter-row">
                             <div class="side-border-left col s1">
-                                <img src=<%=tweets[i].user.profile_image_url%> class="circle">                
+                                <img src=<%=tweets[i].user.profile_image_url%> class="circle">
                             </div>
                             <div class="col s11">
                                 <span class="tweet-text"><%= tweets[i].text %></span>
@@ -52,7 +56,7 @@
     <div class="tweet-container">
         <h4>@team_waterloop</h4>
         <div class="carousel carousel-slider">
-        <% for(var i=0; i<instas.image.length ; i++) {%>     
+        <% for(var i=0; i<instas.image.length ; i++) {%>
             <a class="carousel-item">
                 <div class="center-align">
                     <img class="insta-image" src=<%=instas.image[i].images.standard_resolution.url%> >
@@ -65,7 +69,7 @@
 <br><br>
 <div class="center-align container">
     <div class="row">
-    <% for(var i=0; i<instas.video.length ; i++) {%>     
+    <% for(var i=0; i<instas.video.length ; i++) {%>
         <div class="col l6 s12 insta-video">
             <div class="card">
                 <div class="card-image">
@@ -83,3 +87,11 @@
     <% } %>
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.parallax').parallax();
+    });
+
+</script>
