@@ -67,10 +67,16 @@
     <div class="row">
     <% for(var i=0; i<instas.video.length ; i++) {%>     
         <div class="col l6 s12 insta-video">
-            <video src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
-            <div class="insta-caption">
-                <%= instas.video[i].caption.text %>
-                <div class="insta-shadow"></div>
+            <div class="card">
+                <div class="card-image">
+                    <video class="insta-video" src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
+                </div>
+                <div class="card-content">
+                    <div class="insta-caption">
+                    <%= instas.video[i].caption.text %>
+                    <div class="insta-shadow"></div>
+                    </div>
+                </div>
             </div>
             <br>
         </div>
