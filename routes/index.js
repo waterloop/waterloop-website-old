@@ -39,35 +39,15 @@ for(let i in flockJSON) {
     });
 }
 
-router.get('/downloads/', function(req, res, next) {
+router.get('/downloads', function(req, res, next) {
     res.render('index', {
         title: 'Waterloop – Downloads',
-        pageName: 'download',
+        pageName: 'downloads',
         pageParams: {
-          dl: {
-              cur: 0,
-              total: Math.ceil(downloadsJSON.length / 4),
-              img: downloadsJSON.slice(0, Math.min(downloadsJSON.length, 4))
-          }
+            dl: downloadsJSON
         }
     });
 });
-
-for(let i = 0; i < downloadsJSON.length; i += 4) {
-    router.get('/downloads/' + (i/4 + 1), function(req, res, next) {
-        res.render('index', {
-            title: 'Waterloop – Downloads page ' + (i/4 + 1),
-            pageName: 'download',
-            pageParams: {
-              dl: {
-                  cur: i/4,
-                  total: Math.ceil(downloadsJSON.length / 4),
-                  img: downloadsJSON.slice(i, Math.min(downloadsJSON.length, i+4))
-              }
-            }
-        });
-    });
-}
 
 router.get('/media', function(req, res, next) {
     var tweets = [];
