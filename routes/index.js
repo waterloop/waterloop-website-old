@@ -74,18 +74,20 @@ router.get('/media', function(req, res, next) {
     var instas = [];
     sender.getTweeterPosts(function(tweetList) {
         sender.getInstaPosts(function(instaList) {
+
             var instaSortedData = {
                 video: [],
                 image: []
             }
             instaList.data.forEach(element => {
-                if(element.type === "image" && element.type === "carousel") {
+                if(element.type === "image" || element.type === "carousel") {
                     instaSortedData["image"].push(element);
                 } else {
+                    console.log(element.caption.text);
                     instaSortedData["video"].push(element);                    
                 }
             });
-            console.log(instaSortedData.carousel[0].images);
+
             res.render('index', {
                 title: 'Waterloop – Media',
                 pageName: 'media',

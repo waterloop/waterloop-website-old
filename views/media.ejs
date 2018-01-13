@@ -62,9 +62,18 @@
         </div>
     </div>
 </div>
-
-<div class="center-align">
+<br><br>
+<div class="center-align container">
+    <div class="row">
     <% for(var i=0; i<instas.video.length ; i++) {%>     
-        <video src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
+        <div class="col l6 s12 insta-video">
+            <video src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
+            <div class="insta-caption">
+                <%= instas.video[i].caption.text %>
+                <div class="insta-shadow"></div>
+            </div>
+            <br>
+        </div>
     <% } %>
+    </div>
 </div>
