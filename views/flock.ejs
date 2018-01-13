@@ -18,6 +18,13 @@ body {
   overflow: hidden;
 }
 
+.zoomblur{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
 .zoomblur:hover {
   -webkit-transform: scale(1.05);
 	transform: scale(1.05);
@@ -35,7 +42,7 @@ body {
   <div class="row">
     <% for(var i = 0; i < flock.length; i++) { %>
       <a href="/flock/<%= flock[i].url %>">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="card z-depth-3" style="background-color: rgba(0,0,0,0); box-shadow: none;">
             <div class="card-image">
               <img class="zoomblur noseldrag img-responsive" src="<%= flock[i].thumbnail %>">

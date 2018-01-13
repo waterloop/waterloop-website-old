@@ -150,5 +150,13 @@
     "desc": "",
     "banner": "",
     "sections": []
+  },
+  {
+    "name": "Goose X",
+    "thumbnail": "/images/flock/goose3.png",
+    "url": "goose_x",
+    "desc": "",
+    "banner": "",
+    "sections": []
   }
 ]

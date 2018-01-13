@@ -244,7 +244,7 @@ footer .logo {
 }
 
 .twitter-row {
-    margin: 0;
+    margin: 5%;
 }
 
 .tweet-container {
@@ -255,6 +255,10 @@ footer .logo {
     color: #111111;
     font-size: 18px;
     padding: 4vh 2vw;
+}
+
+#insta {
+  margin-top:-200px;
 }
 
 .insta-image {
