@@ -83,7 +83,6 @@ router.get('/media', function(req, res, next) {
                 if(element.type === "image" || element.type === "carousel") {
                     instaSortedData["image"].push(element);
                 } else {
-                    console.log(element.caption.text);
                     instaSortedData["video"].push(element);                    
                 }
             });
