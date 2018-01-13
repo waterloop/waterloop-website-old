@@ -46,35 +46,5 @@
         "thumbnail": "/images/thumbs/North_Tbnl.jpg",
         "mobile": "/images/wallpapers/North/north_phone_white.png",
         "desktop": "/images/wallpapers/North/north_1080_white.png"
-    },
-    {
-        "name": "Go For It",
-        "thumbnail": "/images/thumbs/Go_Tbnl.jpg",
-        "mobile": "/images/wallpapers/Go_for_it/goforit_phone_white.png",
-        "desktop": "/images/wallpapers/Go_for_it/goforit_1080_white.png"
-    },
-    {
-        "name": "Hype",
-        "thumbnail": "/images/thumbs/Hype_Tbnl.jpg",
-        "mobile": "images/wallpapers/Hype/hype_phone_white.png",
-        "desktop": "images/wallpapers/Hype/hype_1080_white.png"
-    },
-    {
-        "name": "Loopy",
-        "thumbnail": "/images/thumbs/Loopy_Tbnl.jpg",
-        "mobile": "/images/wallpapers/Loopy/loopy_phone_white.png",
-        "desktop": "/images/wallpapers/Loopy/loopy_1080_white.png"
-    },
-    {
-        "name": "North",
-        "thumbnail": "/images/thumbs/North_Tbnl.jpg",
-        "mobile": "/images/wallpapers/North/north_phone_white.png",
-        "desktop": "/images/wallpapers/North/north_1080_white.png"
-    },
-    {
-        "name": "North",
-        "thumbnail": "/images/thumbs/North_Tbnl.jpg",
-        "mobile": "/images/wallpapers/North/north_phone_white.png",
-        "desktop": "/images/wallpapers/North/north_1080_white.png"
     }
 ]
