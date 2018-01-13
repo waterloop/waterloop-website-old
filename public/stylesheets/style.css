@@ -253,6 +253,11 @@ footer .logo {
     padding: 4vh 2vw;
 }
 
+.insta-image {
+    height: 100%;
+    width: auto
+}
+
 .side-border-left {
     border-right-style: solid;
     border-width: 2px;

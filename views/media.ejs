@@ -47,3 +47,24 @@
     </div>
 </div>
 </div>
+
+<div class="container">
+    <div class="tweet-container">
+        <h4>@team_waterloop</h4>
+        <div class="carousel carousel-slider">
+        <% for(var i=0; i<instas.image.length ; i++) {%>     
+            <a class="carousel-item">
+                <div class="center-align">
+                    <img class="insta-image" src=<%=instas.image[i].images.standard_resolution.url%> >
+                </div>
+            </a>
+        <% } %>
+        </div>
+    </div>
+</div>
+
+<div class="center-align">
+    <% for(var i=0; i<instas.video.length ; i++) {%>     
+        <video src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
+    <% } %>
+</div>
