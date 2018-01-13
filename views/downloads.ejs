@@ -1,0 +1,26 @@
+<div class="container container-fluid">
+  <div class="row center">
+    <h1>Downloads</h1>
+  </div>
+  <% for(var i = 0; i < dl.length; i++) { %>
+    <% if(i % 2 == 0) { %>
+      <div class="row">
+    <% } %>
+    <div class="col m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= dl[i].thumbnail %>">
+          <span class="card-title"><%= dl[i].title %></span>
+        </div>
+        <div class="card-action">
+          <a href="<%= dl[i].mobile %>" download>Mobile</a>
+          <a href="<%= dl[i].desktop %>" download>Desktop</a>
+        </div>
+      </div>
+    </div>
+    <% if(i % 2 == 1 || i == dl.length - 1) { %>
+      </div>
+    <% } %>
+  <% } %>
+  </div>
+</div>
