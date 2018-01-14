@@ -32,9 +32,8 @@
       fromTop < podStartAnimationPoint
     ) {
       this.timelinePosition = fromTop
+      timeline.seek(this.timelinePosition)
     }
-
-    timeline.seek(this.timelinePosition)
   }
 
   setupTimeline()
