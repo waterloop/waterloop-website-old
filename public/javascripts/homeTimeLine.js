@@ -1,16 +1,16 @@
 (function($, TweenLite, TimelineLite){
   const container = $('#pod-container')
   const pod = $('#pod')
-
+  let podStartAnimationPoint
   let timeline
 
   function setupTimeline () {
     const bodyHeight = $('body').height()
     const viewportHeight = $(window).innerHeight()
     const viewportWidth = $(window).innerWidth()
+    podStartAnimationPoint = pod.offset().top + pod.height() - viewportHeight
     
     timeline = new TimelineLite()
-    timeline.add('pod-start', pod.offset().top + pod.height() - viewportHeight)
 
     const animationDuration = viewportHeight * 0.8
     const fromOpts = {
@@ -21,13 +21,19 @@
       easee: Sine.easeInOut
     }
 
-    timeline.fromTo(pod, animationDuration, fromOpts, toOpts, 'pod-start')
+    timeline.fromTo(pod, animationDuration, fromOpts, toOpts, podStartAnimationPoint)
     timeline.pause()
   }
 
   function progressTimeline (fromTop) {
-    this.timelinePosition = Math.max(fromTop, this.timelinePosition) || fromTop
-    console.log(this.timelinePosition)
+    if (
+      this.timelinePosition === undefined ||
+      fromTop > this.timelinePosition ||
+      fromTop < podStartAnimationPoint
+    ) {
+      this.timelinePosition = fromTop
+    }
+
     timeline.seek(this.timelinePosition)
   }
 
