@@ -167,8 +167,9 @@ footer .logo {
 
 .team-header-text {
     font-size: 30px;
-    opacity: 0.6;
+    opacity:0.8;
     padding: 0 4vw;
+    font-weight: 600;
 }
 
 .team-header {

@@ -59,7 +59,7 @@
                     "name": "General",
                     "numBold":1,
                     "members":[
-                        "Isabel Zhu",
+                        "Lead: Isabel Zhu",
                         "Promit Barua"
                     ]
                 }
@@ -68,10 +68,11 @@
     },
     "technical": {
         "lead": "Clive Chan",
+        "integration_lead": "Jimmy Zhou",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Software",
+                    "name": "Controls",
                     "numBold":1,
                     "members": [
                         "Lead: Ruslan Nikolaev",
@@ -108,7 +109,7 @@
                     "numBold":2,
                     "members":[
                         "Co-Lead: Aditya Arora",
-                        "Co-Lead: Melissa Tran",  
+                        "Co-Lead: Melissa Tran",
                         "Armanit Garg",
                         "Tyler Zhang",
                         "Stephanie Mills",
@@ -150,7 +151,7 @@
                     "name": "Mechanical",
                     "numBold":1,
                     "members":[
-                        "Urooj Khaleji",
+                        "Lead: Urooj Khaleji",
                         "Leon Lau",
                         "Edmond Lu",
                         "Justin Schaper",
