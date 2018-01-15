@@ -12,13 +12,13 @@
     
     timeline = new TimelineLite()
 
-    const animationDuration = viewportHeight * 0.8
+    const animationDuration = viewportHeight * 0.4
     const fromOpts = {
       left: - pod.width()  // Start with the pod completely off screen
     }
     const toOpts = {
-      left: viewportWidth,
-      easee: Sine.easeInOut
+      left: (viewportWidth / 2) - (pod.width() / 2),
+      ease: Sine.easeInOut
     }
 
     timeline.fromTo(pod, animationDuration, fromOpts, toOpts, podStartAnimationPoint)
@@ -28,8 +28,8 @@
   function progressTimeline (fromTop) {
     if (
       this.timelinePosition === undefined ||
-      fromTop > this.timelinePosition ||
-      fromTop < podStartAnimationPoint
+      fromTop > this.timelinePosition
+      // fromTop < podStartAnimationPoint
     ) {
       this.timelinePosition = fromTop
       timeline.seek(this.timelinePosition)
