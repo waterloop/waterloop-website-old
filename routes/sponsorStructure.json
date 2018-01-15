@@ -4,53 +4,55 @@
             "name" : "Hypersonic",
             "itemsNum": 2,
             "members" : [
-                "../images/sponsors/orbital/Baluff.svg",
+                "../images/sponsors/orbital/Balluff.png",
                 "../images/sponsors/orbital/BOKO_DESIGN.png",
                 "../images/sponsors/orbital/Communitech.png",
                 "../images/sponsors/orbital/EAGLECAD.png",
                 "../images/sponsors/orbital/ITS.png",
                 "../images/sponsors/orbital/Miltera.png",
                 "../images/sponsors/orbital/UW_ENGINEERING_ENDOWMENT.png",
-                "../images/sponsors/orbital/UW_ENGINEERING_SOCIETY.png"
-
+                "../images/sponsors/orbital/UW_ENGINEERING_SOCIETY.png",
+                "../images/sponsors/orbital/UW_Engineering.png"
             ]
         },{
             "name" : "Supersonic",
             "itemsNum": 3,
             "members" : [
-                "../images/sponsors/hypersonic/idream-01.png",
-                "../images/sponsors/hypersonic/LEAGUE_HEALTH.jpg",
+                "../images/sponsors/hypersonic/idream.png",
+                "../images/sponsors/hypersonic/LEAGUE_HEALTH.png",
                 "../images/sponsors/hypersonic/LEGETT_PLATT.png",
                 "../images/sponsors/hypersonic/Objex_Unlimited.png",
                 "../images/sponsors/hypersonic/PAYPAL.png",
-                "../images/sponsors/hypersonic/Routes_Transport_group.jpg"
+                "../images/sponsors/hypersonic/Routes_Transport_group.png"
             ]
         },{
             "name" : "Transonic",
-            "itemsNum": 5,
+            "itemsNum": 4,
             "members" : [
-                "../images/sponsors/supersonic/Arts_Student_Union_nonEPS.jpeg",
-                "../images/sponsors/supersonic/IBI.jpg",
-                "../images/sponsors/supersonic/Javelin_nonEPS.gif",
+                "../images/sponsors/supersonic/Arts_Student_Union_nonEPS.png",
+                "../images/sponsors/supersonic/IBI.png",
+                "../images/sponsors/supersonic/Javelin_nonEPS.png",
                 "../images/sponsors/supersonic/KIK.png",
-                "../images/sponsors/supersonic/Maplesoft.eps",
+                "../images/sponsors/supersonic/Maplesoft.png",
                 "../images/sponsors/supersonic/MASRI_O.png",
-                "../images/sponsors/supersonic/Naylor.eps",
-                "../images/sponsors/supersonic/UW_ENGINEERING_ARVHITECTURE.png",
-                "../images/sponsors/supersonic/UW_SCIENCE.jpg",
-                "../images/sponsors/supersonic/uw-01.png"
+                "../images/sponsors/supersonic/Naylor.png",
+                "../images/sponsors/supersonic/UW_ENGINEERING_ARCHITECTURE.png",
+                "../images/sponsors/supersonic/UW_SCIENCE.png",
+                "../images/sponsors/supersonic/uw-01.png",
+                "../images/sponsors/supersonic/MMOSER.png"
             ]
         },{
             "name" : "Sonic",
-            "itemsNum": 7,
+            "itemsNum": 6,
             "members" : [
                 "../images/sponsors/transonic/BABYLON_VR.png",
                 "../images/sponsors/transonic/DASSAULT.png",
-                "../images/sponsors/transonic/GRIVEWARE_TECHNOLOGIES.png",
+                "../images/sponsors/transonic/GROVEWARE_TECHNOLOGIES.png",
                 "../images/sponsors/transonic/INK_SMITH.png",
                 "../images/sponsors/transonic/LOT41.png",
                 "../images/sponsors/transonic/PHIDON.png",
-                "../images/sponsors/transonic/ROUTES_TRANSPRT.jpg",
+                "../images/sponsors/transonic/ROUTES_TRANSPORT.jpg",
+                "../images/sponsors/transonic/SUSTAINABLE_TO.png",
                 "../images/sponsors/transonic/SILVER_STAR.jpeg",
                 "../images/sponsors/transonic/UW_ARCHITECTURE_GRADUATE_SOCIETY.png"
             ]
