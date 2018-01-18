@@ -98,6 +98,32 @@
         height: auto;
     }
   }
+  .fancy {
+  line-height: 0.5;
+  text-align: center;
+  }
+  .fancy span {
+    display: inline-block;
+    position: relative;
+  }
+  .fancy span:before,
+  .fancy span:after {
+    content: "";
+    position: absolute;
+    height: 3vmin;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    top: 1vmin;
+    width: 600px;
+  }
+  .fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  .fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+  }
 </style>
 
 <div class="parallax-container" style="height: 50vh;">
@@ -112,7 +138,7 @@
   <div class="row container center-align ">
     <div class="col l8 s10 offset-l2 offset-s1" style="margin-top: -10vh;">
 
-      <a href="/sponsorship_package.pdf" class="waves-effect waves-light btn sponsor-button amber accent-2">Sponsorship Package</a>
+      <a href="/sponsorship_package.pdf" class="waves-effect waves-light btn sponsor-button amber" style="font-weight:1000;font-family:'proxima_nova_altbold'">Sponsorship Package</a>
       <div class="card">
         <div class="card-content">
           <div class="sponsor-landing-heading">Our mission:</div>

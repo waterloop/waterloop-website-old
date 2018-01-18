@@ -1,7 +1,7 @@
 $(document).ready(function(){
-      $('.carousel').carousel({dist: -50, padding: 400, duration: 500});
+      $('.carousel').carousel({padding: 400, indicators: false});
     });
 
 setInterval(function(){
   $('.carousel').carousel('next');
-}, 5000);
+}, 2000);

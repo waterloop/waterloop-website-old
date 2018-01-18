@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://dev.teamwaterloop.ca/</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/team</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/media</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/sponsors</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/downloads</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/shop</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/contact</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/hyperloop</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/sitemap</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock/goose_i</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock/goose_ii</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock/goose_iii</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock/goose_x</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/sponsorship_package.pdf</loc>
+  <lastmod>2018-01-17T04:17:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://dev.teamwaterloop.ca/flock/team</loc>
+  <lastmod>2018-01-18T22:25:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
