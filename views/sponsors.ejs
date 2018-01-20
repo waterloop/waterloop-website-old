@@ -73,7 +73,11 @@
       width: auto;
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width:921px) {
+    .sponsor-logo1 {
+        max-width:95% !important;
+        height: auto !important;
+    }
     .sponsors-header {
         font-size: 57px;
     }
@@ -98,28 +102,32 @@
         height: auto;
     }
   }
+
   .fancy {
   line-height: 0.5;
   text-align: center;
   }
+
   .fancy span {
     display: inline-block;
     position: relative;
   }
-  .fancy span:before,
-  .fancy span:after {
+
+  .fancy span:before, .fancy span:after {
     content: "";
     position: absolute;
     height: 3vmin;
     border-bottom: 2px solid black;
     border-top: 2px solid black;
     top: 1vmin;
-    width: 600px;
+    width: 30%;
   }
+
   .fancy span:before {
     right: 100%;
     margin-right: 15px;
   }
+  
   .fancy span:after {
     left: 100%;
     margin-left: 15px;
