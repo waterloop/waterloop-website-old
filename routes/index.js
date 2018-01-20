@@ -63,7 +63,7 @@ router.get('/media', function(req, res, next) {
                 if(element.type === "image" || element.type === "carousel") {
                     instaSortedData["image"].push(element);
                 } else {
-                    instaSortedData["video"].push(element);                    
+                    instaSortedData["video"].push(element);
                 }
             });
 
@@ -81,7 +81,7 @@ router.get('/media', function(req, res, next) {
 
 router.get('/hyperloop', function(req, res, next) {
     res.render('index', {
-        title: 'Waterloop – Flock',
+        title: 'Waterloop – Hyperloop',
         pageName: 'hyperloop',
         pageParams: {
           flock: flockJSON

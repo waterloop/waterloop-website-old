@@ -5,4 +5,4 @@ $(document).ready(function(){
 setInterval(function(){
   $('.media-carousel').carousel('next');
 
-}, 5000);
+}, 8000);
