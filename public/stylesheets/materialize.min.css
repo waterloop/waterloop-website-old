@@ -4659,8 +4659,9 @@ small {
 }
 
 .card .card-title {
-    font-size: 24px;
-    font-weight: 300
+    font-family:'proxima_nova_ltsemibold';
+    font-size: 3vmin;
+    font-weight: 300;
 }
 
 .card .card-title.activator {
@@ -4809,6 +4810,7 @@ small {
 }
 
 .card .card-action {
+    font-family: 'proxima_nova_ltsemibold';
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160,160,160,0.2);
