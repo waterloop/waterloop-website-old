@@ -64,19 +64,32 @@ function submitSlackForm(){
     }
 }
 
-function submitEmailForm(){
-    const form = getInputs();
-
-    if (form) {
-        $.ajax({
-            type: "POST",
-            url: "/api/submitEmailForm" + formatParams(form),
-            success: function (returnCode) {
-                showMessage(returnCode.message);
-                resetFields();
-            }, error: function (err) {
-                showMessage(err.message);
-            }
-        });
-    }
-}
+$(function(){
+	var lockColor = false;
+	var hovering = false;
+	function rewidth(){$("#submitbtn").width($("#submitbtn span").width());}
+	$("#submitbtn").mouseenter(function(){hovering = true; if(!lockColor)$(this).addClass("hovered");});
+	$("#submitbtn").mouseleave(function(){hovering = false; if(!lockColor)$(this).removeClass("hovered");});
+	$("#ss-form").on("submit", function () {
+		$("#submitbtn span").html("Sending message...");
+		$("#submitbtn").css({"background-color":"red","color":"white"});
+		rewidth();
+		lockColor=true;
+		$("#hiddenFrame").on("load", function(){
+			$("#submitbtn span").html("Thanks!");
+			$("#submitbtn").css("background-color","green");
+			$("#submitbtn").on("click.resubmit", function(e){
+				$("#submitbtn span").html("Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class=\"material-icons\" style=\"vertical-align: top;display:inline;\">send</i>");
+				$("#submitbtn").css("background-color","#fed138");
+				rewidth();
+				lockColor=false;
+				if(hovering) $("#submitbtn").mouseenter();
+				$("#ss-form input, #ss-form textarea").val("");
+				$("#ss-form input").get(0).focus();
+				e.preventDefault();
+				$("#submitbtn").off("click.resubmit");
+			});
+			rewidth();
+		});
+  });
+});

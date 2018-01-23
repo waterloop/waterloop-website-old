@@ -2,7 +2,6 @@ html{font-family:'proxima_nova_ltthin', 'Montserrat', Helvetica;height:100%;}
 p{font-family:'Proxima Nova';}
 body{font-size:115%;}
 form-text{font-size:10px;}
-input[type=email]:not(.browser-default){margin:0;}
 #social img{width:10%;margin:0 5%;min-height:30px;min-width:30px;opacity:0.6;}
 #neg-margin{margin-top:10px !important;}
 #threejs{width:100%;display:block;height:30vh;background-image:url("../images/front-page/spotlight01.jpg");background-attachment:fixed;background-color:#555555;}
