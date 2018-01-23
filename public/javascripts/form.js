@@ -93,3 +93,16 @@ $(function(){
 		});
   });
 });
+
+$(function(){
+	$("#ss-form-2").on("submit", function () {
+		$("#email-submit i").text("more_horiz").css("color","#fed138");
+		$("#hiddenFrame").on("load", function(){
+			$("#email-submit i").text("done").css("color","green");
+      $("#email").val("");
+			setTimeout(function(){
+				$("#email-submit i").text("send").css("color","#fed138");
+			}, 5000);
+		});
+  });
+});
