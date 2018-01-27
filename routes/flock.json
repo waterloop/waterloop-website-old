@@ -145,7 +145,7 @@
   },
   {
     "name": "Goose III",
-    "thumbnail": "/images/flock/goose3.png",
+    "thumbnail": "/images/flock/comingsoon.png",
     "url": "goose_iii",
     "desc": "",
     "banner": "",
@@ -156,7 +156,27 @@
     "thumbnail": "/images/flock/goose3.png",
     "url": "goose_x",
     "desc": "",
-    "banner": "",
-    "sections": []
+    "banner": "/images/flock/goose3/torontorender.jpg",
+    "sections": [
+      {
+        "content": [
+          "This is our GOOSE X pod, a conceptual full size Hyperloop vehicle inspired by the prototype we are building. The full size pod will have a capacity of 26 passengers per pod, interior diameter of 2 meters, top speed around 1220 km/h and cost around $500,000 per pod."
+        ]
+      },
+      {
+        "title": "Exterior Design",
+        "content":[
+          "The exterior design of the pod highlights its primary design feature: the geodetic structural frame. The front end of the pod features a funnel like shape which would be used to collect the small amount of low pressure air in front of the train to eliminate air drag and supply air for the compressor which supplies the air castors. The matte black finish departs from contemporary transit imagery and signals in the new era of Hyperloop transit."
+        ],
+        "parallax": "/images/flock/goose3/spherepod.jpg"
+      },
+      {
+        "title": "Interior Design",
+        "content": [
+          "Due to cost efficiency, the diameter of the Hyperloop track must be kept as minimal as possible. For this reason, the pod design is kept as small as possible, and the curved geometry, white colour palette, and use of interior features resembling windows creates the illusion of a much bigger space"
+        ],
+        "parallax": "/images/flock/goose3/innerpod.jpg"
+      }
+    ]
   }
 ]
