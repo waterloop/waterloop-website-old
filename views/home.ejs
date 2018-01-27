@@ -183,48 +183,24 @@
       <h2 class="subtitle center">Our Blogs</h2>
       <p class="text center" style="font-size:2vmax;">Behind the scene stories from our journey so far
       </p>
+        <% if(blog) { %>
+        <% for(var i = 0; i < 3 && i < blog.length; i++) { %>
         <div class="col l4 m6 s12">
             <div class="card">
                 <div class="card-image">
-                    <img class="responsive-img" src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-                    <span class="card-title">Mr. Goose blog</span>
+                    <img class="noseldrag responsive-img" src="<%= blog[i].img %>">
+                    <span class="card-title"><%= blog[i].title %>></span>
                 </div>
                 <div class="card-content">
-                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
+                    <p><%= blog[i].subtitle %></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">Keep reading</a>
+                    <a href="<%= blog[i].url %>">Keep reading</a>
                 </div>
             </div>
         </div>
-        <div class="hide-on-small-only col l4 m6 s12">
-            <div class="card">
-                <div class="card-image">
-                    <img class="responsive-img" src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-                    <span class="card-title">Mr. Goose blog</span>
-                </div>
-                <div class="card-content">
-                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">Keep reading</a>
-                </div>
-            </div>
-        </div>
-        <div class="hide-on-med-and-down col l4 m12 s12">
-            <div class="card">
-                <div class="card-image">
-                    <img class="responsive-img" src="/images/front-page/gary-bendig-192233.jpg" height="400px" width="400px">
-                    <span class="card-title">Mr. Goose blog</span>
-                </div>
-                <div class="card-content">
-                    <p>All hail Mr. Goose the proud recipient of an honorary degree in Software Engineering for having completing the task of shitting on every frosh.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">Keep reading</a>
-                </div>
-            </div>
-        </div>
+        <% } %>
+        <% } %>
         <a  class="right" href="https://medium.com/waterloop" target="_blank"><span style="font-size:1.5vmax;margin:0;font-family: 'proxima_nova_ltsemibold';">Read More Blogs </span><i class="material-icons" style="margin-bottom: 10px !important;">arrow_forward</i></a>
     </div>
 </div>

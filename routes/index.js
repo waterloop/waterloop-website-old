@@ -1,4 +1,5 @@
 const express = require('express');
+const mediumGetLatestPosts = require("medium-get-latest-posts")
 const router = express.Router();
 const teamStructureJSON = require('./teamStructure.json');
 const sponsorStructureJSON = require('./sponsorStructure.json');
@@ -7,21 +8,30 @@ const flockJSON = require('./flock.json');
 const downloadsJSON = require('./downloads.json');
 
 /* GET home page. */
-
-router.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Waterloop – Canada\'s Hyperloop',
-        pageName: 'home',
-        pageParams: {},
+// First gets the latest medium posts
+function getBlogPosts() {
+    mediumGetLatestPosts.getPublisherLatestPosts('waterloop').then((data) => {
+        let blogd = data;
+        console.log(blogd);
+        router.get('/', (req, res) => {
+            console.log(blogd);
+            res.render('index', {
+                title: 'Waterloop – Canada\'s Hyperloop',
+                pageName: 'home',
+                pageParams: {
+                    blog: blogd,
+                },
+            });
+        });
     });
-});
+}
 
 router.get('/flock', (req, res) => {
     res.render('index', {
         title: 'Waterloop – Flock',
         pageName: 'flock',
         pageParams: {
-          flock: flockJSON,
+            flock: flockJSON,
         }
     });
 });
