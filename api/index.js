@@ -94,8 +94,10 @@ module.exports = {
 
     getMediumPosts: function (callback) {
         medium.getPublisherLatestPosts(medium_username).then((data) => {
+            console.log(data);
             callback(data);
         }).catch((err) => {
+            console.log(err);
             callback(err);
         });
     },

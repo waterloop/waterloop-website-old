@@ -1,30 +1,22 @@
 const express = require('express');
-const mediumGetLatestPosts = require("medium-get-latest-posts")
 const router = express.Router();
 const teamStructureJSON = require('./teamStructure.json');
 const sponsorStructureJSON = require('./sponsorStructure.json');
-const sender = require('../api/index');
+const wat_api = require('../api/index');
 const flockJSON = require('./flock.json');
 const downloadsJSON = require('./downloads.json');
 
-/* GET home page. */
-// First gets the latest medium posts
-function getBlogPosts() {
-    mediumGetLatestPosts.getPublisherLatestPosts('waterloop').then((data) => {
-        let blogd = data;
-        console.log(blogd);
-        router.get('/', (req, res) => {
-            console.log(blogd);
-            res.render('index', {
-                title: 'Waterloop – Canada\'s Hyperloop',
-                pageName: 'home',
-                pageParams: {
-                    blog: blogd,
-                },
-            });
+router.get('/', (req, res) => {
+    wat_api.getMediumPosts((data) => {
+        res.render('index', {
+            title: 'Waterloop – Canada\'s Hyperloop',
+            pageName: 'home',
+            pageParams: {
+                blog: data,
+            },
         });
     });
-}
+});
 
 router.get('/flock', (req, res) => {
     res.render('index', {
@@ -43,7 +35,7 @@ for (const item of flockJSON) {
             title: 'Waterloop – ' + item.name,
             pageName: 'goose',
             pageParams: {
-              goose: item,
+                goose: item,
             }
         });
     });
@@ -65,8 +57,8 @@ const instaSortedData = {
     image: [],
 };
 
-sender.getTweeterPosts(curTweetList => {
-    sender.getInstaPosts(instaList => {
+wat_api.getTweeterPosts(curTweetList => {
+    wat_api.getInstaPosts(instaList => {
         tweetList = curTweetList;
         for (const element of instaList.data) {
             if (element.type === "image" || element.type === "carousel") {
@@ -94,7 +86,7 @@ router.get('/hyperloop', (req, res) => {
         title: 'Waterloop – Hyperloop',
         pageName: 'hyperloop',
         pageParams: {
-          flock: flockJSON,
+            flock: flockJSON,
         }
     });
 });
@@ -146,7 +138,7 @@ router.get('*', (req, res) => {
 router.post('/api/submitEmailForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
 
-    sender.sendEmail(req.query, result => {
+    wat_api.sendEmail(req.query, result => {
         if (result) {
             res.status(200).json({"message": "Email sent successfully"});
         } else {
@@ -159,7 +151,7 @@ router.post('/api/submitEmailForm', (req, res) => {
 router.post('/api/submitSlackForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
 
-    sender.sendSlack(req.query, result => {
+    wat_api.sendSlack(req.query, result => {
         if (result) {
             res.status(200).json({"message": "Slack sent successfully"});
         } else {
