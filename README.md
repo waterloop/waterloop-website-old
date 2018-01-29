@@ -2,7 +2,7 @@
 Official website of teamwaterloop
 
 ## How to start a server and locally run the website?
-* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git`
+* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git --depth=1`  (remove the --depth flag if you are a contributor and don't want the entire commit history)
 * Do this `cd waterloop-website`
 * Install requirements `npm install`
 * Run server `npm start`
