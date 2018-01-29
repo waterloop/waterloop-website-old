@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "nodemon --ignore public/ ./bin/www",
     "prod": "NODE_ENV=production node ./bin/www"
   },
   "dependencies": {
