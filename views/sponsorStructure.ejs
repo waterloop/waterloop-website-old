@@ -7,16 +7,18 @@
         </div>
     </div>
 
-    <div class="row center-align">
+    <% if (members.length%itemsNum !== 0) { %>
+    <div class="row flex-align <%= name %>">
     <% for(var i=0; i<members.length%itemsNum; i++) {%>
-        <img class="sponsor-logo1 <%= name %>" src=<%= members[i] %> />
+        <img class="sponsor-logo1" src=<%= members[i] %> />
     <% } %>
     </div>
+    <% } %>
 
     <% for(var i=members.length%itemsNum; i<members.length; i=itemsNum+i) {%>
-        <div class="row center-align">
+        <div class="row flex-align <%= name %>">
             <% for(var j=0; j<itemsNum; j++) {%>
-                <img class="sponsor-logo1 <%= name %>" src=<%= members[i+j] %> />
+                <img class="sponsor-logo1" src=<%= members[i+j] %> />
             <% } %>
         </div>
     <% } %>
