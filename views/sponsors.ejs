@@ -38,14 +38,13 @@
       font-size: 10vmin;
       font-weight: 600;
       color: #BFBFBF;
-      /*text-decoration: underline;*/
   }
 
   .sponsor-logo1 {
-      height: 120px;
       margin: 2vh 1vw;
       opacity: 0.9;
-      /*transition: 0.2s;*/
+      max-width: 50%;
+      max-height: 100%;
   }
 
   .sponsor-logo1:hover {
@@ -53,59 +52,48 @@
       transition: 0.2s;
   }
 
-  .Hypersonic {
-      max-height: 80%;
-      width: auto;
+  .Hypersonic img {
+      max-height: 80px;
   }
 
-  .Supersonic {
-      max-height: 60%;
-      width: auto;
+  .Supersonic img {
+      max-height: 70px;
   }
 
-  .Transonic {
-      max-height: 40%;
-      width: auto;
+  .Transonic img {
+      max-height: 60px;
   }
 
-  .Sonic {
-      max-height: 30%;
-      width: auto;
+  .Sonic img {
+      max-height: 50px;
+  }
+
+  .flex-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   @media only screen and (max-width:921px) {
     .sponsor-logo1 {
-        max-width:95% !important;
-        height: auto !important;
+        max-width:95%;
+        height: auto;
     }
     .sponsors-header {
         font-size: 57px;
     }
-
-    .Hypersonic {
-        max-width: 80%;
-        height: auto;
+    .Hypersonic, .Supersonic, .Transonic, .Sonic {
+        height: unset;
     }
-
-    .Supersonic {
-        max-width: 40%;
-        height: auto;
-    }
-
-    .Transonic {
-        max-width: 27%;
-        height: auto;
-    }
-
-    .Sonic {
-        max-width: 20%;
-        height: auto;
+    .flex-align {
+        flex-direction: column;
     }
   }
 
   .fancy {
-  line-height: 0.5;
-  text-align: center;
+    line-height: 0.5;
+    text-align: center;
   }
 
   .fancy span {
