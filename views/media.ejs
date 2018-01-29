@@ -95,17 +95,12 @@
 
 
 <script>
-    $(document).ready(function(){
-        $('.parallax').parallax();
-    });
+$(function(){
+  $('.parallax').parallax();
+  $('.carousel').carousel({padding: 400, indicators: false});
+});
 
-    $(function(){
-          $('.carousel').carousel({padding: 400, indicators: false});
-        });
-
-    setInterval(function(){
-      $('.carousel').carousel('next');
-    }, 5000);
-
-
+setInterval(function(){
+  $('.carousel').carousel('next');
+}, 5000);
 </script>
