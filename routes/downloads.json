@@ -1,25 +1,25 @@
 [
     {
         "name": "Go For It",
-        "thumbnail": "/images/thumbs/Go_Tbnl.jpg",
+        "thumbnail": "/images/wallpapers/Go_for_it/goforit_tbnl.jpg",
         "mobile": "/images/wallpapers/Go_for_it/goforit_phone_white.png",
         "desktop": "/images/wallpapers/Go_for_it/goforit_1080_white.png"
     },
     {
         "name": "Hype",
-        "thumbnail": "/images/thumbs/Hype_Tbnl.jpg",
+        "thumbnail": "/images/wallpapers/Hype/hype_tbnl.jpg",
         "mobile": "images/wallpapers/Hype/hype_phone_white.png",
         "desktop": "images/wallpapers/Hype/hype_1080_white.png"
     },
     {
         "name": "Loopy",
-        "thumbnail": "/images/thumbs/Loopy_Tbnl.jpg",
+        "thumbnail": "/images/wallpapers/Loopy/loopy_tbnl.jpg",
         "mobile": "/images/wallpapers/Loopy/loopy_phone_white.png",
         "desktop": "/images/wallpapers/Loopy/loopy_1080_white.png"
     },
     {
         "name": "North",
-        "thumbnail": "/images/thumbs/North_Tbnl.jpg",
+        "thumbnail": "/images/wallpapers/North/north_tbnl.jpg",
         "mobile": "/images/wallpapers/North/north_phone_white.png",
         "desktop": "/images/wallpapers/North/north_1080_white.png"
     }
