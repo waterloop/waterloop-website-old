@@ -6,12 +6,12 @@
             "members" : [
                 "../images/sponsors/orbital/Balluff.png",
                 "../images/sponsors/orbital/BOKO_DESIGN.png",
-                "../images/sponsors/orbital/Communitech.png",
-                "../images/sponsors/orbital/EAGLECAD.png",
+                "../images/sponsors/orbital/Communitech.svg",
+                "../images/sponsors/orbital/EAGLECAD.svg",
                 "../images/sponsors/orbital/ITS.png",
                 "../images/sponsors/orbital/Miltera.png",
                 "../images/sponsors/orbital/UW_ENGINEERING_ENDOWMENT.png",
-                "../images/sponsors/orbital/UW_ENGINEERING_SOCIETY.PNG",
+                "../images/sponsors/orbital/UW_ENGINEERING_SOCIETY.png",
                 "../images/sponsors/orbital/UW_Engineering.png"
             ]
         },{
@@ -23,7 +23,7 @@
                 "../images/sponsors/hypersonic/LEGETT_PLATT.png",
                 "../images/sponsors/hypersonic/Objex_Unlimited.png",
                 "../images/sponsors/hypersonic/PAYPAL.png",
-                "../images/sponsors/hypersonic/Routes_Transport_group.png"
+                "../images/sponsors/hypersonic/Routes_Transport_Group.png"
             ]
         },{
             "name" : "Transonic",
@@ -32,8 +32,8 @@
                 "../images/sponsors/supersonic/Arts_Student_Union_nonEPS.png",
                 "../images/sponsors/supersonic/IBI.png",
                 "../images/sponsors/supersonic/Javelin_nonEPS.png",
-                "../images/sponsors/supersonic/KIK.png",
-                "../images/sponsors/supersonic/Maplesoft.png",
+                "../images/sponsors/supersonic/KIK.svg",
+                "../images/sponsors/supersonic/Maplesoft.svg",
                 "../images/sponsors/supersonic/MASRI_O.png",
                 "../images/sponsors/supersonic/Naylor.png",
                 "../images/sponsors/supersonic/UW_ENGINEERING_ARCHITECTURE.png",
@@ -51,7 +51,6 @@
                 "../images/sponsors/transonic/INK_SMITH.png",
                 "../images/sponsors/transonic/LOT41.png",
                 "../images/sponsors/transonic/PHIDON.png",
-                "../images/sponsors/transonic/ROUTES_TRANSPORT.jpg",
                 "../images/sponsors/transonic/SUSTAINABLE_TO.png",
                 "../images/sponsors/transonic/SILVER_STAR.jpeg",
                 "../images/sponsors/transonic/UW_ARCHITECTURE_GRADUATE_SOCIETY.png"
