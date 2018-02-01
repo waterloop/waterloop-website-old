@@ -119,11 +119,17 @@
     "url": "goose_iii",
     "desc": "",
     "banner": "",
-    "sections": []
+    "sections": [
+      {
+        "content": [
+          "This is GOOSE III pod, the one that we are building in the next few terms to get ready for Competition III."
+        ]
+      }
+    ]
   },
   {
     "name": "Goose X",
-    "thumbnail": "/images/flock/goose3.png",
+    "thumbnail": "/images/flock/goosex.png",
     "url": "goose_x",
     "desc": "",
     "banner": "/images/flock/goose3/torontorender.jpg",
