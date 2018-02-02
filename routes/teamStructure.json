@@ -68,8 +68,8 @@
         ]
     },
     "technical": {
-        "lead": "Clive Chan",
-        "integration_lead": "Jimmy Zhou",
+        "lead": "Jeff Niu",
+        "integration_lead": "Jeff Niu",
         "teamHeirarchy": [
             {
                 "team": {
@@ -79,7 +79,6 @@
                         "Lead: Ruslan Nikolaev",
                         "Lily Hwang",
                         "Tyler Zhang",
-                        "Jeff Niu",
                         "Archer Zhang",
                         "Edwin Zhang",
                         "Navraj Singh Chhina",
@@ -144,7 +143,8 @@
                         "Lead: William Ngana",
                         "Ben Tonita",
                         "Josie Eshkenazi",
-                        "Connor Nicholls"
+                        "Connor Nicholls",
+                        "Jeff Niu"
                     ]
                 }
             },{
