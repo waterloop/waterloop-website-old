@@ -24,7 +24,7 @@ footer .logo{height:120px;opacity:0.9;}
 .team-tree{padding:0 0 0 10px;}
 .team-name{padding:1vh 1vw;font-weight:600;display:inline-block;}
 .team-card{padding:2vh 0;}
-.team-number{float:right;display:inline-block;padding:1vh 1vw;font-weight:500;}
+.team-number{float:right;padding:1vh 1vw;font-weight:500;}
 .lead-text{font-weight:600;}
 .team-header-text{font-size:125%;opacity:0.8;padding:0 2vw;font-weight:600;}
 .team-header{font-weight:600;}
@@ -51,3 +51,4 @@ footer .logo{height:120px;opacity:0.9;}
 @media only screen and (min-width:993px){#i404{margin-top:7rem;}}
 .responsive-img{object-fit:cover;min-width:100%;min-height:100%;}
 .h100{height:100%;}
+.card-title{text-shadow:0 0 8px black}
