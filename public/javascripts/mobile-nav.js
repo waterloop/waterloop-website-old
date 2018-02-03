@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".button-collapse").sideNav({menuWidth:300,closeOnClick:true,draggable:true,onOpen:function(el){},onClose:function(el){},});});
+$(function(){$(".button-collapse").sideNav({menuWidth:300,closeOnClick:true,draggable:true,onOpen:function(el){},onClose:function(el){},});});

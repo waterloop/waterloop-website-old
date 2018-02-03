@@ -90,14 +90,23 @@
     .subtitle {
       padding-top: 3%;
     }
+
+    .home-carousel a {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .home-carousel.carousel .carousel-item > img {
+        transform: scale(1.5, 1.5);
+    }
 </style>
 <div class="parallax-container full-height" style="padding: 70px 0;">
-    <div class="parallax"><img class="responsive-img" src="images/front-page/toronto.png"></div>
+    <div class="parallax"><img class="responsive-img" src="images/front-page/toronto.jpg"></div>
     <div class="container center landing" style="font-size:0.8em;">
         <div class="image123">
-            <img src="images/front-page/waterloo-shield.png" height="50"/>
-            <img class="small-glyph" src="images/front-page/waterloop-logo.png" height="50"/>
-            <img class="small-glyph" src="images/front-page/leaf.png" height="50"/>
+            <img src="images/front-page/waterloo-shield.svg" height="50"/>
+            <img class="small-glyph" src="images/front-page/waterloop-logo.svg" height="50"/>
+            <img class="small-glyph" src="images/front-page/leaf.svg" height="50"/>
         </div>
         <div class="title-box">
             <h1 class="title-text">Canada's Hyperloop</h1>
@@ -130,16 +139,16 @@
             </div>
             <div class="row" style="margin-bottom:0px;" id="social">
                 <div class="col s8 m4 l4 offset-s2 offset-m4 offset-l4 noseldrag">
-                    <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-new.png" alt="team waterloop facebook"></a>
-                    <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-new.png" alt="team waterloop twitter"></a>
-                    <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-new.png" alt="team waterloop insta"></a>
+                    <a href="https://www.facebook.com/teamwaterloop" target="_blank"><img src="/images/logos/facebook-new.svg" alt="team waterloop facebook"></a>
+                    <a href="https://twitter.com/team_waterloop" target="_blank"><img src="/images/logos/twitter-new.svg" alt="team waterloop twitter"></a>
+                    <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-new.svg" alt="team waterloop insta"></a>
                 </div>
             </div>
             <a href="#pod-container" style="position: absolute;bottom:80px;left: 50%;z-index: 2;display: inline-block;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);text-decoration: none;"><span id="arrow"></span></a>
         </div>
     </div>
 </div>
-<div class="section white empty" style="height:50%;">
+<div class="section white empty hide-on-med-and-down" style="height:50%;">
     <div id="pod-container" style="position: relative; height: 40%; top:20%; overflow-x: hidden; background-color: lightblue">
         <img id='pod' class="noseldrag" src="/images/pod.png" style="position: absolute;max-width:70%;width:auto;height:auto; bottom:0px"/>
     </div>
@@ -151,22 +160,22 @@
             <h2 class="subtitle">Our Sponsors</h2>
             <p class="text" style="font-size:2vmax;">Since the first competition we have relied on our sponsors <br>to support us through our journey to first place.
             </p>
-            <div id="gallery" class="carousel center">
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/Balluff.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/BOKO_DESIGN.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/Communitech.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/EAGLECAD.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/ITS.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/Miltera.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/UW_ENGINEERING_ENDOWMENT.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/UW_ENGINEERING_SOCIETY.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/orbital/UW_Engineering.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/PAYPAL.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/Objex_Unlimited.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/idream.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/LEGETT_PLATT.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/LEAGUE_HEALTH.png" style="max-width:150%;margin-left:-25%"></a>
-                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/Routes_Transport_group.png" style="max-width:150%;margin-left:-25%"></a>
+            <div id="gallery" class="carousel center home-carousel">
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/Balluff.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/BOKO_DESIGN.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/Communitech.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/EAGLECAD.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/ITS.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/Miltera.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/UW_ENGINEERING_ENDOWMENT.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/UW_ENGINEERING_SOCIETY.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/hypersonic/UW_Engineering.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/PAYPAL.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/Objex_Unlimited.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/idream.png"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/LEGETT_PLATT.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/LEAGUE_HEALTH.svg"></a>
+                <a class="carousel-item" href="#!"><img src="/images/sponsors/supersonic/Routes_Transport_Group.png"></a>
             </div>
         </div>
     </div>
@@ -176,7 +185,9 @@
     <h2 class="subtitle">Our Progress</h2>
     <p class="text" style="font-size:2vmax;">Since the first competition we have learnt more than we we could ever imagine!</p></div>
     <div class="parallax"><img class="responsive-img" src="images/front-page/TeamBG-01.jpg"></div>
-    <div id="lineChart"><%- include('linechart'); %></div>
+    <div>
+      <div id="lineChart"><%- include('linechart'); %></div>
+    </div>
 </div>
 <div class="section white">
     <div class="container row">
@@ -195,7 +206,7 @@
                     <p><%= blog[i].subtitle %></p>
                 </div>
                 <div class="card-action">
-                    <a href="<%= blog[i].url %>">Keep reading</a>
+                    <a href="<%= blog[i].url %>" target="_blank">Keep reading</a>
                 </div>
             </div>
         </div>
@@ -207,7 +218,7 @@
 
 <script src="/javascripts/homeTimeLine.js"></script>
 <script>
-    $(document).ready(function(){
+    $(function(){
       $('.parallax').parallax();
       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
@@ -232,5 +243,14 @@
         } // End if
       });
     });
+
+    $(function(){
+          $('.carousel').carousel({padding: 400, indicators: false});
+        });
+
+    setInterval(function(){
+      $('.carousel').carousel('next');
+    }, 2000);
+
 
 </script>

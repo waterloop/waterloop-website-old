@@ -2,10 +2,16 @@
 Official website of teamwaterloop
 
 ## How to start a server and locally run the website?
-* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git`
+* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git --depth=1`  
+(remove the --depth flag if you are a contributor and don't want the entire commit history)
 * Do this `cd waterloop-website`
 * Install requirements `npm install`
+* If this is your first time doing this contact @aurpine on slack for the API_KEYS
 * Run server `npm start`
+
+## Maintaining the team roster
+All the data is stored within `routes/teamStructure.json`. The file contains a JSON array of the team. It has the list of members by team alongside the faculty and alumni advisors.
+Images of team leads are stored in `public/images` and can be updated in `views/team.ejs` accordingly
 
 ## Maintaining the flock pages
 
