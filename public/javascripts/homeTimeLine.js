@@ -9,7 +9,7 @@
     const viewportHeight = $(window).innerHeight()
     const viewportWidth = $(window).innerWidth()
     podStartAnimationPoint = pod.offset().top + pod.height() - viewportHeight
-    
+
     timeline = new TimelineLite()
 
     const animationDuration = viewportHeight * 0.4
@@ -40,10 +40,10 @@
 
   $(window).scroll(() => progressTimeline($(window).scrollTop()))
   $(window).resize(() => {
-    console.log('resized')
+    // console.log('resized')
     setupTimeline()
     progressTimeline($(window).scrollTop())
   })
 
-  
+
 })($, TweenLite, TimelineLite)

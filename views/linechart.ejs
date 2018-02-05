@@ -134,7 +134,7 @@ function draw(){
           })
           .on("mouseover", function (d) {
               d3.select(this).style("stroke","#ff7a09");
-              console.log(d);
+            //   console.log(d);
               div.transition()
                   .duration(200)
                   .style("opacity", .9);
@@ -157,8 +157,8 @@ function draw(){
       var t = d3.transition()
           .duration(2000)
           .ease(d3.easeQuadIn)
-          .on("start", function(d){ console.log("transiton start") })
-          .on("end", function(d){ console.log("transiton end") })
+        //   .on("start", function(d){ console.log("transiton start") })
+        //   .on("end", function(d){ console.log("transiton end") })
       // var t1 = d3.transition()
       //     .duration(1000)
       //     .ease(d3.easeLinear)
@@ -173,7 +173,7 @@ function draw(){
 
 draw();
 $(window).resize(() => {
-  console.log('resized')
+//   console.log('resized')
   d3.selectAll("svg > *").remove()
   draw();
 })
