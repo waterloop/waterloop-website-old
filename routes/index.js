@@ -151,7 +151,7 @@ router.post('/api/submitEmailForm', (req, res) => {
 router.post('/api/submitSlackForm', (req, res) => {
     console.log(`[200] ${req.method} ${req.url}`);
 
-    wat_api.sendSlack(req.query, result => {
+    wat_api.sendSlack(req.body, result => {
         if (result) {
             res.status(200).json({"message": "Slack sent successfully"});
         } else {

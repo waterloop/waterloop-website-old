@@ -3,13 +3,13 @@ const Instagram = require('node-instagram').default;
 const slackmailer = require('slack-node');
 const twitter = require('twitter');
 const medium = require('medium-get-latest-posts');
-var google = require('googleapis');
+const GoogleSpreadsheet = require('google-spreadsheet');
+
 const secret = require('../secret/index.json');
 
 const email = secret.email_account;
 const slack = secret.slack_account;
 const medium_username = secret.medium_account.username;
-const google_creds = secret.medium_account.username;
 
 module.exports = {
     sendEmail: function (data, callback) {
@@ -41,18 +41,33 @@ module.exports = {
 
     sendSlack: function (data, callback) {
         let slackClient = new slackmailer(slack.api_token);
-        console.log(data.firstname);
 
         slackClient.api('chat.postMessage', {
             token: slack.api_token,
-            text: `*Incoming contact us request:*\n*Name:* \`${data.firstname} ${data.lastname}\`\n*Email:* \`${data.email}\`\n*Subject:* ${data.subject}\n*Message:* ${data.msg}`,
+            text: `*Incoming contact us request:*\n*Name:* \`${data['entry.204801274']}\`\n*Email:* \`${data['entry.79140437']}\`\n*Message:* ${data['entry.59625375']}`,
             channel: '#contact_us',
-        }, function(err, response){
-            //console.log(response);
+        }, function(err, response) {
+
             if (err) {
                 callback(false);
             } else {
-                callback(true);
+                const google_creds = secret.google_creds;
+                const doc = new GoogleSpreadsheet('1JGe07rwKV9SRbTr2tGs9wLouq4BWECFbNOEwO0a483k');
+
+                doc.useServiceAccountAuth(google_creds, (err) => {
+
+                    doc.addRow(1, {
+                        email: data['entry.79140437'],
+                        first_name: data['entry.204801274'],
+                        message: data['entry.59625375']
+                    }, function(err) {
+                        if (err) {
+                            callback(false);
+                        } else {
+                            callback(true);
+                        }
+                    });
+                });
             }
         });
     },
@@ -61,7 +76,7 @@ module.exports = {
         const instagram = new Instagram({
             clientId: secret.insta_account.client_id,
             clientSecret: secret.insta_account.client_id,
-            accessToken: secret.insta_account.access_token,
+            accessToken: secret.insta_account.access_token
         });
 
         instagram.get('users/self/media/recent', (err, data) => {
@@ -101,23 +116,4 @@ module.exports = {
             callback(err);
         });
     },
-
-    writeRowToGoogleSheet: function (values, callback) {
-          var body = {
-            values: values
-          };
-          service.spreadsheets.values.append({
-            spreadsheetId: spreadsheetId,
-            range: range,
-            valueInputOption: valueInputOption,
-            resource: body
-          }, function(err, result) {
-            if(err) {
-              // Handle error.
-              console.log(err);
-            } else {
-              console.log('%d cells appended.', result.updates.updatedCells);
-            }
-          });
-    }
 };
