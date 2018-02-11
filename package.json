@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon --ignore public/ ./bin/www",
+    "clean": "rm -rf ./cache",
     "prod": "NODE_ENV=production node ./bin/www"
   },
   "dependencies": {
@@ -13,16 +14,19 @@
     "ejs": "~2.5.7",
     "es6": "0.0.7",
     "express": "~4.15.5",
+    "express-minify": "^1.0.0",
     "favicon": "0.0.2",
     "google-auth-library": "^0.12.0",
     "googleapis": "^23.0.0",
+    "html-minifier": "^3.5.9",
     "medium-get-latest-posts": "^1.1.2",
     "morgan": "~1.9.0",
     "node-instagram": "^4.1.0",
     "sendmail": "^1.2.0",
     "serve-favicon": "~2.4.5",
     "slack-node": "^0.1.8",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "uglify-es": "^3.3.10"
   },
   "devDependencies": {
     "nodemailer": "^4.4.2",
