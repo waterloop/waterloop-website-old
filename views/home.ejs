@@ -54,24 +54,9 @@
       margin-left: -12px;
       border-left: 1px solid #fff;
       border-bottom: 1px solid #fff;
-      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      -webkit-animation: sdb 1.5s infinite;
       animation: sdb 1.5s infinite;
       box-sizing: border-box;
-    }
-    @-webkit-keyframes sdb {
-      0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-      }
     }
     @keyframes sdb {
       0% {
@@ -144,7 +129,7 @@
                     <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-new.svg" alt="team waterloop insta"></a>
                 </div>
             </div>
-            <a href="#pod-container" style="position: absolute;bottom:80px;left: 50%;z-index: 2;display: inline-block;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);text-decoration: none;"><span id="arrow"></span></a>
+            <a href="#pod-container" style="position: absolute;bottom:80px;left: 50%;z-index: 2;display: inline-block;transform: translate(0, -50%);text-decoration: none;"><span id="arrow"></span></a>
         </div>
     </div>
 </div>
@@ -180,7 +165,7 @@
         </div>
     </div>
 </div>
-<div class="parallax-container full-height empty hide-on-med-and-down">
+<div class="parallax-container full-height empty">
     <div class="center">
     <h2 class="subtitle">Our Progress</h2>
     <p class="text" style="font-size:2vmax;">Since the first competition we have learnt more than we we could ever imagine!</p></div>
