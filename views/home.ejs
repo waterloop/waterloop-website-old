@@ -54,24 +54,9 @@
       margin-left: -12px;
       border-left: 1px solid #fff;
       border-bottom: 1px solid #fff;
-      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      -webkit-animation: sdb 1.5s infinite;
       animation: sdb 1.5s infinite;
       box-sizing: border-box;
-    }
-    @-webkit-keyframes sdb {
-      0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-      }
     }
     @keyframes sdb {
       0% {
@@ -124,14 +109,23 @@
                     <a href="https://www.instagram.com/team_waterloop" target="_blank"><img src="/images/logos/instagram-new.svg" alt="team waterloop insta"></a>
                 </div>
             </div>
-            <a href="#pod-container" style="position: absolute;bottom:80px;left: 50%;z-index: 2;display: inline-block;-webkit-transform: translate(0, -50%);transform: translate(0, -50%);text-decoration: none;"><span id="arrow"></span></a>
+            <a href="#pod-container" style="position: absolute;bottom:80px;left: 50%;z-index: 2;display: inline-block;transform: translate(0, -50%);text-decoration: none;"><span id="arrow"></span></a>
         </div>
     </div>
 </div>
-<div class="section white empty hide-on-med-and-down" style="height:50%;">
-    <div id="pod-container" style="position: relative; height: 40%; top:20%; overflow-x: hidden; background-color: lightblue">
-        <img id='pod' class="noseldrag" src="/images/pod.png" style="position: absolute;max-width:70%;width:auto;height:auto; bottom:0px"/>
+<div id="pod-container" class="section relative empty hide-on-small-only noseldrag" style="height:45%;background-color: #deeff5">
+    <div class="flex-align flex-column f3 pt1" style="padding-top: 6rem">
+        <img src="images/front-page/waterloop-logo.svg" alt="Waterloop Logo" height="30">
+        <span class="fg-yellow" style="padding: 1rem">Toronto - Montreal</span>
+        <div class="btn btn-round flex-align">
+            <img src="/images/stopwatch.svg" style="filter:invert(1)" height="20px" alt=""> <span style="margin-left:5px">in 30 minutes</span>
+        </div>
     </div>
+    <img src="/images/front-page/Waterloop_Toronto_Skyline.svg" alt="Toronto" class="absolute l0 b0 z1 h90">
+    <div style="background-color:skyblue;position:absolute;width:100%;bottom:10%;height:20%">
+        <img id="pod" class="absolute h100" src="/images/pod.png"/>
+    </div>
+    <img src="/images/front-page/Waterloop_Montreal_Skyline.svg" alt="Montreal" class="absolute r0 b0 z1 h90">
 </div>
 
 <div class="section">
@@ -160,14 +154,12 @@
         </div>
     </div>
 </div>
-<div class="parallax-container full-height empty hide-on-med-and-down">
+<div class="parallax-container full-height empty flex-column hide-on-small-only">
     <div class="center">
     <h2 class="subtitle">Our Progress</h2>
     <p class="text" style="font-size:2vmax;">Since the first competition we have learnt more than we we could ever imagine!</p></div>
     <div class="parallax"><img class="responsive-img" src="images/front-page/TeamBG-01.jpg"></div>
-    <div>
-      <div id="lineChart"><%- include('linechart'); %></div>
-    </div>
+    <div id="lineChart" class="flex-auto"><%- include('linechart'); %></div>
 </div>
 <div class="section white">
     <div class="container row">
@@ -175,30 +167,37 @@
       <p class="text center" style="font-size:2vmax;">Behind the scene stories from our journey so far
       </p>
         <% if(blog) { %>
-        <% for(var i = 0; i < 3 && i < blog.length; i++) { %>
-        <div class="col l4 m6 s12">
-            <div class="card">
-                <div class="card-image">
-                    <img class="noseldrag responsive-img" src="<%= blog[i].img %>">
-                    <span class="card-title"><%= blog[i].title %></span>
-                </div>
-                <div class="card-content">
-                    <p><%= blog[i].subtitle %></p>
-                </div>
-                <div class="card-action">
-                    <a href="<%= blog[i].url %>" target="_blank">Keep reading</a>
+            <% for(var i = 0; i < 3 && i < blog.length; i++) { %>
+            <div class="col l4 m6 s12">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="noseldrag responsive-img" src="<%= blog[i].img %>">
+                        <span class="card-title"><%= blog[i].title %></span>
+                    </div>
+                    <div class="card-content">
+                        <p><%= blog[i].subtitle %></p>
+                    </div>
+                    <div class="card-action">
+                        <a href="<%= blog[i].url %>" target="_blank">Keep reading</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <% } %>
         <% } %>
-        <% } %>
-        <a  class="right" href="https://medium.com/waterloop" target="_blank"><span style="font-size:1.5vmax;margin:0;font-family: 'proxima_nova_ltsemibold';">Read More Blogs </span><i class="material-icons" style="margin-bottom: 10px !important;">arrow_forward</i></a>
+        <a class="right" href="https://medium.com/waterloop" target="_blank"><span style="font-size:1.5vmax;margin:0;font-family: 'proxima_nova_ltsemibold';">Read More Blogs </span><i class="material-icons" style="margin-bottom: 10px !important;">arrow_forward</i></a>
     </div>
 </div>
 
-<script src="/javascripts/homeTimeLine.js"></script>
 <script>
-    $(function(){
+var podContainer = document.getElementById('pod-container');
+var animateHook = function () {
+    if (podContainer.getBoundingClientRect().bottom < document.documentElement.clientHeight) {
+        window.removeEventListener('scroll', animateHook);
+        document.getElementById('pod').classList.add('pod-animate');
+    }
+};
+    window.addEventListener('scroll', animateHook, false);
+    animateHook();
       $('.parallax').parallax();
       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
@@ -222,11 +221,8 @@
           });
         } // End if
       });
-    });
 
-    $(function(){
-          $('.carousel').carousel({padding: 400, indicators: false});
-        });
+        $('.carousel').carousel({padding: 400, indicators: false});
 
     setInterval(function(){
       $('.carousel').carousel('next');
