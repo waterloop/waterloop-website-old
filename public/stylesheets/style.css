@@ -26,7 +26,7 @@ footer .logo{width:120px;opacity:0.9;}
 .team-card{padding:2vh 0;}
 .team-number{float:right;padding:5px 5px;font-weight:500;}
 .lead-text{font-weight:600;}
-.team-header-text{font-size:125%;opacity:0.8;padding:0 5px;font-weight:600;}
+.team-header-text{font-size:170%;opacity:1;padding:0 5px;font-weight:600;}
 .team-header{font-weight:600;}
 .team-landing{padding: 10px;}
 .team-faculty{font-size:24px;}
@@ -80,6 +80,7 @@ footer .logo{width:120px;opacity:0.9;}
 .card-title{text-shadow:0 0 8px black}
 .dn{display:none}
 .h100{height:100%}
+.h90{height:90%}
 .flex-column{display:flex;flex-direction:column}
 .flex-auto{flex:1 1 auto}
 .flex-align {
@@ -108,6 +109,9 @@ footer .logo{width:120px;opacity:0.9;}
 .t0 {
   top: 0;
 }
+.b0 {
+  bottom: 0;
+}
 .z1 {
   z-index: 1;
 }
@@ -117,4 +121,8 @@ footer .logo{width:120px;opacity:0.9;}
 .f2 {
   font-family:'Proxima Nova';
   font-size: 2rem;
+}
+.f3 {
+  font-family:'Proxima Nova';
+  font-size: 3rem;
 }
