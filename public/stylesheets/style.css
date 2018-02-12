@@ -1,6 +1,6 @@
 html{font-family:'proxima_nova_ltthin', 'Montserrat', Helvetica;height:100%;}
 p{font-family:'Proxima Nova';}
-body{font-size:115%;}
+body{font-size:115%;scroll-behavior: smooth;}
 form-text{font-size:10px;}
 #social img{width:10%;margin:0 5%;min-height:30px;min-width:30px;opacity:0.6;}
 #email-submit{margin-top:10px !important;background-color:transparent;color:#fed138;border:none;transition:padding-left 0.5s;}
@@ -34,7 +34,24 @@ footer .logo{height:120px;opacity:0.9;}
 .team-picture{padding:2vh 0;width:100%;}
 .btn{background-color:#fed138;}
 .btn:hover, .btn-large:hover{background-color:#fee098;}
-.noseldrag{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-user-drag:none;user-drag:none;}
+.noseldrag, .noseldrag *{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-user-drag:none;user-drag:none;}
+#pod {
+  left: 0;
+  transform: translateX(-100%);
+}
+.pod-animate {
+  animation: slide 1s ease-out forwards;
+}
+@keyframes slide {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
 .media-landing{margin:none;height:50vh;}
 .media-header{color:white;font-size:70px;padding:9vh 0 10vh 0;font-weight:600;}
 .media-icon{color:white;display:inline-block;padding:0 1vw 0 1vw;}
@@ -50,7 +67,6 @@ footer .logo{height:120px;opacity:0.9;}
 .insta-shadow{top:1em;width:100%;height:2em;background:-webkit-linear-gradient(transparent, white);background:-o-linear-gradient(transparent, white);background:-moz-linear-gradient(transparent, white);background:linear-gradient(transparent, white);}
 @media only screen and (min-width:993px){#i404{margin-top:7rem;}}
 .responsive-img{object-fit:cover;min-width:100%;min-height:100%;}
-.h100{height:100%;}
 .card-title{text-shadow:0 0 8px black}
 .dn{display:none}
 .h100{height:100%}
@@ -66,4 +82,19 @@ footer .logo{height:120px;opacity:0.9;}
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.l0 {
+  left: 0;
+}
+.r0 {
+  right: 0;
+}
+.z1 {
+  z-index: 1;
 }
