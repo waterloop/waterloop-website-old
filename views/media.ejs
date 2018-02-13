@@ -1,5 +1,5 @@
 <div class="parallax-container full-height" style="padding: 70px 0;">
-  <div class="parallax"><img class="responsive-img" src="images/gooseI.jpg"></div>
+  <div class="parallax"><img class="responsive-img" src="images/gooseI.jpg" alt="Goose architecture"></div>
   <div class="media-landing">
   <div class="center">
     <div class="media-header"> Notes from Waterloop! </div>
@@ -40,7 +40,7 @@
       <div class="tweet-design card">
       <div class="row twitter-row">
         <div class="side-border-left col s1">
-        <img class="circle responsive-img" style="filter:brightness(0.1);" src="images/logos/twitter-new.svg">
+        <img class="circle responsive-img" style="filter:brightness(0.1);" src="images/logos/twitter-new.svg" alt="Twitter">
         </div>
         <div class="col s11">
         <span class="tweet-text"><%= tweets[i].text %></span>
@@ -64,7 +64,7 @@
   <% for(var i=0; i<instas.image.length ; i++) {%>
     <a class="carousel-item" href="https://www.instagram.com/team_waterloop" target="_blank">
     <div class="center-align h100">
-      <img class="insta-image" src="<%=instas.image[i].images.standard_resolution.url%>">
+      <img class="insta-image" src="<%=instas.image[i].images.standard_resolution.url%>" alt="Instagram picture">
     </div>
     </a>
   <% } %>

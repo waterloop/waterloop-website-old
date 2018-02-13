@@ -11,7 +11,7 @@
   <% if (members.length%itemsNum !== 0) { %>
     <div class="row flex-align <%= name %>">
       <% for(var i=0; i<members.length%itemsNum; i++) {%>
-        <img class="sponsor-logo1" src="<%= members[i] %>">
+        <img class="sponsor-logo1" src="<%= members[i] %>" alt="<%= name %> sponsor">
       <% } %>
     </div>
   <% } %>
@@ -19,7 +19,7 @@
   <% for(var i=members.length%itemsNum; i<members.length; i=itemsNum+i) {%>
     <div class="row flex-align <%= name %>">
       <% for(var j=0; j<itemsNum; j++) {%>
-        <img class="sponsor-logo1" src="<%= members[i+j] %>">
+        <img class="sponsor-logo1" src="<%= members[i+j] %>" alt="<%= name %> sponsor">
       <% } %>
     </div>
   <% } %>

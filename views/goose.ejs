@@ -13,7 +13,7 @@ p.content {
     </div>
   </nav>
 <div class="parallax-container">
-  <div class="parallax"><img class="responsive-img" src="<%= goose.banner %>"></div>
+  <div class="parallax"><img class="responsive-img" src="<%= goose.banner %>" alt="Goose banner"></div>
 </div>
 <div class="section white">
   <div class="row container">
@@ -24,7 +24,7 @@ p.content {
 <% for(var i in goose.sections) { %>
   <% if('parallax' in goose.sections[i]) { %>
     <div class="parallax-container">
-      <div class="parallax"><img class="responsive-img pimg" src="<%= goose.sections[i].parallax %>"></div>
+      <div class="parallax"><img class="responsive-img pimg" src="<%= goose.sections[i].parallax %>" alt="Goose features"></div>
     </div>
   <% } %>
   <div class="section white">
@@ -38,7 +38,7 @@ p.content {
       <% } %>
       <% if('img' in goose.sections[i]) { %>
       <% for(var j = 0; j < goose.sections[i].img.length; j++) { %>
-        <img class="responsive-img" src="<%= goose.sections[i].img[j] %>">
+        <img class="responsive-img" src="<%= goose.sections[i].img[j] %>" alt="Goose features">
       <% } %>
       <% } %>
     </div>
