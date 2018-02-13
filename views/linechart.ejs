@@ -29,8 +29,13 @@
     border: 0;
     border-radius: 8px;
     max-width: 200px;
+    opacity: 0.9;
+    transition: transform 1s ease-out, opacity 1s ease;
+  }
+
+  .tooltip.inactive {
+    transform: scale(0, 0);
     opacity: 0;
-    transition: opacity 2s ease;
   }
 
   .tooltip p {
@@ -131,39 +136,50 @@ d3.csv("/timeline.csv", function(err, data) {
         var position = parseInt(d.position);
         var cy = parseFloat(self.getAttribute('cy'));
         var cx = parseFloat(self.getAttribute('cx'));
-
+        var transformOrigin = '';
         if (position % 2 === 0) {
+          transformOrigin += "bottom";
           tooltip.style("bottom", function () {
             return (1 - cy / height) * 100 + "%";
           });
         } else {
+          transformOrigin += "top";
           tooltip.style("top", function () {
             return cy / height * 100 + "%";
           });
         }
+        transformOrigin += " ";
         // ~~ is a faster Math.floor() (two bitwise nots converts it to integer)
         if (~~(position / 2) === 0) {
+          transformOrigin += "right";
           tooltip.style("right", function () {
             return (1 - cx / width) * 100 + "%";
           });
         } else {
+          transformOrigin += "left";
           tooltip.style("left", function () {
             return cx / width * 100 + "%";
           });
         }
+        tooltip.style("transform-origin", transformOrigin);
         setTimeout(function() {
           dot.style("fill-opacity", 1).style("stroke-opacity", 1);
           tooltip.style("opacity", .9);
         }, 2000 * cx / width);
+        setTimeout(function() {
+          tooltip.classed('inactive', true);
+          tooltip.style("opacity", '');
+        }, 3000);
+        dot.on('mouseenter', function() {
+          tooltip.classed('inactive', false);
+        }).on('mouseleave', function() {
+          tooltip.classed('inactive', true);
+        })
       });
 
     setTimeout(function() {
       path.attr("class", "line").style("stroke-dashoffset", 0);
     }, 0);
-    // setTimeout(function() {
-    //   fixeddot.style("fill-opacity", 1).style("stroke-opacity", 1);
-    //   bbox.selectAll('.tooltip').style("opacity", .9);
-    // }, 2000);
 
   }
   function redraw() {
@@ -201,6 +217,7 @@ d3.csv("/timeline.csv", function(err, data) {
       drew = true;
     }
   };
+  animateHook();
   window.addEventListener('scroll', animateHook, false);
   window.addEventListener('resize', function() {
     if (drew) {
