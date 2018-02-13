@@ -1,4 +1,4 @@
-<div id="bbox" style="width:85%;height:70%" class="absolute-transform-center">
+<div id="bbox" class="absolute-transform-center" style="width:85%; height:70%;">
   <svg id="timeline" width="100%" height="100%"></svg>
 </div>
 <style>
@@ -13,8 +13,8 @@
   .dot {
     fill-opacity: 0;
     stroke-opacity: 0;
-    stroke: #111111;
-    fill: #FFF1CC;
+    stroke: #111;
+    fill: #fff1cc;
     stroke-width: 3px;
     transition: fill-opacity 2s ease, stroke-opacity 2s ease;
   }
@@ -26,7 +26,7 @@
     margin: 3px;
     font-size: 14px;
     background: #fffbfd;
-    border: 0px;
+    border: 0;
     border-radius: 8px;
     max-width: 200px;
     opacity: 0;
@@ -36,7 +36,7 @@
   .tooltip p {
     margin: 0;
     padding: 0;
-    font-family: 'proxima_nova_ltsemibold', 'Montserrat', Helvetica;
+    font-family: 'proxima_nova_ltsemibold', sans-serif;
   }
 
   .line {
@@ -68,7 +68,9 @@ function makeLine(x, y) {
 }
 
 d3.csv("/timeline.csv", function(err, data) {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   function createScales(width, height) {
     var x = d3.scaleLinear().range([dotRadius + 2, width - dotRadius - 2]);
     var y = d3.scaleLinear().range([height - dotRadius - 2, dotRadius + 2]);
@@ -88,20 +90,20 @@ d3.csv("/timeline.csv", function(err, data) {
     var scales = createScales(width, height);
     var x = scales[0], y = scales[1];
 
-    var svg = d3.select(timeline)
+    var svg = d3.select(timeline);
     var totalLength;
     var path = svg.append("path")
       .data([data])
       .attr("d", makeLine(x, y))
       .attr("stroke-dasharray", function(){ return totalLength = this.getTotalLength(); })
-      .style("stroke-dashoffset", totalLength)
+      .style("stroke-dashoffset", totalLength);
 
     // add the dots with tooltips
     var fixeddot = svg.selectAll()
       .data(data)
       .enter().append("circle")
       .attr("r", dotRadius)
-      .attr("class", "dot")
+      .attr("class", "dot");
 
     var bbox = d3.select(document.getElementById('bbox'));
     fixeddot
@@ -119,7 +121,7 @@ d3.csv("/timeline.csv", function(err, data) {
           .append("div")
           .attr("class", "tooltip")
           .style("opacity", 0);
-        tooltip.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>")
+        tooltip.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>");
 
         // position:
         // 0 | 2
@@ -128,7 +130,7 @@ d3.csv("/timeline.csv", function(err, data) {
         // where `o` is the circle on the timeline
         var position = parseInt(d.position);
         var cy = parseFloat(self.getAttribute('cy'));
-        var cx = parseFloat(self.getAttribute('cx'))
+        var cx = parseFloat(self.getAttribute('cx'));
 
         if (position % 2 === 0) {
           tooltip.style("bottom", function () {
@@ -143,11 +145,11 @@ d3.csv("/timeline.csv", function(err, data) {
         if (~~(position / 2) === 0) {
           tooltip.style("right", function () {
             return (1 - cx / width) * 100 + "%";
-          })
+          });
         } else {
           tooltip.style("left", function () {
             return cx / width * 100 + "%";
-          })
+          });
         }
         setTimeout(function() {
           dot.style("fill-opacity", 1).style("stroke-opacity", 1);
@@ -181,14 +183,14 @@ d3.csv("/timeline.csv", function(err, data) {
     var svg = d3.select(timeline);
     svg.select("path")
       .attr("d", valueline)
-      .attr("stroke-dasharray", function(){ return this.getTotalLength() })
+      .attr("stroke-dasharray", function(){ return this.getTotalLength(); });
     svg.selectAll(".dot")
       .attr("cx", function (d) {
         return x(d.epoch);
       })
       .attr("cy", function (d) {
         return y(d.GNI);
-      })
+      });
   }
   var drew = false;
   var animateHook = function () {
@@ -198,7 +200,7 @@ d3.csv("/timeline.csv", function(err, data) {
       draw();
       drew = true;
     }
-  }
+  };
   window.addEventListener('scroll', animateHook, false);
   window.addEventListener('resize', function() {
     if (drew) {

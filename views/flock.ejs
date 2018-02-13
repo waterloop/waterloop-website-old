@@ -1,9 +1,8 @@
 <style>
 body {
-  background: linear-gradient(0deg,rgba(255,255,255,1.1),rgba(255,255,255,0.95)),url('/images/front-page/ray-hennessy-233426.jpg') center center no-repeat;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1.1), rgba(255, 255, 255, 0.95)), url('/images/front-page/ray-hennessy-233426.jpg') center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /*padding: 5%;*/
 }
 
 #flock {
@@ -18,14 +17,14 @@ body {
   overflow: hidden;
 }
 
-.zoomblur{
-	transform: scale(1);
-	transition: .3s ease-in-out;
+.zoomblur {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
 }
 
 .zoomblur:hover {
-	transform: scale(1.05);
-	transition: .3s ease-in-out;
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 </style>
 
@@ -39,7 +38,7 @@ body {
     <% for(var i = 0; i < flock.length; i++) { %>
       <a href="/flock/<%= flock[i].url %>">
         <div class="col s12 m6">
-          <div class="card z-depth-3" style="background-color: rgba(0,0,0,0); box-shadow: none;">
+          <div class="card z-depth-3" style="background-color: rgba(0, 0, 0, 0); box-shadow: none;">
             <div class="card-image">
               <img class="zoomblur noseldrag img-responsive" src="<%= flock[i].thumbnail %>">
             </div>

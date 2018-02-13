@@ -1,7 +1,7 @@
 <div class="dn show-on-medium-and-up">
 <nav>
   <div class="nav-wrapper grey lighten-5">
-    <ul id="nav-mobile" class="left">
+    <ul class="left">
       <li class="nav-logo"><a href="/" class="logo noseldrag"><img class="logo noseldrag" src="/images/Logotype_Black.svg"></a></li>
       <li <%if(active=="home"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/">Home</a></li>
       <li <%if(active=="flock" || active=="goose"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/flock">Flock</a></li>
@@ -10,7 +10,7 @@
       <li <%if(active=="sponsors"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/sponsors">Sponsors</a></li>
       <li <%if(active=="downloads"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/downloads">Downloads</a></li>
     </ul>
-    <ul id="nav-mobile" class="right">
+    <ul class="right">
       <li <%if(active=="shop"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a target="_blank" href="https://merch.teamwaterloop.ca">Shop</a></li>
       <li <%if(active=="contact"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/contact">Contact</a></li>
     </ul>
@@ -19,21 +19,21 @@
 </div>
 
 <div class="hide-on-med-and-up">
-<ul id="slide-out" class="side-nav">
+<ul id="slide-out" class="side-nav" style="font-family:'Proxima Nova', sans-serif;">
     <li><div class="user-view" style="min-height:80px;">
       <div class="background" style="min-height:80px;">
-        <img src="images/Logotype_Black.svg" style="width:auto;height:100%;">
+        <img style="width:auto; height:100%;" src="images/Logotype_Black.svg">
       </div>
     </div></li>
-    <li <%if(active=="home"){%>class="active"<%}%>><a  class="waves-effect" href="/"><span style="font-family:'Proxima Nova';">Home</span></a></li>
-    <li <%if(active=="flock" || active=="goose"){%>class="active"<%}%>><a class="waves-effect" href="/flock"><span style="font-family:'Proxima Nova';">Flock</span></a></li>
-    <li <%if(active=="team"){%>class="active"<%}%>><a  class="waves-effect" href="/team"><span style="font-family:'Proxima Nova';">Team</span></a></li>
-    <li <%if(active=="media"){%>class="active"<%}%>><a  class="waves-effect" href="/media"><span style="font-family:'Proxima Nova';">Media</span></a></li>
-    <li <%if(active=="sponsors"){%>class="active"<%}%>><a  class="waves-effect" href="/sponsors"><span style="font-family:'Proxima Nova';">Sponsors</span></a></li>
-    <li <%if(active=="downloads"){%>class="active"<%}%>><a  class="waves-effect" href="/downloads"><span style="font-family:'Proxima Nova';">Downloads</span></a></li>
+    <li <%if(active=="home"){%>class="active"<%}%>><a class="waves-effect" href="/"><span>Home</span></a></li>
+    <li <%if(active=="flock" || active=="goose"){%>class="active"<%}%>><a class="waves-effect" href="/flock"><span>Flock</span></a></li>
+    <li <%if(active=="team"){%>class="active"<%}%>><a class="waves-effect" href="/team"><span>Team</span></a></li>
+    <li <%if(active=="media"){%>class="active"<%}%>><a class="waves-effect" href="/media"><span>Media</span></a></li>
+    <li <%if(active=="sponsors"){%>class="active"<%}%>><a class="waves-effect" href="/sponsors"><span>Sponsors</span></a></li>
+    <li <%if(active=="downloads"){%>class="active"<%}%>><a class="waves-effect" href="/downloads"><span>Downloads</span></a></li>
     <li><div class="divider"></div></li>
-    <li <%if(active=="shop"){%>class="active"<%}%>><a  class="waves-effect" target="_blank" href="https://merch.teamwaterloop.ca"><span style="font-family:'Proxima Nova';">Shop</span></a></li>
-    <li <%if(active=="contact"){%>class="active"<%}%>><a  class="waves-effect" href="/contact"><span style="font-family:'Proxima Nova';">Contact</span></a></li>
+    <li <%if(active=="shop"){%>class="active"<%}%>><a class="waves-effect" target="_blank" href="https://merch.teamwaterloop.ca"><span>Shop</span></a></li>
+    <li <%if(active=="contact"){%>class="active"<%}%>><a class="waves-effect" href="/contact"><span>Contact</span></a></li>
   </ul>
 </div>
 

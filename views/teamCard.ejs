@@ -1,20 +1,20 @@
 <div class="team-card">
-    <div class="card">
-        <div class="team-name">
-            <%- team.name %>
-        </div>
-        <div class="team-number">
-            <%- team.members.length %>
-        </div>
+  <div class="card">
+    <div class="team-name">
+      <%- team.name %>
     </div>
-    <div class="team-tree">
-        <ul>
-            <% for(var i=0; i<team.numBold; i++) {%>
-                <li> <span class="lead-text"> <%- team.members[i] %> </span>  </li>
-            <% } %>
-            <% for(var i=team.numBold; i<team.members.length; i++) {%>
-                <li><%= team.members[i] %></li>
-            <% } %>
-        </ul>
+    <div class="team-number">
+      <%- team.members.length %>
     </div>
+  </div>
+  <div class="team-tree">
+    <ul>
+      <% for(var i=0; i<team.numBold; i++) {%>
+        <li> <span class="lead-text"> <%- team.members[i] %> </span>  </li>
+      <% } %>
+      <% for(var i=team.numBold; i<team.members.length; i++) {%>
+        <li><%= team.members[i] %></li>
+      <% } %>
+    </ul>
+  </div>
 </div>

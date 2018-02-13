@@ -1,104 +1,104 @@
 <div class="parallax-container" style="padding-bottom:10%;">
-    <div class="parallax"><img class="responsive-img" src="/images/teamPicture.jpg" style="opacity:0.15;"></div>
-    <div id="team-background" class="team-landing center">
-        <div class="container">
-            <h1 class="team-header">
-                Our Brilliant Team
-            </h1>
-            <p class="team-header-text">
-                Comprised of like minded students, sharing the vision of
-                changing the future of transportation. Waterloop's team includes first years to
-                masters students, ranging across all faculties. The team has grown from a small
-                group of students to a 70+ member organization working towards making Hyperloop idea
-                a reality.
-            </p>
-        </div>
+  <div class="parallax"><img class="responsive-img" style="opacity:0.15;" src="/images/teamPicture.jpg"></div>
+  <div id="team-background" class="team-landing center">
+    <div class="container">
+      <h1 class="team-header">
+        Our Brilliant Team
+      </h1>
+      <p class="team-header-text">
+        Comprised of like minded students, sharing the vision of
+        changing the future of transportation. Waterloop's team includes first years to
+        masters students, ranging across all faculties. The team has grown from a small
+        group of students to a 70+ member organization working towards making Hyperloop idea
+        a reality.
+      </p>
     </div>
+  </div>
 </div>
 
 
 <div class="card-layout container team-container">
-    <div class="row">
+  <div class="row">
 
-        <div class="row team-faculty center-align">
-            <span class="team-advisor"> Faculty Advisor: </span> <%- teamStructure.advisorName %>
-        </div>
-        <div class="row team-faculty center-align">
-            <span class="team-advisor"> Alumni Advisor: </span> <%- teamStructure.alumniName %>
-        </div>
-
-        <div class="row" style="padding-top: 3rem">
-            <div class="col s12">
-                <div class="row">
-                    <div class="col l4 offset-l2 s6">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/images/clive.jpg">
-                                <span class="card-title">Technical Director</span>
-                            </div>
-                            <div class="card-content">
-                                <%- teamStructure.technical.lead %>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 s6">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/images/jimmy.jpg">
-                                <span class="card-title">Integration Lead</span>
-                            </div>
-                            <div class="card-content">
-                                <%- teamStructure.technical.integration_lead %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <% for(var i=0; i<teamStructure.technical.teamHeirarchy.length-teamStructure.technical.teamHeirarchy.length%3; i= i+3) {%>
-                    <div class="row">
-                        <% for(var j=0; j<3; j++) {%>
-                            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[i+j].team }); %></div>
-                        <% } %>
-                    </div>
-                <% } %>
-                <div class="row">
-                    <% for(var j=teamStructure.technical.teamHeirarchy.length - teamStructure.technical.teamHeirarchy.length%3; j<teamStructure.technical.teamHeirarchy.length; j++) {%>
-                        <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[j].team }); %></div>
-                    <% } %>
-                </div>
-            </div>
-            <div class="col s12">
-
-                <div class="row">
-                    <div class="col l4 offset-l4 s6 offset-s3">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="/images/jason.jpg">
-                                <span class="card-title">Admin Lead</span>
-                            </div>
-                            <div class="card-content">
-                                <%- teamStructure.admin.lead %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <% for(var i=0; i<teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; i= i+3) {%>
-                    <div class="row">
-                        <% for(var j=0; j<3; j++) {%>
-                            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[i+j].team }); %></div>
-                        <% } %>
-                    </div>
-                <% } %>
-                <div class="row">
-                    <% for(var j=teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; j<teamStructure.admin.teamHeirarchy.length; j++) {%>
-                        <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[j].team }); %></div>
-                    <% } %>
-                </div>
-
-        </div>
-        </div>
+    <div class="row team-faculty center-align">
+      <span class="team-advisor"> Faculty Advisor: </span> <%- teamStructure.advisorName %>
     </div>
+    <div class="row team-faculty center-align">
+      <span class="team-advisor"> Alumni Advisor: </span> <%- teamStructure.alumniName %>
+    </div>
+
+    <div class="row" style="padding-top: 3rem;">
+      <div class="col s12">
+        <div class="row">
+          <div class="col l4 offset-l2 s6">
+            <div class="card">
+              <div class="card-image">
+                <img src="/images/clive.jpg">
+                <span class="card-title">Technical Director</span>
+              </div>
+              <div class="card-content">
+                <%- teamStructure.technical.lead %>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 s6">
+            <div class="card">
+              <div class="card-image">
+                <img src="/images/jimmy.jpg" alt="Jimmy">
+                <span class="card-title">Integration Lead</span>
+              </div>
+              <div class="card-content">
+                <%- teamStructure.technical.integration_lead %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% for(var i=0; i<teamStructure.technical.teamHeirarchy.length-teamStructure.technical.teamHeirarchy.length%3; i= i+3) {%>
+          <div class="row">
+            <% for(var j=0; j<3; j++) {%>
+              <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[i+j].team }); %></div>
+            <% } %>
+          </div>
+        <% } %>
+        <div class="row">
+          <% for(var j=teamStructure.technical.teamHeirarchy.length - teamStructure.technical.teamHeirarchy.length%3; j<teamStructure.technical.teamHeirarchy.length; j++) {%>
+            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.technical.teamHeirarchy[j].team }); %></div>
+          <% } %>
+        </div>
+      </div>
+      <div class="col s12">
+
+        <div class="row">
+          <div class="col l4 offset-l4 s6 offset-s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="/images/jason.jpg" alt="Jason">
+                <span class="card-title">Admin Lead</span>
+              </div>
+              <div class="card-content">
+                <%- teamStructure.admin.lead %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% for(var i=0; i<teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; i= i+3) {%>
+          <div class="row">
+            <% for(var j=0; j<3; j++) {%>
+              <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[i+j].team }); %></div>
+            <% } %>
+          </div>
+        <% } %>
+        <div class="row">
+          <% for(var j=teamStructure.admin.teamHeirarchy.length - teamStructure.admin.teamHeirarchy.length%3; j<teamStructure.admin.teamHeirarchy.length; j++) {%>
+            <div class="col l4 s10 offset-l0 offset-s1"><%- include('teamCard', { team: teamStructure.admin.teamHeirarchy[j].team }); %></div>
+          <% } %>
+        </div>
+
+    </div>
+    </div>
+  </div>
 </div>
 <script>
 $(function(){

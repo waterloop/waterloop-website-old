@@ -1,27 +1,27 @@
 <div class="parallax-container full-height" style="padding: 70px 0;">
-    <div class="parallax"><img class="responsive-img" src="images/gooseI.jpg"></div>
-    <div class="media-landing">
-        <div class="center">
-            <div class="media-header"> Notes from Waterloop! </div>
-            <div class="container sponsor-container">
-                <div class="row">
-                    <div class="container">
-                        <div class="row center-align">
-                            <div class="media-icon">
-                                <i class="small material-icons">add_circle_outline</i>
-                            </div>
-                            <div class="media-icon">
-                                <i class="small material-icons">add_circle_outline</i>
-                            </div>
-                            <div class="media-icon">
-                                <i class="small material-icons">add_circle_outline</i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="parallax"><img class="responsive-img" src="images/gooseI.jpg"></div>
+  <div class="media-landing">
+  <div class="center">
+    <div class="media-header"> Notes from Waterloop! </div>
+    <div class="container sponsor-container">
+    <div class="row">
+      <div class="container">
+      <div class="row center-align">
+        <div class="media-icon">
+        <i class="small material-icons">add_circle_outline</i>
         </div>
+        <div class="media-icon">
+        <i class="small material-icons">add_circle_outline</i>
+        </div>
+        <div class="media-icon">
+        <i class="small material-icons">add_circle_outline</i>
+        </div>
+      </div>
+      </div>
     </div>
+    </div>
+  </div>
+  </div>
 </div>
 
 
@@ -29,68 +29,68 @@
 <div class="container">
 <div class="tweet-container">
 
-    <a href="https://twitter.com/team_waterloop" target="_blank">
-      <h4><img src="/images/twitter.png" alt="team waterloop twitter" style="width:30px; height:auto;"> <span style="font-family:'Proxima Nova';">@team_waterloop</span></h4>
-    </a>
-    <div class="carousel carousel-slider">
-    <% for(var i=0; i<tweets.length ; i++) {%>
-        <a class="carousel-item">
-            <div class="col s12 center-align carousel-tweet">
-                <div class="main-tweet">
-                    <div class="tweet-design card">
-                        <div class="row twitter-row">
-                            <div class="side-border-left col s1">
-                                <img src="images/logos/twitter-new.svg" class="circle responsive-img" style="filter:brightness(0.1)">
-                            </div>
-                            <div class="col s11">
-                                <span class="tweet-text"><%= tweets[i].text %></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    <% } %>
+  <a href="https://twitter.com/team_waterloop" target="_blank">
+  <h4><img style="width:30px; height:auto;" src="/images/twitter.png" alt="team waterloop twitter"> <span style="font-family:'Proxima Nova', sans-serif;">@team_waterloop</span></h4>
+  </a>
+  <div class="carousel carousel-slider">
+  <% for(var i=0; i<tweets.length ; i++) {%>
+  <a class="carousel-item">
+    <div class="col s12 center-align carousel-tweet">
+    <div class="main-tweet">
+      <div class="tweet-design card">
+      <div class="row twitter-row">
+        <div class="side-border-left col s1">
+        <img class="circle responsive-img" style="filter:brightness(0.1);" src="images/logos/twitter-new.svg">
+        </div>
+        <div class="col s11">
+        <span class="tweet-text"><%= tweets[i].text %></span>
+        </div>
+      </div>
+      </div>
     </div>
+    </div>
+  </a>
+  <% } %>
+  </div>
 </div>
 </div>
 
-<div id="insta"class="container">
-    <div class="tweet-container">
-      <a href="https://www.instagram.com/team_waterloop" target="_blank">
-        <h4><img src="/images/instagram.png" alt="team waterloop instagram" style="width:30px; height:auto;z-index:10;"> <span style="font-family:'Proxima Nova';">@team_waterloop</span></h4>
-      </a>
-        <div class="carousel carousel-slider">
-        <% for(var i=0; i<instas.image.length ; i++) {%>
-            <a class="carousel-item" href="https://www.instagram.com/team_waterloop" target="_blank">
-                <div class="center-align h100">
-                    <img class="insta-image" src=<%=instas.image[i].images.standard_resolution.url%> >
-                </div>
-            </a>
-        <% } %>
-        </div>
+<div id="insta" class="container">
+  <div class="tweet-container">
+  <a href="https://www.instagram.com/team_waterloop" target="_blank">
+  <h4><img style="width:30px; height:auto; z-index:10;" src="/images/instagram.png" alt="team waterloop instagram"> <span style="font-family:'Proxima Nova', sans-serif;">@team_waterloop</span></h4>
+  </a>
+  <div class="carousel carousel-slider">
+  <% for(var i=0; i<instas.image.length ; i++) {%>
+    <a class="carousel-item" href="https://www.instagram.com/team_waterloop" target="_blank">
+    <div class="center-align h100">
+      <img class="insta-image" src="<%=instas.image[i].images.standard_resolution.url%>">
     </div>
+    </a>
+  <% } %>
+  </div>
+  </div>
 </div>
 <br><br>
 <div class="center-align container">
-    <div class="row">
-    <% for(var i=0; i<instas.video.length ; i++) {%>
-        <div class="col l6 s12 insta-video">
-            <div class="card">
-                <div class="card-image">
-                    <video class="insta-video" src=<%=instas.video[i].videos.standard_resolution.url%> controls ></video>
-                </div>
-                <div class="card-content">
-                    <div class="insta-caption">
-                    <%= instas.video[i].caption.text %>
-                    <div class="insta-shadow"></div>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </div>
-    <% } %>
+  <div class="row">
+  <% for(var i=0; i<instas.video.length ; i++) {%>
+  <div class="col l6 s12 insta-video">
+    <div class="card">
+    <div class="card-image">
+      <video class="insta-video" src="<%=instas.video[i].videos.standard_resolution.url%>" controls ></video>
     </div>
+    <div class="card-content">
+      <div class="insta-caption">
+      <%= instas.video[i].caption.text %>
+      <div class="insta-shadow"></div>
+      </div>
+    </div>
+    </div>
+    <br>
+  </div>
+  <% } %>
+  </div>
 </div>
 
 

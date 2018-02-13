@@ -1,15 +1,15 @@
-const UglifyJS = require('uglify-es');
+const UglifyJS = require("uglify-es");
 // minify HTML markup
-const htmlMinifier = require('html-minifier');
+const htmlMinifier = require("html-minifier");
 // minify JS, CSS, SVG assets
-const minify = require('express-minify');
-const fs = require('fs');
-const path = require('path');
+const minify = require("express-minify");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = function (app) {
   // the default view cache has unminified markup in it, so it is of no use
   // so we disable it and use our own caching object
-  app.set('view cache', false);
+  app.set("view cache", false);
 
   const uglifyOptions = {
     mangle: true,
@@ -17,7 +17,7 @@ module.exports = function (app) {
       drop_console: true,
     }
   };
-  const assetCacheDir = path.join(__dirname, 'cache');
+  const assetCacheDir = path.join(__dirname, "cache");
 
   app.use(function(req, res, next) {
     res.minifyOptions = res.minifyOptions || {};
@@ -45,7 +45,7 @@ module.exports = function (app) {
         res.send(cached);
       } else {
         this.innerRender(view, options, (err, html) => {
-          if (err) throw err;
+          if (err) {throw err;}
           const minifiedHtml = htmlMinifier.minify(html, {
             removeComments: true,
             collapseWhitespace: true,

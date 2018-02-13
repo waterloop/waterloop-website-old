@@ -34,11 +34,11 @@ p.content {
       <% } %>
       <h2 class="header"><%= goose.sections[i].title %></h2>
       <% for(var j in goose.sections[i].content) { %>
-        <p class="content"><%- goose.sections[i].content[j] %><p>
+        <p class="content"><%- goose.sections[i].content[j] %></p>
       <% } %>
       <% if('img' in goose.sections[i]) { %>
       <% for(var j = 0; j < goose.sections[i].img.length; j++) { %>
-        <img class="responsive-img" src="<%= goose.sections[i].img[j] %>" />
+        <img class="responsive-img" src="<%= goose.sections[i].img[j] %>">
       <% } %>
       <% } %>
     </div>
@@ -46,23 +46,7 @@ p.content {
 <% } %>
 
 <script>
-  $(function(){
-    $('.parallax').parallax();
-  });
+$(function(){
+  $('.parallax').parallax();
+});
 </script>
-
-
-
-<!--
-<div class="container container-fluid">
-   <h1><%= goose.name %></h1>
-    <div class="row">
-      <% for(var i in goose.sections) { %>
-        <h2><%= goose.sections[i].title %></h2>
-        <% for(var j in goose.sections[i].content) { %>
-          <p><%= goose.sections[i].content[j] %><p>
-        <% } %>
-        <img class="responsive-img" src="<%= goose.sections[i].img %>" />
-      <% } %>
-    </div>
-</div> -->

@@ -1,46 +1,45 @@
-<div class="container container-fluid" style="font-family:'Proxima Nova';">
-   <h1 style="font-size:5vw;">Contact Info</h1>
-    <div class="row">
-        <div class="col m8">
-            <form target="hiddenFrame" class="col s12" action="https://docs.google.com/forms/d/e/1FAIpQLSd4xYnEvhpS1hjVxdZcDsPldDitgyDtW_ZE_EktLpLiFDcC9w/formResponse" method="POST" id="ss-form">
-                <h2 style="font-size:4vw;">Send us a message</h2>
-                <h3 id="resultField"></h3>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="name" type="text" name="entry.204801274" value="">
-                        <label for="name">Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">email</i>
-                        <input id="email" type="email" name="entry.79140437" value="">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">subject</i>
-                        <textarea id="message" class="materialize-textarea" value="" name="entry.59625375" required aria-required="true"></textarea>
-                        <label for="message">Message *</label>
-                    </div>
-                </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action" id="submitbtn"><span style="display:inline-block;">Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons" style="vertical-align:top;display:inline;">send</i></span>
-                </button>
-            </form>
-            <iframe id="hiddenFrame" name="hiddenFrame" style="display: none;"></iframe>
+<div class="container container-fluid" style="font-family:'Proxima Nova', sans-serif;">
+  <h1 style="font-size:5vw;">Contact Info</h1>
+  <div class="row">
+    <div class="col m8">
+      <form id="ss-form" class="col s12" target="hiddenFrame" action="https://docs.google.com/forms/d/e/1FAIpQLSd4xYnEvhpS1hjVxdZcDsPldDitgyDtW_ZE_EktLpLiFDcC9w/formResponse" method="POST">
+        <h2 style="font-size:4vw;">Send us a message</h2>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="name" type="text" name="entry.204801274" value="">
+            <label for="name">Name</label>
+          </div>
         </div>
-
-        <div class="col m4">
-            <h2 style="font-size:4vw;">Visit us</h2>
-
-            <p>University of Waterloo<br>
-                200 University Ave W<br>
-                Engineering 5, 1104<br>
-                Waterloo, ON N2L 3G1</p>
-
-            <iframe style="width: 100%; height: 450px;"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4398990702825!2d-80.54704628419452!3d43.47228927212763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf6ad02edccff%3A0xdd9df23996268e17!2sUniversity+of+Waterloo!5e0!3m2!1sen!2sca!4v1511187357255" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" name="entry.79140437" value="">
+            <label for="email">Email</label>
+          </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">subject</i>
+            <textarea id="message" class="materialize-textarea" name="entry.59625375" required value="" aria-required="true"></textarea>
+            <label for="message">Message *</label>
+          </div>
+        </div>
+        <button id="submitbtn" class="btn waves-effect waves-light" type="submit" name="action"><span style="display:inline-block;">Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons" style="vertical-align:top; display:inline;">send</i></span>
+        </button>
+      </form>
+      <iframe id="hidden-frame" style="display: none;" name="hiddenFrame"></iframe>
     </div>
+
+    <div class="col m4">
+      <h2 style="font-size:4vw;">Visit us</h2>
+
+      <p>University of Waterloo<br>
+        200 University Ave W<br>
+        Engineering 5, 1104<br>
+        Waterloo, ON N2L 3G1</p>
+
+      <iframe style="width: 100%; height: 450px; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4398990702825!2d-80.54704628419452!3d43.47228927212763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf6ad02edccff%3A0xdd9df23996268e17!2sUniversity+of+Waterloo!5e0!3m2!1sen!2sca!4v1511187357255" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
