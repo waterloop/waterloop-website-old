@@ -118,3 +118,10 @@ footer .logo{width:120px;opacity:0.9;}
 .pn {
   pointer-events: none;
 }
+.img-3x2 {
+  padding-top: 66.6666666666%;
+  background-size: cover;
+}
+.m0 {
+  margin: 0;
+}
