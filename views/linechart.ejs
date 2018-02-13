@@ -89,6 +89,7 @@ d3.csv("/timeline.csv", function(err, data) {
   }
 
   function draw() {
+    drew = true;
     var width = timeline.clientWidth;
     var height = timeline.clientHeight;
     // set the ranges
@@ -205,8 +206,9 @@ d3.csv("/timeline.csv", function(err, data) {
     var boundingRect = timeline.getBoundingClientRect();
     if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
       window.removeEventListener("scroll", animateHook);
-      draw();
-      drew = true;
+      if (!drew) {
+        draw();
+      }
     }
   };
   animateHook();
