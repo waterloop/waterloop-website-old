@@ -16,6 +16,7 @@
     stroke: #111111;
     fill: #FFF1CC;
     stroke-width: 3px;
+    transition: fill-opacity 2s ease, stroke-opacity 2s ease;
   }
 
   .tooltip {
@@ -29,6 +30,7 @@
     border-radius: 8px;
     max-width: 200px;
     opacity: 0;
+    transition: opacity 2s ease;
   }
 
   .tooltip p {
@@ -36,14 +38,9 @@
     padding: 0;
     font-family: 'proxima_nova_ltsemibold', 'Montserrat', Helvetica;
   }
+
   .line {
     transition: stroke-dashoffset 2s linear;
-  }
-  .dot {
-    transition: fill-opacity 2s ease, stroke-opacity 2s ease;
-  }
-  .tooltip {
-    transition: opacity 2s ease;
   }
 
   #he {

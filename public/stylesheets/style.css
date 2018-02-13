@@ -45,23 +45,6 @@ footer .logo{width:120px;opacity:0.9;}
 }
 .btn:hover, .btn-large:hover{background-color:#fee098;}
 .noseldrag, .noseldrag *{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-user-drag:none;user-drag:none;}
-#pod {
-  left: 0;
-  transform: translateX(-100%);
-}
-.pod-animate {
-  animation: slide 1s ease-out forwards;
-}
-@keyframes slide {
-  0% {
-    left: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    left: 50%;
-    transform: translateX(-50%)
-  }
-}
 .media-landing{margin:none;height:50vh;}
 .media-header{color:white;font-size:70px;padding:9vh 0 10vh 0;font-weight:600;}
 .media-icon{color:white;display:inline-block;padding:0 1vw 0 1vw;}
@@ -80,6 +63,7 @@ footer .logo{width:120px;opacity:0.9;}
 .card-title{text-shadow:0 0 8px black}
 .dn{display:none}
 .h100{height:100%}
+.w100{width:100%}
 .h90{height:90%}
 .flex-column{display:flex;flex-direction:column}
 .flex-auto{flex:1 1 auto}
@@ -125,4 +109,12 @@ footer .logo{width:120px;opacity:0.9;}
 .f3 {
   font-family:'Proxima Nova';
   font-size: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .only-first-on-small > *:not(:first-child) {
+    display: none;
+  }
+}
+.pn {
+  pointer-events: none;
 }
