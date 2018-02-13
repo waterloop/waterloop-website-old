@@ -211,7 +211,8 @@
 <script>
 var podContainer = document.getElementById('pod-container');
 var animateHook = function () {
-    if (podContainer.getBoundingClientRect().bottom < document.documentElement.clientHeight) {
+    var boundingRect = podContainer.getBoundingClientRect();
+    if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
         window.removeEventListener('scroll', animateHook);
         document.getElementById('pod').classList.add('pod-animate');
     }

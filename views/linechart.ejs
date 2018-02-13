@@ -193,10 +193,20 @@ d3.csv("/timeline.csv", function(err, data) {
         return y(d.GNI);
       })
   }
-  draw();
-
+  var drew = false;
+  var animateHook = function () {
+    var boundingRect = timeline.getBoundingClientRect();
+    if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
+      window.removeEventListener('scroll', animateHook);
+      draw();
+      drew = true;
+    }
+  }
+  window.addEventListener('scroll', animateHook, false);
   window.addEventListener('resize', function() {
-    redraw();
+    if (drew) {
+      redraw();
+    }
   }, false);
 });
 
