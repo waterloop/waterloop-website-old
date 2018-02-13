@@ -142,7 +142,7 @@
         </div>
     </div>
     <img src="/images/front-page/Waterloop_Toronto_Skyline.svg" alt="Toronto" class="absolute l0 b0 z1 h90">
-    <div style="background-color:skyblue;position:absolute;width:100%;bottom:10%;height:20%">
+    <div id="pod-tube" style="background-color:skyblue;position:absolute;width:100%;bottom:10%;height:20%">
         <img id="pod" class="absolute h100" src="/images/pod.png"/>
     </div>
     <img src="/images/front-page/Waterloop_Montreal_Skyline.svg" alt="Montreal" class="absolute r0 b0 z1 h90">
@@ -209,9 +209,9 @@
 </div>
 
 <script>
-var podContainer = document.getElementById('pod-container');
+var podTube = document.getElementById('pod-tube');
 var animateHook = function () {
-    var boundingRect = podContainer.getBoundingClientRect();
+    var boundingRect = podTube.getBoundingClientRect();
     if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
         window.removeEventListener('scroll', animateHook);
         document.getElementById('pod').classList.add('pod-animate');
