@@ -47,6 +47,7 @@ function formatParams( params ){
     .join("&");
 }
 
+// eslint-disable-next-line no-unused-vars
 function submitSlackForm(){
   const form = getInputs();
 

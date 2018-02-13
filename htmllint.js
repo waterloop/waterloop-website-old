@@ -10,17 +10,14 @@ glob("**/*.ejs", function (er, files) {
     fs.readFile(file, "utf8", (err, data) => err ? reject(err) : resolve(data))
   ))).then(fileStrings => Promise.all(fileStrings.map((f, i) => {
     const filename = files[i];
-    const absPath = path.resolve(process.cwd(), filename);
     let escaped = f
       .replace(new RegExp("<%(=|-).*?%>", "gs"), "null")
       .replace(new RegExp("<(?!%)((.(?!>))*?)<%.*%>(.*?)(?<!%)>", "g"), "<$1$3>") // eslint-disable-line
       .replace(new RegExp("<%(.*?)%>", "gs"), "<!--$1-->");
-    if (filename.endsWith('downloads.ejs')) {
-      console.log(f, escaped);
-    }
+
     return htmllint(escaped, opts).then(issues => {
       issues.forEach(issue => {
-        console.log(`${chalk.magenta(absPath)}:${issue.line}:${issue.column}  ${chalk.red(htmllint.messages.renderIssue(issue))}\n`);
+        console.log(`${chalk.magenta(filename)}:${issue.line}:${issue.column}  ${chalk.red(htmllint.messages.renderIssue(issue))}\n`);
       });
       return issues.length;
     }).catch(err => {

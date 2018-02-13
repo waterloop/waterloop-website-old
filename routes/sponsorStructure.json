@@ -5,6 +5,7 @@
             "itemsNum": 2,
             "members" : [
                 "../images/sponsors/hypersonic/Balluff.svg",
+                "../images/sponsors/hypersonic/altium.png",
                 "../images/sponsors/hypersonic/BOKO_DESIGN.png",
                 "../images/sponsors/hypersonic/Communitech.svg",
                 "../images/sponsors/hypersonic/EAGLECAD.svg",
@@ -21,7 +22,6 @@
                 "../images/sponsors/supersonic/idream.png",
                 "../images/sponsors/supersonic/LEAGUE_HEALTH.svg",
                 "../images/sponsors/supersonic/LEGETT_PLATT.svg",
-                "../images/sponsors/supersonic/Objex_Unlimited.svg",
                 "../images/sponsors/supersonic/PAYPAL.svg",
                 "../images/sponsors/supersonic/Routes_Transport_Group.png"
             ]
@@ -30,6 +30,7 @@
             "itemsNum": 4,
             "members" : [
                 "../images/sponsors/transonic/Arts_Student_Union_nonEPS.svg",
+                "../images/sponsors/transonic/deloitte.png",
                 "../images/sponsors/transonic/IBI.svg",
                 "../images/sponsors/transonic/Javelin_nonEPS.svg",
                 "../images/sponsors/transonic/KIK.svg",
