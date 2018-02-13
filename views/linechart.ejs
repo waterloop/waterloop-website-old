@@ -41,7 +41,7 @@
   .tooltip p {
     margin: 0;
     padding: 0;
-    font-family: 'proxima_nova_ltsemibold', sans-serif;
+    font-family: "proxima_nova_ltsemibold", sans-serif;
   }
 
   .line {
@@ -60,7 +60,7 @@
 !function() {
 
 var dotRadius = 5;
-var timeline = document.getElementById('timeline');
+var timeline = document.getElementById("timeline");
 
 function makeLine(x, y) {
   return d3.line()
@@ -110,7 +110,7 @@ d3.csv("/timeline.csv", function(err, data) {
       .attr("r", dotRadius)
       .attr("class", "dot");
 
-    var bbox = d3.select(document.getElementById('bbox'));
+    var bbox = d3.select(document.getElementById("bbox"));
     fixeddot
       .attr("cx", function (d) {
         return x(d.epoch);
@@ -134,32 +134,24 @@ d3.csv("/timeline.csv", function(err, data) {
         // 1 | 3
         // where `o` is the circle on the timeline
         var position = parseInt(d.position);
-        var cy = parseFloat(self.getAttribute('cy'));
-        var cx = parseFloat(self.getAttribute('cx'));
-        var transformOrigin = '';
+        var cy = parseFloat(self.getAttribute("cy"));
+        var cx = parseFloat(self.getAttribute("cx"));
+        var transformOrigin = "";
         if (position % 2 === 0) {
           transformOrigin += "bottom";
-          tooltip.style("bottom", function () {
-            return (1 - cy / height) * 100 + "%";
-          });
+          tooltip.style("bottom", (1 - cy / height) * 100 + "%");
         } else {
           transformOrigin += "top";
-          tooltip.style("top", function () {
-            return cy / height * 100 + "%";
-          });
+          tooltip.style("top", cy / height * 100 + "%");
         }
         transformOrigin += " ";
         // ~~ is a faster Math.floor() (two bitwise nots converts it to integer)
         if (~~(position / 2) === 0) {
           transformOrigin += "right";
-          tooltip.style("right", function () {
-            return (1 - cx / width) * 100 + "%";
-          });
+          tooltip.style("right", (1 - cx / width) * 100 + "%");
         } else {
           transformOrigin += "left";
-          tooltip.style("left", function () {
-            return cx / width * 100 + "%";
-          });
+          tooltip.style("left", cx / width * 100 + "%");
         }
         tooltip.style("transform-origin", transformOrigin);
         setTimeout(function() {
@@ -167,14 +159,14 @@ d3.csv("/timeline.csv", function(err, data) {
           tooltip.style("opacity", .9);
         }, 2000 * cx / width);
         setTimeout(function() {
-          tooltip.classed('inactive', true);
-          tooltip.style("opacity", '');
+          tooltip.classed("inactive", true);
+          tooltip.style("opacity", "");
         }, 3000);
-        dot.on('mouseenter', function() {
-          tooltip.classed('inactive', false);
-        }).on('mouseleave', function() {
-          tooltip.classed('inactive', true);
-        })
+        dot.on("mouseenter", function() {
+          tooltip.classed("inactive", false);
+        }).on("mouseleave", function() {
+          tooltip.classed("inactive", true);
+        });
       });
 
     setTimeout(function() {
@@ -212,14 +204,14 @@ d3.csv("/timeline.csv", function(err, data) {
   var animateHook = function () {
     var boundingRect = timeline.getBoundingClientRect();
     if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
-      window.removeEventListener('scroll', animateHook);
+      window.removeEventListener("scroll", animateHook);
       draw();
       drew = true;
     }
   };
   animateHook();
-  window.addEventListener('scroll', animateHook, false);
-  window.addEventListener('resize', function() {
+  window.addEventListener("scroll", animateHook, false);
+  window.addEventListener("resize", function() {
     if (drew) {
       redraw();
     }
