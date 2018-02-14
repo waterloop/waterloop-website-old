@@ -1,4 +1,4 @@
-<div id="bbox" style="width:85%;height:70%" class="absolute-transform-center">
+<div id="bbox" class="absolute-transform-center" style="width:85%; height:70%;">
   <svg id="timeline" width="100%" height="100%"></svg>
 </div>
 <style>
@@ -13,9 +13,10 @@
   .dot {
     fill-opacity: 0;
     stroke-opacity: 0;
-    stroke: #111111;
-    fill: #FFF1CC;
+    stroke: #111;
+    fill: #fff1cc;
     stroke-width: 3px;
+    transition: fill-opacity 2s ease, stroke-opacity 2s ease;
   }
 
   .tooltip {
@@ -23,27 +24,28 @@
     text-align: center;
     padding: 5px 25px 5px 25px;
     margin: 3px;
-    font-size: 14px;
+    font-size: 1.5vmin;
     background: #fffbfd;
-    border: 0px;
+    border: 0;
     border-radius: 8px;
     max-width: 200px;
+    opacity: 0.9;
+    transition: transform 1s ease-out, opacity 1s ease;
+  }
+
+  .tooltip.inactive {
+    transform: scale(0, 0);
     opacity: 0;
   }
 
   .tooltip p {
     margin: 0;
     padding: 0;
-    font-family: 'proxima_nova_ltsemibold', 'Montserrat', Helvetica;
+    font-family: "proxima_nova_ltsemibold", sans-serif;
   }
+
   .line {
     transition: stroke-dashoffset 2s linear;
-  }
-  .dot {
-    transition: fill-opacity 2s ease, stroke-opacity 2s ease;
-  }
-  .tooltip {
-    transition: opacity 2s ease;
   }
 
   #he {
@@ -58,7 +60,7 @@
 !function() {
 
 var dotRadius = 5;
-var timeline = document.getElementById('timeline');
+var timeline = document.getElementById("timeline");
 
 function makeLine(x, y) {
   return d3.line()
@@ -71,7 +73,9 @@ function makeLine(x, y) {
 }
 
 d3.csv("/timeline.csv", function(err, data) {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   function createScales(width, height) {
     var x = d3.scaleLinear().range([dotRadius + 2, width - dotRadius - 2]);
     var y = d3.scaleLinear().range([height - dotRadius - 2, dotRadius + 2]);
@@ -85,28 +89,29 @@ d3.csv("/timeline.csv", function(err, data) {
   }
 
   function draw() {
+    drew = true;
     var width = timeline.clientWidth;
     var height = timeline.clientHeight;
     // set the ranges
     var scales = createScales(width, height);
     var x = scales[0], y = scales[1];
 
-    var svg = d3.select(timeline)
+    var svg = d3.select(timeline);
     var totalLength;
     var path = svg.append("path")
       .data([data])
       .attr("d", makeLine(x, y))
       .attr("stroke-dasharray", function(){ return totalLength = this.getTotalLength(); })
-      .style("stroke-dashoffset", totalLength)
+      .style("stroke-dashoffset", totalLength);
 
     // add the dots with tooltips
     var fixeddot = svg.selectAll()
       .data(data)
       .enter().append("circle")
       .attr("r", dotRadius)
-      .attr("class", "dot")
+      .attr("class", "dot");
 
-    var bbox = d3.select(document.getElementById('bbox'));
+    var bbox = d3.select(document.getElementById("bbox"));
     fixeddot
       .attr("cx", function (d) {
         return x(d.epoch);
@@ -122,7 +127,7 @@ d3.csv("/timeline.csv", function(err, data) {
           .append("div")
           .attr("class", "tooltip")
           .style("opacity", 0);
-        tooltip.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>")
+        tooltip.html("<p id=\"he\">" + d.term + "</p><p>" + d.info + "</p>");
 
         // position:
         // 0 | 2
@@ -130,41 +135,44 @@ d3.csv("/timeline.csv", function(err, data) {
         // 1 | 3
         // where `o` is the circle on the timeline
         var position = parseInt(d.position);
-        var cy = parseFloat(self.getAttribute('cy'));
-        var cx = parseFloat(self.getAttribute('cx'))
-
+        var cy = parseFloat(self.getAttribute("cy"));
+        var cx = parseFloat(self.getAttribute("cx"));
+        var transformOrigin = "";
         if (position % 2 === 0) {
-          tooltip.style("bottom", function () {
-            return (1 - cy / height) * 100 + "%";
-          });
+          transformOrigin += "bottom";
+          tooltip.style("bottom", (1 - cy / height) * 100 + "%");
         } else {
-          tooltip.style("top", function () {
-            return cy / height * 100 + "%";
-          });
+          transformOrigin += "top";
+          tooltip.style("top", cy / height * 100 + "%");
         }
+        transformOrigin += " ";
         // ~~ is a faster Math.floor() (two bitwise nots converts it to integer)
         if (~~(position / 2) === 0) {
-          tooltip.style("right", function () {
-            return (1 - cx / width) * 100 + "%";
-          })
+          transformOrigin += "right";
+          tooltip.style("right", (1 - cx / width) * 100 + "%");
         } else {
-          tooltip.style("left", function () {
-            return cx / width * 100 + "%";
-          })
+          transformOrigin += "left";
+          tooltip.style("left", cx / width * 100 + "%");
         }
+        tooltip.style("transform-origin", transformOrigin);
         setTimeout(function() {
           dot.style("fill-opacity", 1).style("stroke-opacity", 1);
           tooltip.style("opacity", .9);
         }, 2000 * cx / width);
+        setTimeout(function() {
+          tooltip.classed("inactive", true);
+          tooltip.style("opacity", "");
+        }, 3000);
+        dot.on("mouseenter", function() {
+          tooltip.classed("inactive", false);
+        }).on("mouseleave", function() {
+          tooltip.classed("inactive", true);
+        });
       });
 
     setTimeout(function() {
       path.attr("class", "line").style("stroke-dashoffset", 0);
     }, 0);
-    // setTimeout(function() {
-    //   fixeddot.style("fill-opacity", 1).style("stroke-opacity", 1);
-    //   bbox.selectAll('.tooltip').style("opacity", .9);
-    // }, 2000);
 
   }
   function redraw() {
@@ -184,19 +192,31 @@ d3.csv("/timeline.csv", function(err, data) {
     var svg = d3.select(timeline);
     svg.select("path")
       .attr("d", valueline)
-      .attr("stroke-dasharray", function(){ return this.getTotalLength() })
+      .attr("stroke-dasharray", function(){ return this.getTotalLength(); });
     svg.selectAll(".dot")
       .attr("cx", function (d) {
         return x(d.epoch);
       })
       .attr("cy", function (d) {
         return y(d.GNI);
-      })
+      });
   }
-  draw();
-
-  window.addEventListener('resize', function() {
-    redraw();
+  var drew = false;
+  var animateHook = function () {
+    var boundingRect = timeline.getBoundingClientRect();
+    if (boundingRect.top >= 0 && boundingRect.bottom <= document.documentElement.clientHeight) {
+      window.removeEventListener("scroll", animateHook);
+      if (!drew) {
+        draw();
+      }
+    }
+  };
+  animateHook();
+  window.addEventListener("scroll", animateHook, false);
+  window.addEventListener("resize", function() {
+    if (drew) {
+      redraw();
+    }
   }, false);
 });
 

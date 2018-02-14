@@ -2,7 +2,7 @@
 Official website of teamwaterloop
 
 ## How to start a server and locally run the website?
-* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git --depth=1`  
+* Git clone the repo `git clone https://github.com/teamwaterloop/waterloop-website.git --depth=1`
 (remove the --depth flag if you are a contributor and don't want the entire commit history)
 * Do this `cd waterloop-website`
 * Install requirements `npm install`
@@ -87,3 +87,7 @@ Light: `#FCFCFC` overlay at 95% opacity.
 Dark: `#27282B` overlay at 75% opacity.
 
 Button drop-shadows: `x:0,  Y:5, B:5`
+
+## Style Guide
+1. Two-space indent.
+2. Must run `npm run lint` and fix all linting errors before committing.

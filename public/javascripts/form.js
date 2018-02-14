@@ -2,107 +2,108 @@
  * @return {boolean}
  */
 function ValidateEmail(email) {
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
 }
 
 function getInputs() {
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
 
-    if (ValidateEmail(email) && message.length > 0) {
-        return {
-            firstname: document.getElementById('first_name').value,
-            lastname: document.getElementById('last_name').value,
-            email: email,
-            subject: document.getElementById('subject').value,
-            msg: message,
-        };
-    } else if (message.length === 0) {
-        showMessage("Message field cannot be empty");
-        return false;
-    } else {
-        showMessage("Invalid email");
-        return false;
-    }
+  if (ValidateEmail(email) && message.length > 0) {
+    return {
+      firstname: document.getElementById("first_name").value,
+      lastname: document.getElementById("last_name").value,
+      email: email,
+      subject: document.getElementById("subject").value,
+      msg: message,
+    };
+  } else if (message.length === 0) {
+    showMessage("Message field cannot be empty");
+    return false;
+  } else {
+    showMessage("Invalid email");
+    return false;
+  }
 }
 
 function resetFields() {
-    document.getElementById('first_name').value = "";
-    document.getElementById('last_name').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('subject').value = "";
-    document.getElementById('message').value = "";
+  document.getElementById("first_name").value = "";
+  document.getElementById("last_name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
 }
 
 function showMessage(text) {
-    alert(text);
+  alert(text);
 }
 
 function formatParams( params ){
-    return "?" + Object
-        .keys(params)
-        .map(function(key){
-            return key+"="+encodeURIComponent(params[key])
-        })
-        .join("&");
+  return "?" + Object
+    .keys(params)
+    .map(function(key){
+      return key+"="+encodeURIComponent(params[key]);
+    })
+    .join("&");
 }
 
+// eslint-disable-next-line no-unused-vars
 function submitSlackForm(){
-    const form = getInputs();
+  const form = getInputs();
 
-    if (form) {
-        $.ajax({
-            type: "POST",
-            url: "/api/submitSlackForm" + formatParams(form),
-            success: function (returnCode) {
-                showMessage(returnCode.message);
-                resetFields();
-            }, error: function (err) {
-                showMessage(err.message);
-            }
-        });
-    }
+  if (form) {
+    $.ajax({
+      type: "POST",
+      url: "/api/submitSlackForm" + formatParams(form),
+      success: function (returnCode) {
+        showMessage(returnCode.message);
+        resetFields();
+      }, error: function (err) {
+        showMessage(err.message);
+      }
+    });
+  }
 }
 
 $(function(){
-	var lockColor = false;
-	var hovering = false;
-	function rewidth(){$("#submitbtn").width($("#submitbtn span").width());}
-	$("#submitbtn").mouseenter(function(){hovering = true; if(!lockColor)$(this).addClass("hovered");});
-	$("#submitbtn").mouseleave(function(){hovering = false; if(!lockColor)$(this).removeClass("hovered");});
-	$("#ss-form").on("submit", function () {
-		$("#submitbtn span").html("Sending message...");
-		$("#submitbtn").css({"background-color":"red","color":"white"});
-		rewidth();
-		lockColor=true;
-		$("#hiddenFrame").on("load", function(){
-			$("#submitbtn span").html("Thanks!");
-			$("#submitbtn").css("background-color","green");
-			$("#submitbtn").on("click.resubmit", function(e){
-				$("#submitbtn span").html("Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class=\"material-icons\" style=\"vertical-align: top;display:inline;\">send</i>");
-				$("#submitbtn").css("background-color","#fed138");
-				rewidth();
-				lockColor=false;
-				if(hovering) $("#submitbtn").mouseenter();
-				$("#ss-form input, #ss-form textarea").val("");
-				$("#ss-form input").get(0).focus();
-				e.preventDefault();
-				$("#submitbtn").off("click.resubmit");
-			});
-			rewidth();
-		});
+  var lockColor = false;
+  var hovering = false;
+  function rewidth(){$("#submitbtn").width($("#submitbtn span").width());}
+  $("#submitbtn").mouseenter(function(){hovering = true; if(!lockColor){$(this).addClass("hovered");}});
+  $("#submitbtn").mouseleave(function(){hovering = false; if(!lockColor){$(this).removeClass("hovered");}});
+  $("#ss-form").on("submit", function () {
+    $("#submitbtn span").html("Sending message...");
+    $("#submitbtn").css({"background-color":"red","color":"white"});
+    rewidth();
+    lockColor=true;
+    $("#hidden-frame").on("load", function(){
+      $("#submitbtn span").html("Thanks!");
+      $("#submitbtn").css("background-color","green");
+      $("#submitbtn").on("click.resubmit", function(e){
+        $("#submitbtn span").html("Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class=\"material-icons\" style=\"vertical-align: top;display:inline;\">send</i>");
+        $("#submitbtn").css("background-color","#fed138");
+        rewidth();
+        lockColor=false;
+        if(hovering) {$("#submitbtn").mouseenter();}
+        $("#ss-form input, #ss-form textarea").val("");
+        $("#ss-form input").get(0).focus();
+        e.preventDefault();
+        $("#submitbtn").off("click.resubmit");
+      });
+      rewidth();
+    });
   });
 });
 
 $(function(){
-	$("#ss-form-2").on("submit", function () {
-		$("#email-submit i").text("more_horiz").css("color","#fed138");
-		$("#hiddenFrame").on("load", function(){
-			$("#email-submit i").text("done").css("color","green");
+  $("#ss-form-2").on("submit", function () {
+    $("#email-submit i").text("more_horiz").css("color","#fed138");
+    $("#hidden-frame").on("load", function(){
+      $("#email-submit i").text("done").css("color","green");
       $("#email").val("");
-			setTimeout(function(){
-				$("#email-submit i").text("send").css("color","#fed138");
-			}, 5000);
-		});
+      setTimeout(function(){
+        $("#email-submit i").text("send").css("color","#fed138");
+      }, 5000);
+    });
   });
 });

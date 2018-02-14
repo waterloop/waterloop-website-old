@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "globals": {
+    "d3": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "strict": [2, "never"],
+    "curly": [2, "all"],
+    "consistent-return": 2,
+    "indent": [1, 2, {"SwitchCase": 1, "outerIIFEBody": 0}],
+    "no-unexpected-multiline": 2,
+    "no-invalid-regexp": [2, { "allowConstructorFlags": ["s"] }],
+    "semi": [2, "always"],
+    "no-fallthrough": 2,
+    "default-case": 2,
+    "no-console": 0,
+    "quotes": 2,
+    "guard-for-in": 2,
+    "no-unused-vars": [2, { "args": "none", "vars": "local"}],
+    "eqeqeq": 2,
+    "no-native-reassign": 2,
+    "no-useless-escape": 0
+  },
+  "plugins": [
+    "ejs",
+    "script-tags"
+  ]
+}

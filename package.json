@@ -5,7 +5,14 @@
   "scripts": {
     "start": "nodemon --ignore public/ ./bin/www",
     "clean": "rm -rf ./cache",
-    "prod": "NODE_ENV=production node ./bin/www"
+    "prod": "NODE_ENV=production node ./bin/www",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
+    "lint:js": "eslint . views/*",
+    "lint:js:fix": "eslint . views/* --fix",
+    "lint:css": "stylelint */**/*.ejs */**/*.css",
+    "lint:css:fix": "stylelint */**/*.ejs */**/*.css --fix",
+    "lint:html": "node htmllint"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -31,7 +38,16 @@
     "uglify-es": "^3.3.10"
   },
   "devDependencies": {
+    "@gerhobbelt/xregexp": "^3.2.0-22",
+    "chalk": "^2.3.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-ejs": "0.0.2",
+    "eslint-plugin-script-tags": "^0.5.0",
+    "glob": "^7.1.2",
+    "htmllint": "^0.7.0",
     "nodemailer": "^4.4.2",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0"
   }
 }
