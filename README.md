@@ -9,6 +9,9 @@ Official website of teamwaterloop
 * If this is your first time doing this contact @aurpine on slack for the API_KEYS
 * Run server `npm start`
 
+## Setting up for production
+http://pm2.keymetrics.io/docs/usage/deployment/
+
 ## Maintaining the team roster
 All the data is stored within `routes/teamStructure.json`. The file contains a JSON array of the team. It has the list of members by team alongside the faculty and alumni advisors.
 Images of team leads are stored in `public/images` and can be updated in `views/team.ejs` accordingly
