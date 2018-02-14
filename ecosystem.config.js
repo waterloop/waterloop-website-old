@@ -36,7 +36,7 @@ module.exports = {
       key  : '~/.ssh/instance-key.pem',
       repo : 'git@github.com:waterloop/waterloop-website.git',
       path : '/home/ec2-user/prod/waterloop-website',
-      "post-setup": "cp -R ~/cred/secret/ ~/prod/waterloop-website/source/",
+      "post-setup": "cp -R ~/cred/secret/ ~/prod/waterloop-website/source/;ls ~/prod/waterloop-website/source/",
       "pre-deploy-local" : "pwd;ls -la",
       'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js production',
       "env"  : {
