@@ -6,3 +6,7 @@ secret
 .vscode
 .directory
 cache/
+source
+current
+shared
+.deploys
