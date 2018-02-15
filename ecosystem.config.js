@@ -28,7 +28,7 @@ module.exports = {
       path : '/home/ec2-user/prod/waterloop-website',
       "post-setup": "echo #######Post Setup#######",
       "pre-deploy-local" : "#########Pre-Deploy-Local#############;pwd;cp -R ~/cred/secret/ ~/prod/waterloop-website/;ls ~/prod/waterloop-website/source/",
-      'post-deploy' : 'pwd;cp -R ~/cred/secret/ ~/prod/waterloop-website/;ls ~/prod/waterloop-website/source/;npm install && pm2 startOrRestart ecosystem.config.js production',
+      'post-deploy' : 'pwd;cp -R ~/cred/secret/ ~/prod/waterloop-website/source/;ls ~/prod/waterloop-website/source/;npm install && pm2 startOrRestart ecosystem.config.js production',
       "env"  : {
         "NODE_ENV": "production"
       }
