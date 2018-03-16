@@ -68,24 +68,21 @@
         ]
     },
     "technical": {
-        "lead": "Deep Dhillon",
-        "integration_lead": "Ben Tonita",
+        "lead": "Clive Chan",
+        "integration_lead": "Jimmy Zhou",
         "teamHeirarchy": [
             {
                 "team": {
-                    "name": "Software",
+                    "name": "Controls",
                     "numBold":1,
                     "members": [
-                        "Lead: Jeff Niu",
-                        "Edwin Zhang",
+                        "Lead: Ruslan Nikolaev",
+                        "Lily Hwang",
                         "Tyler Zhang",
-                        "Devansh Vaid",
-                        "Mathieu Godin",
-                        "Quinton Lucy",
-                        "Thomas George",
-                        "Josie Eshkenazi",
-                        "Shun Rao",
-                        "Jashan Shewakramani"
+                        "Archer Zhang",
+                        "Edwin Zhang",
+                        "Navraj Singh Chhina",
+                        "Shun Rao"
                     ]
                 }
             },{
@@ -111,13 +108,34 @@
                     "name": "Web",
                     "numBold":2,
                     "members":[
-                        "Co-Lead: Clive Chan",
+                        "Co-Lead: Aditya Arora",
                         "Co-Lead: Melissa Tran",
-                        "Tyler Zhang"
+                        "Armanit Garg",
+                        "Tyler Zhang",
+                        "Stephanie Mills",
+                        "Egemen Guray",
+                        "Justin Pu",
+                        "Nicole Rosario"
                     ]
                 }
-            },            
-            ,{
+            },            {
+                "team": {
+                    "name": "Embedded",
+                    "numBold":1,
+                    "members":[
+                        "Lead: Deep Dhillon",
+                        "Ambareesh Balaji",
+                        "Ayush Kapur",
+                        "Bob Wei",
+                        "Heather D'Souza",
+                        "Ibrahim Irfan",
+                        "Imad Azzam",
+                        "Mathieu Godin",
+                        "Jeff Niu",
+                        "Jack Xu"
+                    ]
+                }
+            },{
                 "team": {
                     "name": "EC-Brakes",
                     "numBold":1,
@@ -125,7 +143,8 @@
                         "Lead: William Ngana",
                         "Ben Tonita",
                         "Josie Eshkenazi",
-                        "Connor Nicholls"
+                        "Connor Nicholls",
+                        "Jeff Niu"
                     ]
                 }
             },{
@@ -146,7 +165,8 @@
                     "name": "Electrical",
                     "numBold":2,
                     "members":[
-                        "Lead: Chawthri Kanagarasa",
+                        "Co-Lead: James Ro",
+                        "Co-Lead: Chawthri Kanagarasa",
                         "Connor Nicholls",
                         "Illya Myshakov",
                         "Justin Gorvett",
