@@ -5,7 +5,6 @@
             "itemsNum": 2,
             "members" : [
                 "../images/sponsors/hypersonic/Balluff.svg",
-                "../images/sponsors/hypersonic/Altair.jpg",
                 "../images/sponsors/hypersonic/altium.svg",
                 "../images/sponsors/hypersonic/BOKO_DESIGN.png",
                 "../images/sponsors/hypersonic/Communitech.svg",
@@ -20,6 +19,7 @@
             "name" : "Supersonic",
             "itemsNum": 3,
             "members" : [
+                "../images/sponsors/hypersonic/Altair.jpg",
                 "../images/sponsors/supersonic/idream.png",
                 "../images/sponsors/supersonic/LEAGUE_HEALTH.svg",
                 "../images/sponsors/supersonic/LEGETT_PLATT.svg",
