@@ -11,9 +11,9 @@
       <li <%if(active=="downloads"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/downloads">Downloads</a></li>
     </ul>
     <ul class="right">
-      <li <%if(active=="join"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a target="_blank" href="https://wloop.ca/join"><b>Join Us</b></a></li>
       <li <%if(active=="shop"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a target="_blank" href="https://merch.teamwaterloop.ca">Shop</a></li>
       <li <%if(active=="contact"){%>class="active nav-button"<%} else{%>class="nav-button"<%}%>><a href="/contact">Contact</a></li>
+      <li class="<%if(active=="join"){%>active <%}%>nav-button call-to-action"><a target="_blank" href="https://wloop.ca/join"><b>Join Us</b></a></li>
     </ul>
   </div>
 </nav>
@@ -35,6 +35,7 @@
     <li><div class="divider"></div></li>
     <li <%if(active=="shop"){%>class="active"<%}%>><a class="waves-effect" target="_blank" href="https://merch.teamwaterloop.ca"><span>Shop</span></a></li>
     <li <%if(active=="contact"){%>class="active"<%}%>><a class="waves-effect" href="/contact"><span>Contact</span></a></li>
+    <li class="<%if(active=="join"){%>active<%}%> call-to-action"><a class="waves-effect" href="https://wloop.ca/join"><span>Join Us</span></a></li>
   </ul>
 </div>
 
