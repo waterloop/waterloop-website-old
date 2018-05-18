@@ -68,15 +68,16 @@
         ]
     },
     "technical": {
-        "lead": "Deep Dhillon",
-        "integration_lead": "Ben Tonita",
+        "lead": "Clive Chan",
+        "integration_lead": "Jimmy Zhou",
         "teamHeirarchy": [
             {
                 "team": {
                     "name": "Software",
                     "numBold":1,
                     "members": [
-                        "Lead: Jeff Niu",
+                        "Co-lead: Deep Dhillon",
+                        "Co-lead: Jeff Niu",
                         "Edwin Zhang",
                         "Tyler Zhang",
                         "Devansh Vaid",
@@ -116,7 +117,7 @@
                         "Tyler Zhang"
                     ]
                 }
-            },            
+            },
             {
                 "team": {
                     "name": "EC-Brakes",
