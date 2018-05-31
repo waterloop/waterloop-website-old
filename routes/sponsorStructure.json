@@ -2,7 +2,7 @@
     "sponsors" : [
         {
             "name" : "Hypersonic",
-            "itemsNum": 2,
+            "itemsNum": 10,
             "members" : [
                 "../images/sponsors/hypersonic/Balluff.svg",
                 "../images/sponsors/hypersonic/altium.svg",
@@ -17,9 +17,9 @@
             ]
         },{
             "name" : "Supersonic",
-            "itemsNum": 3,
+            "itemsNum": 6,
             "members" : [
-                "../images/sponsors/hypersonic/Altair.jpg",
+                "../images/sponsors/supersonic/Altair.jpg",
                 "../images/sponsors/supersonic/idream.png",
                 "../images/sponsors/supersonic/LEAGUE_HEALTH.svg",
                 "../images/sponsors/supersonic/LEGETT_PLATT.svg",
@@ -28,10 +28,11 @@
             ]
         },{
             "name" : "Transonic",
-            "itemsNum": 4,
+            "itemsNum": 13,
             "members" : [
                 "../images/sponsors/transonic/Arts_Student_Union_nonEPS.svg",
                 "../images/sponsors/transonic/deloitte.png",
+                "../images/sponsors/transonic/Dominos.jpg",
                 "../images/sponsors/transonic/IBI.svg",
                 "../images/sponsors/transonic/Javelin_nonEPS.svg",
                 "../images/sponsors/transonic/KIK.svg",
@@ -45,7 +46,7 @@
             ]
         },{
             "name" : "Sonic",
-            "itemsNum": 6,
+            "itemsNum": 10,
             "members" : [
                 "../images/sponsors/sonic/BABYLON_VR.png",
                 "../images/sponsors/sonic/DASSAULT.png",
