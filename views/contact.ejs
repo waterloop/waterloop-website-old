@@ -2,33 +2,32 @@
   <h1 style="font-size:5vw;">Contact Info</h1>
   <div class="row">
     <div class="col m8">
-    <form id="ss-form" class="col s12" target="hidden-frame" action="/api/submitSlackForm" method="POST">
+    <form id="ss-form" class="col s12">
         <h2 style="font-size:4vw;">Send us a message</h2>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input id="name" type="text" name="entry.204801274" value="">
+            <input id="name" type="text" name="name" value="">
             <label for="name">Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">email</i>
-            <input id="email" type="email" name="entry.79140437" value="">
+            <input id="email" type="email" name="email" value="">
             <label for="email">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">subject</i>
-            <textarea id="message" class="materialize-textarea" name="entry.59625375" required value="" aria-required="true"></textarea>
+            <textarea id="message" class="materialize-textarea" name="message" required value="" aria-required="true"></textarea>
             <label for="message">Message *</label>
           </div>
         </div>
         <button id="submitbtn" class="btn waves-effect waves-light" type="submit" name="action"><span style="display:inline-block;">Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons" style="vertical-align:top; display:inline;">send</i></span>
         </button>
       </form>
-      <iframe id="hidden-frame" style="display: none;" name="hidden-frame"></iframe>
     </div>
 
     <div class="col m4">
