@@ -5,6 +5,7 @@ const sponsorStructureJSON = require("./sponsorStructure.json");
 const wat_api = require("../api/index");
 const flockJSON = require("./flock.json");
 const downloadsJSON = require("./downloads.json");
+const path = require("path")
 
 router.get("/", (req, res) => {
   wat_api.getMediumPosts((data) => {
@@ -16,6 +17,11 @@ router.get("/", (req, res) => {
       },
     });
   });
+});
+
+// application for web team
+router.get("/webapply", function (req, res) {
+  res.sendFile(path.join(__dirname+"/webapply.html"));
 });
 
 router.get("/flock", (req, res) => {
@@ -159,5 +165,6 @@ router.post("/api/submitSlackForm", (req, res) => {
     }
   });
 });
+
 
 module.exports = router;
