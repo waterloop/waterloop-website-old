@@ -159,15 +159,6 @@ d3.csv("/timeline.csv", function(err, data) {
           dot.style("fill-opacity", 1).style("stroke-opacity", 1);
           tooltip.style("opacity", .9);
         }, 2000 * cx / width);
-        setTimeout(function() {
-          tooltip.classed("inactive", true);
-          tooltip.style("opacity", "");
-        }, 3000);
-        dot.on("mouseenter", function() {
-          tooltip.classed("inactive", false);
-        }).on("mouseleave", function() {
-          tooltip.classed("inactive", true);
-        });
       });
 
     setTimeout(function() {
