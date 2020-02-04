@@ -15,7 +15,9 @@
       },
       {
         "title": "Pod Shell",
-        "content": ["The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."],
+        "content": [
+          "The shell is designed to be as lightweight as possible while withstanding all of the forces it will be subjected to in the one-mile long test drive. This is made possible by introducing a geodetic diagrid frame which is designed to accept the applied forces better than a standard rectilinear frame. Although this style of framing has traditionally been considered more difficult to manufacture, this is quickly overcome with modern technology by precision modelling of the entire assembly in 3D, and the use of rapid fabrication technology including laser cutting and 3D printing."
+        ],
         "parallax": "/images/flock/goose1/p1.jpg"
       },
       {
@@ -87,7 +89,9 @@
       },
       {
         "title": "Levitation",
-        "content": ["A lightweight pneumatic levitation system that allows the pod to float over a thin cushion of compressed air – creating almost zero drag. Air is supplied by two high pressure carbon fiber tanks and sent to four air casters positioned underneath our levitation and suspension module. This module also deals with unevenness of the track and dampens vibrations produced while travelling at high speeds using shock absorbers."],
+        "content": [
+          "A lightweight pneumatic levitation system that allows the pod to float over a thin cushion of compressed air – creating almost zero drag. Air is supplied by two high pressure carbon fiber tanks and sent to four air casters positioned underneath our levitation and suspension module. This module also deals with unevenness of the track and dampens vibrations produced while travelling at high speeds using shock absorbers."
+        ],
         "parallax": "/images/flock/goose2/levitation.jpg"
       },
       {
@@ -128,7 +132,7 @@
     ]
   },
   {
-    "name": "Goose X",
+    "name": "Goose V",
     "thumbnail": "/images/flock/goosex.png",
     "url": "goose_x",
     "desc": "",
@@ -141,7 +145,7 @@
       },
       {
         "title": "Exterior Design",
-        "content":[
+        "content": [
           "The exterior design of the pod highlights its primary design feature: the geodetic structural frame. The front end of the pod features a funnel like shape which would be used to collect the small amount of low pressure air in front of the train to eliminate air drag and supply air for the compressor which supplies the air castors. The matte black finish departs from contemporary transit imagery and signals in the new era of Hyperloop transit."
         ],
         "parallax": "/images/flock/goose3/spherepod.jpg"
